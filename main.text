@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+\usepackage[utf-8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Title}
+\author{Gabriel Tehozol}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\section{Section 1}
+
+\subsection{Subsection 1.1}
+
+Content here.
+
+\section{Section 2}
+
+\subsection{Subsection 2.1}
+
+Content here.
+
+\section{Conclusion}
+
+\begin{thebibliography}{99}
+\bibitem{} Reference here.
+\end{thebibliography}
+
+\end{document}
+
+
