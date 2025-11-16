@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1763247305.40923 "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" "main.pdf" "main" 1763247305.57987 0
-  "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" 1763247304.87848 459 1cd30353ecee6706d45a77dc9445001c ""
+["pdflatex"] 1763328310.27813 "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" "main.pdf" "main" 1763328310.44803 0
+  "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" 1763328309.56002 469 e8b3222720b7b42fbf875c653cce4306 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
@@ -35,8 +35,8 @@
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1731035686 92935 ab22f987f93038b61e05dc32d7c07157 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1731035700 1917512 1a645564ba2ff7e142f6b91c338237a3 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf.cnf" 1731091560.36472 708 85fd07691b6294ba94c59dbc62380410 ""
-  "main.aux" 1763247305.54653 652 424709980067653f6832e7674bb3abd5 "pdflatex"
-  "main.tex" 1763247304.87848 459 1cd30353ecee6706d45a77dc9445001c ""
+  "main.aux" 1763328310.41726 662 d34525a39b60439a3ba02dfd10fc3f30 "pdflatex"
+  "main.tex" 1763328309.56002 469 e8b3222720b7b42fbf875c653cce4306 ""
   (generated)
   "main.aux"
   "main.log"
