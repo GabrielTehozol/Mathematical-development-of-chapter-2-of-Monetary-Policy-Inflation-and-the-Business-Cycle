@@ -5,23 +5,243 @@
 
 \title{Title}
 \author{Gabriel Tehozol}
-\date{\today}
 
 \begin{document}
 
 \maketitle
+%========================================
+% 2.1 HOGARES: Problema de Optimización
+%========================================
+\subsection{Hogares: definición del problema de optimización dinámica}
+\label{subsec:hogares}
 
-\section{A ver 1 el más perro}
+El modelo asume un \emph{hogar representativo} que resuelve un problema de
+\emph{optimización dinámica}. El objetivo es maximizar la utilidad a lo largo
+de un horizonte infinito, sujeta a restricciones presupuestarias de flujo y a
+una restricción de solvencia que descarta esquemas de tipo Ponzi.
 
-\section{Section 1}
+%--------------------------------------------------
+\subsubsection{Ecuación (1): función objetivo (utilidad esperada descontada)}
+\label{subsubsec:hogares_objetivo}
 
-\subsection{Subsection 1.1}
+El hogar busca maximizar la utilidad intertemporal dada por:
+\begin{equation}
+E_0 \sum_{t=0}^{\infty} \beta^t U(C_t, N_t; Z_t),
+\tag{1}
+\end{equation}
+donde $C_t$ es el consumo, $N_t$ las horas de trabajo y $Z_t$ un
+desplazador exógeno de preferencias. El parámetro $\beta \in (0,1)$ es
+el factor de descuento intertemporal, y $E_0\{\cdot\}$ denota el
+operador de expectativas condicional a la información disponible en $t=0$.
 
-Content here.
+\paragraph{Definiciones de términos en (1).}
 
-\section{Section 2}
+\begin{description}
+  \item[$E_0\{\cdot\}$] Operador de expectativas. Indica que el hogar
+  maximiza el valor esperado de la utilidad futura, condicional a la
+  información disponible en $t=0$.
 
-\subsection{Subsection 2.1}
+  \item[$\beta^t$] Factor de descuento (\emph{discount factor}),
+  con $\beta \in (0,1)$. Descuenta la utilidad de los periodos futuros
+  a su valor presente.
+
+  \item[$U(\cdot)$] Función de utilidad periódica, continua y dos veces
+  diferenciable. Mide la satisfacción instantánea del hogar.
+
+  \item[$C_t$] Cantidad consumida del único bien disponible en la economía.
+  La utilidad marginal del consumo es
+  \[
+    U_{c,t} \equiv \frac{\partial U(C_t,N_t;Z_t)}{\partial C_t} > 0,
+  \]
+  y es no creciente ($U_{cc,t} \le 0$).
+
+  \item[$N_t$] Horas de trabajo u oferta de empleo. La utilidad marginal
+  del trabajo es
+  \[
+    U_{n,t} \equiv \frac{\partial U(C_t,N_t;Z_t)}{\partial N_t} \le 0,
+  \]
+  es decir, el trabajo genera desutilidad; $-U_{n,t}$ es positiva
+  y no decreciente.
+
+  \item[$Z_t$] \emph{Factor exógeno de desplazamiento de preferencias}
+  (\emph{exogenous preference shifter}). Un aumento en $Z_t$ eleva la
+  utilidad marginal del consumo:
+  \[
+    U_{cz,t} \equiv 
+    \frac{\partial^2 U(C_t,N_t;Z_t)}{\partial C_t\,\partial Z_t} > 0.
+  \]
+  Dada la forma funcional específica que se adopta en el texto principal,
+  el efecto de $Z_t$ se restringe a las decisiones intertemporales (a través
+  de la razón $U_{c,t+k}/U_{c,t}$), sin afectar directamente las decisiones
+  intratemporales (la razón $U_{n,t}/U_{c,t}$).
+\end{description}
+
+\paragraph{Integración.}
+
+La ecuación (1) define el \emph{objetivo} del hogar: elegir secuencias
+$\{C_t,N_t\}_{t=0}^{\infty}$ que maximizan la utilidad esperada
+descontada. Sin embargo, estas elecciones están restringidas por la
+capacidad del hogar para generar ingreso y endeudarse/ahorrar, lo que
+da lugar a la restricción presupuestaria de flujo.
+
+%--------------------------------------------------
+\subsubsection{Ecuación (2): restricción presupuestaria de flujo}
+\label{subsubsec:hogares_flujo}
+
+En cada periodo $t$, el gasto del hogar y sus decisiones de ahorro deben
+estar limitados por su ingreso corriente:
+
+\begin{equation}
+P_t C_t + Q_t B_t \le B_{t-1} + W_t N_t + D_t,
+\tag{2}
+\end{equation}
+donde el lado izquierdo recoge el gasto en consumo y en bonos, y el lado
+derecho el ingreso disponible.
+
+\paragraph{Definiciones de términos en (2).}
+
+\begin{description}
+  \item[$P_t$] Precio nominal del bien de consumo.
+  \item[$P_t C_t$] Gasto nominal en consumo.
+  \item[$Q_t$] Precio del bono nominal libre de riesgo a un periodo;
+  pagar una unidad de dinero en $t+1$ cuesta $Q_t$ unidades de dinero
+  en el periodo $t$.
+  \item[$B_t$] Cantidad de bonos nominales libres de riesgo comprados
+  en el periodo $t$. El término $Q_t B_t$ es el gasto en ahorro financiero.
+  \item[$B_{t-1}$] Valor nominal de los bonos que maduran y se pagan
+  al hogar en el periodo $t$.
+  \item[$W_t$] Salario nominal (por hora o por trabajador).
+  \item[$W_t N_t$] Ingreso nominal del trabajo.
+  \item[$D_t$] Dividendos que recibe el hogar como propietario de las empresas.
+\end{description}
+
+\paragraph{Integración.}
+
+La secuencia de restricciones como (2) determina el \emph{conjunto factible}
+de planes $(C_t,N_t,B_t)$ para el hogar. El problema del hogar consiste
+en elegir la secuencia $\{C_t,N_t,B_t\}_{t=0}^{\infty}$ que maximiza (1)
+sujeta a (2), dado el vector de precios $(P_t,Q_t,W_t)$ y los dividendos $(D_t)$.
+
+%--------------------------------------------------
+\subsubsection{Ecuación (3): restricción de solvencia (no-Ponzi)}
+\label{subsubsec:hogares_solvencia}
+
+Además de la restricción de flujo, el hogar enfrenta una \emph{restricción
+de solvencia} que impide esquemas de endeudamiento tipo Ponzi, garantizando
+que su deuda pueda ser pagada en el largo plazo:
+
+\begin{equation}
+\lim_{T\to\infty} E_t \left\{ \varXi_{t,T} \frac{B_T}{P_T} \right\} \ge 0,
+\tag{3}
+\end{equation}
+donde $\varXi_{t,T}$ es el factor de descuento estocástico asociado a la
+utilidad marginal del consumo.
+
+\paragraph{Definiciones de términos en (3).}
+
+\begin{description}
+  \item[$\displaystyle \lim_{T\to\infty} E_t\{\cdot\}$]
+  Límite del valor esperado condicional en $t$ a medida que el horizonte
+  $T$ tiende a infinito.
+
+  \item[$B_T/P_T$] Riqueza real terminal asociada a los bonos en el horizonte $T$.
+
+  \item[$\varXi_{t,T}$] \emph{Factor de descuento estocástico}, definido como
+  \[
+    \varXi_{t,T} \equiv \beta^{T-t} \frac{U_{c,T}}{U_{c,t}},
+  \]
+  que descuenta los flujos reales futuros a su valor presente, incorporando
+  tanto la impaciencia ($\beta$) como la evolución de la utilidad marginal del
+  consumo.
+\end{description}
+
+\paragraph{Integración.}
+
+La ecuación (3) asegura que el plan dinámico del hogar es sostenible a
+larga plazo. En equilibrio, con un hogar representativo y oferta neta de
+deuda igual a cero, esta condición suele cumplirse con igualdad (lo que
+se expresará más adelante en forma de condición de transversalidad).
+
+%--------------------------------------------------
+\subsubsection{Ecuación (4): condición de optimalidad intratemporal (oferta de trabajo)}
+\label{subsubsec:hogares_intratemporal}
+
+Una de las condiciones de primer orden resultantes de la maximización de (1)
+sujeta a (2) y (3) es la \emph{condición de optimalidad intratemporal}, que
+rige la elección óptima entre consumo y trabajo dentro de un mismo periodo $t$:
+
+\begin{equation}
+-\frac{U_{n,t}}{U_{c,t}} = \frac{W_t}{P_t}.
+\tag{4}
+\end{equation}
+
+\paragraph{Definiciones de términos en (4).}
+
+\begin{description}
+  \item[$U_{n,t}$] Utilidad marginal del trabajo,
+  $U_{n,t} \equiv \partial U(C_t,N_t;Z_t)/\partial N_t \le 0$.
+  El trabajo genera desutilidad, por lo que $-U_{n,t} > 0$.
+
+  \item[$U_{c,t}$] Utilidad marginal del consumo,
+  $U_{c,t} \equiv \partial U(C_t,N_t;Z_t)/\partial C_t > 0$.
+
+  \item[$-\dfrac{U_{n,t}}{U_{c,t}}$] \emph{Tasa marginal de sustitución}
+  (TMS) entre ocio y consumo: mide cuántas unidades adicionales de
+  consumo son necesarias para compensar la desutilidad de trabajar
+  una unidad extra.
+
+  \item[$W_t/P_t$] \emph{Salario real}, es decir, el precio del trabajo
+  en términos del bien de consumo.
+\end{description}
+
+\paragraph{Derivación (argumento variacional).}
+
+La ecuación (4) puede obtenerse a partir de un argumento de variación
+en el periodo $t$:
+
+\begin{enumerate}
+  \item \textbf{Variación en la utilidad.} Considérese una pequeña desviación
+  $(dC_t,dN_t)$ respecto al plan óptimo en el periodo $t$. La variación de la
+  utilidad instantánea es:
+  \[
+    dU_t = U_{c,t}\,dC_t + U_{n,t}\,dN_t.
+  \]
+  En un óptimo, cualquier desviación factible que mantenga constantes las
+  demás variables no debe elevar la utilidad, por lo que un cambio marginalmente
+  factible debe cumplir $dU_t = 0$.
+
+  \item \textbf{Variación en la restricción presupuestaria.} Si solo se ajustan
+  $C_t$ y $N_t$ en el periodo $t$, manteniendo fijo $B_t$, la variación de la
+  restricción de flujo (2) es:
+  \[
+    P_t\,dC_t = W_t\,dN_t,
+  \]
+  es decir, el gasto adicional en consumo debe igualar el ingreso adicional
+  por trabajar más.
+
+  \item \textbf{Combinación de ambas condiciones.} De la variación presupuestaria
+  se obtiene:
+  \[
+    dC_t = \frac{W_t}{P_t} dN_t.
+  \]
+  Sustituyendo en la variación de utilidad:
+  \[
+    U_{c,t}\left(\frac{W_t}{P_t} dN_t\right) + U_{n,t} dN_t = 0.
+  \]
+  Dividiendo por $dN_t \neq 0$ y reordenando términos se llega a:
+  \[
+    -\frac{U_{n,t}}{U_{c,t}} = \frac{W_t}{P_t},
+  \]
+  que coincide con la ecuación (4).
+\end{enumerate}
+
+\paragraph{Interpretación.}
+
+La ecuación (4) es la condición de \emph{oferta de trabajo} del hogar:
+en el óptimo, el hogar iguala su tasa marginal de sustitución entre
+ocio y consumo (costo de oportunidad de trabajar) con el salario real
+ofrecido en el mercado.
+
 
 Content here.
 
