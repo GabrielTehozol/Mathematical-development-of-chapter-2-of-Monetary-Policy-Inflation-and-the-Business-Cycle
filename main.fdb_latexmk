@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1763408846.40703 "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" "main.pdf" "main" 1763408846.61177 0
-  "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" 1763408845.84514 9356 f481fc9b84f6cb28e0cc8ff7656d40d1 ""
+["pdflatex"] 1763408970.94764 "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" "main.pdf" "main" 1763408971.29821 0
+  "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" 1763408970.77944 9356 f481fc9b84f6cb28e0cc8ff7656d40d1 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -50,8 +50,8 @@
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1731035686 92935 ab22f987f93038b61e05dc32d7c07157 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1731035700 1917512 1a645564ba2ff7e142f6b91c338237a3 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf.cnf" 1731091560.36472 708 85fd07691b6294ba94c59dbc62380410 ""
-  "main.aux" 1763408846.56173 2185 8769c4abb91812623ab6eda7e6675d01 "pdflatex"
-  "main.tex" 1763408845.84514 9356 f481fc9b84f6cb28e0cc8ff7656d40d1 ""
+  "main.aux" 1763408971.20431 2185 8769c4abb91812623ab6eda7e6675d01 "pdflatex"
+  "main.tex" 1763408970.77944 9356 f481fc9b84f6cb28e0cc8ff7656d40d1 ""
   (generated)
   "main.aux"
   "main.log"
