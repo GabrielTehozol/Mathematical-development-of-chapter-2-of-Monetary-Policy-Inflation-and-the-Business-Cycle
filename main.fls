@@ -83,6 +83,7 @@ INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/eps
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm2074.tfm
+INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti2074.tfm
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -180,6 +181,7 @@ INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/e
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk
+INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti2074.600pk
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb

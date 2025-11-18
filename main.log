@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.8)  18 NOV 2025 12:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.8)  18 NOV 2025 12:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -340,12 +340,12 @@ Overfull \hbox (1.53812pt too wide) in paragraph at lines 672--673
 [17]
 
 [18]
-<ecu8_Q_vs_gc.png, id=73, 361.35pt x 252.945pt>
+<ecu8_Q_vs_gc.png, id=74, 361.35pt x 252.945pt>
 File: ecu8_Q_vs_gc.png Graphic file (type png)
 <use ecu8_Q_vs_gc.png>
 Package pdftex.def Info: ecu8_Q_vs_gc.png  used on input line 1261.
 (pdftex.def)             Requested size: 328.82707pt x 230.18031pt.
-<ecu8_Q_vs_gz.png, id=75, 361.35pt x 252.945pt>
+<ecu8_Q_vs_gz.png, id=76, 361.35pt x 252.945pt>
 File: ecu8_Q_vs_gz.png Graphic file (type png)
 <use ecu8_Q_vs_gz.png>
 Package pdftex.def Info: ecu8_Q_vs_gz.png  used on input line 1281.
@@ -353,7 +353,7 @@ Package pdftex.def Info: ecu8_Q_vs_gz.png  used on input line 1281.
 
 
 [19 <./ecu8_Q_vs_gc.png>]
-<ecu8_Q_vs_pi.png, id=87, 361.35pt x 252.945pt>
+<ecu8_Q_vs_pi.png, id=88, 361.35pt x 252.945pt>
 File: ecu8_Q_vs_pi.png Graphic file (type png)
 <use ecu8_Q_vs_pi.png>
 Package pdftex.def Info: ecu8_Q_vs_pi.png  used on input line 1296.
@@ -375,7 +375,7 @@ Underfull \hbox (badness 1210) in paragraph at lines 1349--1349
 [21]
 
 [22]
-<ls_n_vs_w.pdf, id=101, 433.62pt x 289.08pt>
+<ls_n_vs_w.pdf, id=102, 433.62pt x 289.08pt>
 File: ls_n_vs_w.pdf Graphic file (type pdf)
 <use ls_n_vs_w.pdf>
 Package pdftex.def Info: ls_n_vs_w.pdf  used on input line 1497.
@@ -387,7 +387,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 [23]
-<ls_shift_c.pdf, id=105, 433.62pt x 289.08pt>
+<ls_shift_c.pdf, id=106, 433.62pt x 289.08pt>
 File: ls_shift_c.pdf Graphic file (type pdf)
 <use ls_shift_c.pdf>
 Package pdftex.def Info: ls_shift_c.pdf  used on input line 1528.
@@ -395,7 +395,7 @@ Package pdftex.def Info: ls_shift_c.pdf  used on input line 1528.
 
 
 [24 <./ls_n_vs_w.pdf> <./ls_shift_c.pdf>]
-<ls_phi_pendiente.pdf, id=212, 433.62pt x 289.08pt>
+<ls_phi_pendiente.pdf, id=213, 433.62pt x 289.08pt>
 File: ls_phi_pendiente.pdf Graphic file (type pdf)
 <use ls_phi_pendiente.pdf>
 Package pdftex.def Info: ls_phi_pendiente.pdf  used on input line 1557.
@@ -429,18 +429,18 @@ L3 programming layer <2024-11-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5490 strings out of 475322
- 87554 string characters out of 5769397
- 492470 words of memory out of 5000000
- 28281 multiletter control sequences out of 15000+600000
- 579132 words of font info for 90 fonts, out of 8000000 for 9000
+ 5492 strings out of 475322
+ 87579 string characters out of 5769397
+ 492590 words of memory out of 5000000
+ 28282 multiletter control sequences out of 15000+600000
+ 579825 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  57i,12n,65p,366b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (31 pages, 496122 bytes).
+ </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti2074.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (31 pages, 510884 bytes).
 PDF statistics:
- 746 PDF objects out of 1000 (max. 8388607)
- 188 compressed objects within 2 object streams
+ 785 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

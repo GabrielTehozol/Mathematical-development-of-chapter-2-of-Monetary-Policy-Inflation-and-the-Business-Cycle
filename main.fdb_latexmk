@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1763490632.24809 "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" "main.pdf" "main" 1763490633.2268 0
-  "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" 1763490630.83754 68790 19bd3a1809b74012161f8257ee22d7a9 ""
+["pdflatex"] 1763491521.32218 "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" "main.pdf" "main" 1763491522.33204 0
+  "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" 1763491521.63371 68914 bd8590418afbc9c7cca94cebde535a7e ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm" 1136768653 3584 ad49a18d8515beef6d92d4d3f197d0fd ""
@@ -16,6 +16,7 @@
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm" 1136768653 3072 3bce340d4c075dffe6d4ec732b4c32fe ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti1095.tfm" 1136768653 3072 b73d2778cc3af44970de4de5e032d7f6 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti1200.tfm" 1136768653 3072 8b5a64dc91775463bc95e2d818524028 ""
+  "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti2074.tfm" 1136768653 3072 63992ab00396f2014b1f210e2089f34b ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -98,6 +99,7 @@
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk" 1763487812.09266 31872 d931ec06ad799114465949a16cd1860a ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk" 1763490540.88665 35180 9eddd5b10fca6612ab9bd7867853ffdf ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk" 1763429411.66921 39096 3c107c8c545360bc84279c8011e135e9 ""
+  "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti2074.600pk" 1763491521.18797 75260 9ada227f46f10fcf4bc61cb387f9613e ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk" 1763406131.30073 14040 78d12882cf9fb2a29016c9faef468184 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1731035700 1917512 1a645564ba2ff7e142f6b91c338237a3 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf.cnf" 1731091560.36472 708 85fd07691b6294ba94c59dbc62380410 ""
@@ -107,8 +109,8 @@
   "ls_n_vs_w.pdf" 1763489567.99339 19241 e313ac35f5a474e3be9289b399e177df ""
   "ls_phi_pendiente.pdf" 1763489568.68014 17737 8c8d4eb4a0dcb95d1eefd050a1cab5ee ""
   "ls_shift_c.pdf" 1763489568.37674 18017 74aa0a5ea5189731cd288ebde0f1f6eb ""
-  "main.aux" 1763490633.10893 7037 b98c54e1e6396b68fde073c4922ea5a4 "pdflatex"
-  "main.tex" 1763490630.83754 68790 19bd3a1809b74012161f8257ee22d7a9 ""
+  "main.aux" 1763491522.20466 7037 6909e99853eff848268726a944097ef9 "pdflatex"
+  "main.tex" 1763491521.63371 68914 bd8590418afbc9c7cca94cebde535a7e ""
   (generated)
   "main.aux"
   "main.log"
