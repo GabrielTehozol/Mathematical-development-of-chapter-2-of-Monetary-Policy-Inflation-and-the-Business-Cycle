@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.8)  17 NOV 2025 19:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.8)  18 NOV 2025 12:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -181,30 +181,71 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_shortintertext_sep=\dimen168
 \xmathstrut@box=\box54
 \xmathstrut@dim=\dimen169
+) (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen170
+\Gin@req@width=\dimen171
+) (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count292
+\float@exts=\toks27
+\float@box=\box55
+\@float@everytoks=\toks28
+\@floatcapt=\box56
+) (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+ (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen172
+\ar@mcellbox=\box57
+\extrarowheight=\dimen173
+\NC@list=\toks29
+\extratabsurround=\skip58
+\backup@length=\skip59
+\ar@cellbox=\box58
+)
+\TX@col@width=\dimen174
+\TX@old@table=\dimen175
+\TX@old@col=\dimen176
+\TX@target=\dimen177
+\TX@delta=\dimen178
+\TX@cols=\count293
+\TX@ftn=\toks30
 ) (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count292
-\l__pdf_internal_box=\box55
+\l__color_backend_stack_int=\count294
+\l__pdf_internal_box=\box59
 ) (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -240,34 +281,19 @@ LaTeX Font Info:    ... okay on input line 26.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \. on input line 26.
-LaTeX Info: Redefining \% on input line 26.
-(/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 106.
- (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-)) (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+LaTeX Info: Redefining \. on input line 28.
+LaTeX Info: Redefining \% on input line 28.
+(/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\Gin@req@height=\dimen170
-\Gin@req@width=\dimen171
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
  (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
  (/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -293,7 +319,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [9]
 
 [10]
-Overfull \hbox (1.53812pt too wide) in paragraph at lines 670--671
+Overfull \hbox (1.53812pt too wide) in paragraph at lines 672--673
  \T1/cmr/bx/n/12 Parámet-ros:[] \T1/cmr/m/n/12 Para may-or clar-i-dad, pre-sen-ta-mos los parámet-ros que apare-cen en la ecuación
  []
 
@@ -313,7 +339,87 @@ Overfull \hbox (1.53812pt too wide) in paragraph at lines 670--671
 
 [17]
 
-[18] (./main.aux
+[18]
+<ecu8_Q_vs_gc.png, id=73, 361.35pt x 252.945pt>
+File: ecu8_Q_vs_gc.png Graphic file (type png)
+<use ecu8_Q_vs_gc.png>
+Package pdftex.def Info: ecu8_Q_vs_gc.png  used on input line 1261.
+(pdftex.def)             Requested size: 328.82707pt x 230.18031pt.
+<ecu8_Q_vs_gz.png, id=75, 361.35pt x 252.945pt>
+File: ecu8_Q_vs_gz.png Graphic file (type png)
+<use ecu8_Q_vs_gz.png>
+Package pdftex.def Info: ecu8_Q_vs_gz.png  used on input line 1281.
+(pdftex.def)             Requested size: 328.82707pt x 230.18031pt.
+
+
+[19 <./ecu8_Q_vs_gc.png>]
+<ecu8_Q_vs_pi.png, id=87, 361.35pt x 252.945pt>
+File: ecu8_Q_vs_pi.png Graphic file (type png)
+<use ecu8_Q_vs_pi.png>
+Package pdftex.def Info: ecu8_Q_vs_pi.png  used on input line 1296.
+(pdftex.def)             Requested size: 328.82707pt x 230.18031pt.
+
+
+[20 <./ecu8_Q_vs_gz.png> <./ecu8_Q_vs_pi.png>]
+Underfull \hbox (badness 1270) in paragraph at lines 1348--1348
+[]|\T1/cmr/m/n/10.95 Curvatura de la util-i-dad del
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 1349--1349
+[]|\T1/cmr/m/n/10.95 Parámetro de desu-til-i-dad del
+ []
+
+
+
+[21]
+
+[22]
+<ls_n_vs_w.pdf, id=101, 433.62pt x 289.08pt>
+File: ls_n_vs_w.pdf Graphic file (type pdf)
+<use ls_n_vs_w.pdf>
+Package pdftex.def Info: ls_n_vs_w.pdf  used on input line 1497.
+(pdftex.def)             Requested size: 328.82707pt x 219.22668pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[23]
+<ls_shift_c.pdf, id=105, 433.62pt x 289.08pt>
+File: ls_shift_c.pdf Graphic file (type pdf)
+<use ls_shift_c.pdf>
+Package pdftex.def Info: ls_shift_c.pdf  used on input line 1528.
+(pdftex.def)             Requested size: 328.82707pt x 219.22668pt.
+
+
+[24 <./ls_n_vs_w.pdf> <./ls_shift_c.pdf>]
+<ls_phi_pendiente.pdf, id=212, 433.62pt x 289.08pt>
+File: ls_phi_pendiente.pdf Graphic file (type pdf)
+<use ls_phi_pendiente.pdf>
+Package pdftex.def Info: ls_phi_pendiente.pdf  used on input line 1557.
+(pdftex.def)             Requested size: 328.82707pt x 219.22668pt.
+
+
+[25 <./ls_phi_pendiente.pdf>]
+
+[26]
+
+[27]
+
+[28]
+
+[29]
+Overfull \hbox (90.92285pt too wide) detected at line 1972
+[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^@ []\OML/cmm/m/it/12 :
+ []
+
+
+
+[30]
+
+[31] (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
@@ -323,18 +429,18 @@ L3 programming layer <2024-11-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5178 strings out of 475322
- 82250 string characters out of 5769397
- 487778 words of memory out of 5000000
- 27987 multiletter control sequences out of 15000+600000
- 571734 words of font info for 74 fonts, out of 8000000 for 9000
+ 5490 strings out of 475322
+ 87554 string characters out of 5769397
+ 492470 words of memory out of 5000000
+ 28281 multiletter control sequences out of 15000+600000
+ 579132 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,6n,70p,349b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (18 pages, 190111 bytes).
+ 57i,12n,65p,366b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (31 pages, 496122 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 746 PDF objects out of 1000 (max. 8388607)
+ 188 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,8 +10,10 @@
 % Matemáticas
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{mathtools}   % <-- ya no dará error cuando esté instalado
-
+\usepackage{mathtools} 
+\usepackage{graphicx}  % <-- ya no dará error cuando esté instalado
+\usepackage{float}   % para usar [H] en figuras y tablas
+\usepackage{tabularx}
 % Gráficos
 %\usepackage{float}       % para [H]
 %\usepackage{tikz}
@@ -1153,11 +1155,867 @@ La Ecuación (8) combina tres elementos fundamentales:
 En conjunto, estos factores determinan el \emph{precio justo} del bono
 $Q_t$ en equilibrio.
 %--------------------------------------------------
+\subsubsection*{Nota: Reescritura y descomposición de la ecuación (8)}
+
+Partimos de la condición de optimalidad intertemporal específica:
+\begin{equation}
+  Q_t = \beta E_t \left\{
+    \left(
+      \frac{C_{t+1}}{C_t}
+    \right)^{-\sigma}
+    \left(
+      \frac{Z_{t+1}}{Z_t}
+    \right)
+    \left(
+      \frac{P_t}{P_{t+1}}
+    \right)
+  \right\}.
+  \tag{8}
+\end{equation}
+
+Para fijar ideas, consideremos primero el caso sin incertidumbre (o el valor esperado
+como ``escenario central''), de modo que el operador de expectativas puede omitirse.
+Definimos las tasas brutas de crecimiento
+\[
+  g_c \;\equiv\; \frac{C_{t+1}}{C_t},
+  \qquad
+  g_z \;\equiv\; \frac{Z_{t+1}}{Z_t},
+\]
+y escribimos la razón de precios en función de la inflación esperada $\pi_{t+1}^e$:
+\[
+  \frac{P_t}{P_{t+1}}
+  \;=\;
+  \frac{1}{1+\pi_{t+1}^e}.
+\]
+
+Con estas definiciones, la ecuación (8) se puede reescribir como
+\begin{equation}
+  Q_t
+  \;=\;
+  \beta \,
+  g_c^{-\sigma} \,
+  g_z \,
+  \frac{1}{1+\pi_{t+1}^e}.
+  \label{eq:Qt_factores}
+\end{equation}
+Esta expresión hace explícito que el precio del bono nominal de un período $Q_t$ es el
+producto de cuatro componentes:
+\begin{enumerate}
+  \item $\beta$: \emph{impaciencia pura} del hogar.
+  \item $g_c^{-\sigma}$:
+    componente de \emph{sustitución intertemporal del consumo}, que recoge cómo
+    el crecimiento esperado del consumo afecta la utilidad marginal futura.
+  \item $g_z$:
+    componente asociado al \emph{factor de preferencias} $Z_t$, que actúa como un
+    shock al factor de descuento efectivo.
+  \item $\dfrac{1}{1+\pi_{t+1}^e}$:
+    componente que recoge el \emph{castigo por inflación esperada}, al corregir
+    la pérdida de poder adquisitivo del bono nominal.
+\end{enumerate}
+
+Tomando logaritmos naturales en \eqref{eq:Qt_factores}, obtenemos una descomposición
+aditiva particularmente útil:
+\begin{equation}
+  \ln Q_t
+  \;=\;
+  \ln \beta
+  \;-\;
+  \sigma \ln g_c
+  \;+\;
+  \ln g_z
+  \;-\;
+  \ln(1+\pi_{t+1}^e).
+  \label{eq:lnQt_descomposicion}
+\end{equation}
+La ecuación \eqref{eq:lnQt_descomposicion} muestra cómo cada
+componente (crecimiento esperado del consumo, evolución del factor de preferencias
+y inflación esperada) contribuye (con signo y magnitud) al nivel de
+$Q_t$, y por tanto, de la tasa de interés nominal bruta
+$1+i_t = 1/Q_t$.
+
+\subsubsection*{Interpretación gráfica de la ecuación (8)}
+
+La expresión
+\begin{equation}
+  Q_t
+  \;=\;
+  \beta \,
+  g_c^{-\sigma} \,
+  g_z \,
+  \frac{1}{1+\pi_{t+1}^e},
+  \qquad
+  g_c \equiv \frac{C_{t+1}}{C_t},
+  \quad
+  g_z \equiv \frac{Z_{t+1}}{Z_t},
+  \tag{8 revisada}
+\end{equation}
+muestra que el precio del bono nominal de un período $Q_t$ depende de tres
+bloques económicos: (i) el crecimiento esperado del consumo $g_c$ (sustitución
+intertemporal), (ii) la evolución del factor de preferencias $g_z$ y
+(iii) la inflación esperada $\pi_{t+1}^e$ que entra vía $P_t/P_{t+1} = 1/(1+\pi_{t+1}^e)$.
+Las figuras siguientes ilustran cómo cambia $Q_t$ cuando variamos cada uno de
+estos componentes, manteniendo constantes los demás.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{ecu8_Q_vs_gc}%
+  \caption{Efecto del crecimiento esperado del consumo $g_c = C_{t+1}/C_t$ sobre $Q_t$.}
+  \label{fig:Qt_gc}
+\end{figure}
+
+En la Figura~\ref{fig:Qt_gc} se representa $Q_t$ como función del crecimiento
+esperado del consumo $g_c$. Dado que $Q_t \propto g_c^{-\sigma}$, la curva es
+decreciente: cuanto mayor es el crecimiento esperado del consumo
+($g_c \uparrow$), menor es $Q_t$. Económicamente, si el hogar espera ser más
+``rico'' mañana (mayor consumo futuro), la utilidad marginal futura es más baja
+y, por tanto, está dispuesto a pagar menos por una unidad de consumo futuro:
+el bono se vende más barato ($Q_t$ cae) y la tasa de interés nominal
+$1+i_t = 1/Q_t$ aumenta.
+
+\footnote{El símbolo $\propto$ denota \emph{proporcionalidad}. 
+El precio del bono $Q_t$ es \emph{proporcional} a $g_z$ elevado a la 
+potencia menos sigma.}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{ecu8_Q_vs_gz}%
+  \caption{Efecto del factor de preferencias $g_z = Z_{t+1}/Z_t$ sobre $Q_t$.}
+  \label{fig:Qt_gz}
+\end{figure}
+
+La Figura~\ref{fig:Qt_gz} muestra el efecto del factor de preferencias $g_z$.
+Como $Q_t \propto g_z$, la relación es creciente: un aumento de $Z_{t+1}$ en
+relación con $Z_t$ desplaza al alza $Q_t$. En términos económicos, un
+incremento en $g_z$ puede interpretarse como un shock que eleva la
+valoración relativa del consumo futuro; el hogar se vuelve más paciente y
+está dispuesto a pagar más por el bono hoy. En consecuencia, el precio del
+bono sube y la tasa de interés nominal cae.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{ecu8_Q_vs_pi}%
+  \caption{Efecto de la inflación esperada $\pi_{t+1}^e$ sobre $Q_t$.}
+  \label{fig:Qt_pi}
+\end{figure}
+
+Por último, la Figura~\ref{fig:Qt_pi} representa la relación entre $Q_t$ y la
+inflación esperada $\pi_{t+1}^e$, manteniendo constantes $g_c$ y $g_z$. Como
+$Q_t \propto 1/(1+\pi_{t+1}^e)$, la curva es decreciente: una mayor inflación
+esperada reduce el valor real del pago nominal del bono, de modo que los
+hogares sólo están dispuestos a comprarlo a un precio menor. Esto se traduce
+en un $Q_t$ más bajo y, por tanto, en una tasa de interés nominal más alta.
+
+En conjunto, las Figuras~\ref{fig:Qt_gc}--\ref{fig:Qt_pi} ilustran que el precio
+del bono $Q_t$ sintetiza tres tipos de consideraciones: (i) expectativas sobre
+el perfil de consumo, (ii) choques de preferencias que modifican el peso
+relativo del futuro y (iii) expectativas de inflación que erosionan el valor
+real de los pagos nominales.
+ 
+\subsection*{Ecuación (9): Oferta de trabajo log-lineal}
+
+La ecuación (9) es la representación \emph{log-lineal} de la
+\textbf{condición de optimalidad intratemporal} (ecuación (7)), que describe
+la \emph{oferta de trabajo competitiva} del hogar. Se escribe como:
+\begin{equation}
+  w_t - p_t = \sigma c_t + \phi n_t.
+  \tag{9}
+\end{equation}
+
+\noindent
+En este contexto, adoptamos la convención estándar de que las letras
+minúsculas denotan el \textbf{logaritmo natural} de la variable correspondiente
+en niveles:
+\[
+  w_t \equiv \log W_t, \quad
+  p_t \equiv \log P_t, \quad
+  c_t \equiv \log C_t, \quad
+  n_t \equiv \log N_t.
+\]
+
+\subsubsection*{I. Desglose riguroso de términos}
+
+\begin{center}
+\small
+\begin{tabular}{lp{0.32\textwidth}p{0.4\textwidth}}
+\hline
+Símbolo & Definición & Significado\\
+\hline
+$w_t$ & $\log W_t$ & Logaritmo del salario nominal. \\
+$p_t$ & $\log P_t$ & Logaritmo del nivel de precios del bien de consumo. \\
+$w_t - p_t$ & $\log (W_t/P_t)$ & Logaritmo del salario real (precio del trabajo en unidades de bien). \\
+$c_t$ & $\log C_t$ & Logaritmo del consumo; indicador del nivel de consumo/riqueza. \\
+$n_t$ & $\log N_t$ & Logaritmo de horas de trabajo/empleo. \\
+$\sigma$ & Curvatura de la utilidad del consumo & Mide el efecto ingreso del consumo sobre la oferta de trabajo. \\
+$\phi$ & Parámetro de desutilidad del trabajo & Inverso de la elasticidad (Frisch) de la oferta de trabajo. \\
+\hline
+\end{tabular}
+\end{center}
 
 
+\noindent
+Recordemos que:
+\begin{itemize}
+  \item $\sigma$ (sigma) es el parámetro que controla la curvatura de la
+        utilidad en consumo; cuanto mayor es $\sigma$, más sensible es la
+        utilidad marginal ante cambios en $C_t$.
+  \item $\phi$ (phi) está asociado a la desutilidad del trabajo; cuanto mayor
+        es $\phi$, más empinada es la desutilidad marginal de trabajar, y
+        menor es la elasticidad (Frisch) de la oferta de trabajo.
+\end{itemize}
 
+\subsubsection*{II. Proceso de obtención (log-linealización)}
 
+La ecuación (9) se obtiene aplicando logaritmos a la
+\textbf{condición de optimalidad intratemporal específica} (ecuación (7)),
+derivada previamente a partir de la función de utilidad (ecuación (11)):
+\begin{equation}
+  \frac{W_t}{P_t} = C_t^{\sigma} N_t^{\phi}.
+  \tag{7}
+\end{equation}
 
+\paragraph{Paso 1: aplicar logaritmo natural a ambos lados.}
+
+Tomamos $\log(\cdot)$ en ambos lados de (7):
+\begin{equation}
+  \log \left( \frac{W_t}{P_t} \right)
+  \;=\;
+  \log \left( C_t^{\sigma} N_t^{\phi} \right).
+  \label{eq:log_saldo_inicial}
+\end{equation}
+
+\paragraph{Paso 2: usar propiedades básicas de logaritmos.}
+
+Utilizamos tres identidades elementales (que es útil que el lector tenga
+claras):
+\begin{align*}
+  \log\left(\frac{A}{B}\right) &= \log A - \log B, \\
+  \log(AB) &= \log A + \log B, \\
+  \log(A^x) &= x \log A.
+\end{align*}
+
+Aplicando estas propiedades en \eqref{eq:log_saldo_inicial}, obtenemos:
+\begin{align*}
+  \log \left( \frac{W_t}{P_t} \right)
+  &= \log W_t - \log P_t, \\
+  \log \left( C_t^{\sigma} N_t^{\phi} \right)
+  &= \sigma \log C_t + \phi \log N_t.
+\end{align*}
+Por lo tanto:
+\begin{equation}
+  \log W_t - \log P_t
+  \;=\;
+  \sigma \log C_t + \phi \log N_t.
+\end{equation}
+
+\paragraph{Paso 3: sustituir notación log-lineal.}
+
+Sustituyendo $w_t = \log W_t$, $p_t = \log P_t$,
+$c_t = \log C_t$ y $n_t = \log N_t$, llegamos a:
+\begin{equation}
+  w_t - p_t = \sigma c_t + \phi n_t,
+\end{equation}
+que corresponde a la ecuación (9).
+
+\subsubsection*{III. Interpretación didáctica y rigurosa}
+
+La ecuación (9) puede leerse como la \emph{función de oferta de trabajo} del
+hogar en términos logarítmicos:
+\begin{equation*}
+  \underbrace{w_t - p_t}_{\text{salario real (en log)}}
+  \;=\;
+  \underbrace{\sigma c_t}_{\text{efecto ingreso vía consumo}}
+  \;+\;
+  \underbrace{\phi n_t}_{\text{respuesta de la oferta de trabajo}}.
+\end{equation*}
+
+\begin{itemize}
+  \item \textbf{Relación con el salario real.}
+        Para un nivel dado de consumo $c_t$, un aumento del salario real
+        $w_t - p_t$ debe estar asociado a un aumento de $n_t$. Esto refleja
+        el \emph{efecto sustitución}: cuando el salario real sube, el ocio
+        se encarece y el hogar está dispuesto a ofrecer más trabajo.
+
+  \item \textbf{Efecto del consumo (efecto ingreso).}
+        El término $\sigma c_t$ recoge que, cuanto más alto es el consumo
+        (y, en cierto sentido, la ``riqueza'' del hogar), mayor debe ser el
+        salario real para inducir la misma cantidad de trabajo. Intuitivamente:
+        si el hogar ya consume mucho, necesita un incentivo mayor para sacrificar
+        ocio.
+
+  \item \textbf{Papel de $\phi$ y elasticidad de la oferta de trabajo.}
+        Como $\phi$ es el inverso de la elasticidad de la oferta de
+        trabajo, un valor elevado de $\phi$ implica que $n_t$ responde poco
+        a cambios en el salario real: la oferta de trabajo es relativamente
+        inelástica. En cambio, un $\phi$ pequeño implica una oferta de trabajo
+        más sensible a los cambios en $w_t - p_t$.
+\end{itemize}
+
+\subsubsection*{IV. Invarianza a choques de preferencias}
+
+Un punto clave es que la posición de la curva de oferta de trabajo en (9) es
+\textbf{invariante} frente a los choques de preferencias $Z_t$.
+Esto se debe a que el factor $Z_t$ se cancela en la razón
+$-U_{n,t}/U_{c,t}$ al derivar la condición intratemporal (7). Por tanto:
+\begin{itemize}
+  \item $Z_t$ \emph{no} altera la decisión óptima de cuánto trabajar dado un
+        salario real en el período $t$ (ecuación (9));
+  \item en cambio, sí afecta las decisiones \emph{intertemporales} de consumo
+        y ahorro a través de la ecuación de Euler (ecuación (8)).
+\end{itemize}
+Desde el punto de vista didáctico, esto permite separar claramente:
+(i) la determinación del salario real y la oferta de trabajo dentro del período,
+y (ii) las decisiones de ahorro/consumo entre períodos, que son las que sí
+resultan sensibles a los choques de preferencias $Z_t$.
+
+\subsubsection*{Interpretación gráfica de la ecuación (9)}
+
+Recordemos la forma log-lineal de la condición de oferta de trabajo:
+\begin{equation}
+  w_t - p_t = \sigma c_t + \phi n_t.
+  \tag{9}
+\end{equation}
+Para fijar ideas, conviene reescribirla como:
+\begin{equation}
+  w_t - p_t
+  \;=\;
+  \underbrace{\sigma c_t}_{\text{término constante}}
+  \;+\;
+  \underbrace{\phi n_t}_{\text{pendiente por unidad de empleo}}.
+  \label{eq:ls_lineal}
+\end{equation}
+Si fijamos el nivel de consumo $c_t$, la ecuación \eqref{eq:ls_lineal} describe
+una recta en el plano cuyo eje horizontal es el empleo $n_t$ y cuyo eje
+vertical es el salario real $w_t - p_t$:
+\begin{itemize}
+  \item La \textbf{pendiente} de la curva es $\phi$.
+  \item La \textbf{ordenada al origen} (intersección con el eje vertical) es
+        $\sigma c_t$.
+\end{itemize}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{ls_n_vs_w}%
+  \caption{Oferta de trabajo competitiva: salario real vs.\ empleo,
+           para un consumo dado $c_t$.}
+  \label{fig:ls_n_vs_w}
+\end{figure}
+
+En la Figura~\ref{fig:ls_n_vs_w} se representa el salario real de equilibrio
+$w_t - p_t$ en función del empleo $n_t$, manteniendo fijo el nivel de consumo
+$c_t$. La curva es creciente: para que el hogar esté dispuesto a ofrecer más
+trabajo (mayor $n_t$), el mercado debe ofrecer un salario real más alto. Esta
+relación recoge el \emph{efecto sustitución}: al subir el salario real, el ocio
+se vuelve más caro y el hogar decide trabajar más.
+
+\subsubsection*{Desplazamientos por cambios en el consumo $c_t$}
+
+Si comparamos dos niveles de consumo, $c_t^{\text{bajo}}$ y $c_t^{\text{alto}}$,
+con $c_t^{\text{alto}} > c_t^{\text{bajo}}$, la ecuación (9) implica:
+\[
+  (w_t - p_t)^{\text{alto}}
+  = \sigma c_t^{\text{alto}} + \phi n_t,
+  \qquad
+  (w_t - p_t)^{\text{bajo}}
+  = \sigma c_t^{\text{bajo}} + \phi n_t.
+\]
+
+Como $\sigma > 0$, un mayor $c_t$ desplaza la curva hacia arriba: para cualquier
+nivel dado de empleo $n_t$, el salario real compatible con la optimalidad
+intratemporal es más alto. Gráficamente:
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{ls_shift_c}%
+  \caption{Desplazamiento de la oferta de trabajo ante un aumento en el consumo
+           $c_t$.}
+  \label{fig:ls_shift_c}
+\end{figure}
+
+En la Figura~\ref{fig:ls_shift_c} se muestra cómo una curva de oferta de trabajo
+asociada a un bajo consumo $c_t^{\text{bajo}}$ (línea inferior) se desplaza
+hacia arriba cuando el consumo aumenta a $c_t^{\text{alto}}$ (línea superior).
+Económicamente:
+\begin{itemize}
+  \item Si el hogar ya consume más (es “más rico”), necesita un salario real
+        más alto para estar dispuesto a trabajar la misma cantidad de horas.
+  \item Esto es precisamente el \textbf{efecto ingreso}: una mayor riqueza
+        tiende a reducir la oferta de trabajo a un salario real dado.
+\end{itemize}
+
+\subsubsection*{El papel de $\phi$: curvatura y elasticidad de la oferta de trabajo}
+
+El parámetro $\phi$ controla la sensibilidad de la oferta de trabajo al salario
+real. De (9), si mantenemos $c_t$ fijo, podemos interpretar:
+\[
+  w_t - p_t = \sigma c_t + \phi n_t
+  \quad\Longrightarrow\quad
+  \frac{\partial (w_t - p_t)}{\partial n_t} = \phi.
+\]
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\textwidth]{ls_phi_pendiente}%
+  \caption{Curvas de oferta de trabajo con distinta pendiente $\phi$.}
+  \label{fig:ls_phi}
+\end{figure}
+
+En la Figura~\ref{fig:ls_phi} se comparan dos curvas de oferta de trabajo que
+pasan por un mismo punto de referencia, pero con diferente valor de $\phi$:
+\begin{itemize}
+  \item Una curva con \emph{baja} $\phi$ es más plana: pequeños cambios en el
+        salario real generan cambios relativamente grandes en el empleo $n_t$.
+        La oferta de trabajo es \textbf{más elástica}.
+  \item Una curva con \emph{alta} $\phi$ es más empinada: incluso cambios
+        grandes en el salario real producen cambios modestos en $n_t$.
+        La oferta de trabajo es \textbf{más inelástica}.
+\end{itemize}
+
+Dado que $\phi$ es el inverso de la elasticidad de la oferta de
+trabajo, estas comparaciones gráficas ayudan a visualizar cómo la estructura
+de preferencias del hogar se traduce en distintas sensibilidades de la oferta
+de trabajo ante variaciones en el salario real.
+
+\subsubsection*{Ecuación (10): Ecuación de Euler log-linealizada}
+
+Partimos de la ecuación de Euler específica:
+\begin{equation}
+  Q_t = \beta E_t \left\{
+    \left(
+      \frac{C_{t+1}}{C_t}
+    \right)^{-\sigma}
+    \left(
+      \frac{Z_{t+1}}{Z_t}
+    \right)
+    \left(
+      \frac{P_t}{P_{t+1}}
+    \right)
+  \right\},
+  \label{eq:euler8}
+\end{equation}
+y queremos obtener su versión log-lineal, que en el texto se reporta como:
+\begin{equation}
+  c_t
+  =
+  E_t\{c_{t+1}\}
+  - \frac{1}{\sigma}
+    \bigl(
+      i_t - E_t\{\pi_{t+1}\} - \rho
+    \bigr)
+  + \frac{1}{\sigma}(1 - \rho_z)\,z_t .
+  \tag{10}\label{eq:euler10}
+\end{equation}
+
+\paragraph{Notación log-lineal.}
+Recordamos que las letras minúsculas denotan logaritmos:
+\[
+  c_t \equiv \log C_t, \quad
+  p_t \equiv \log P_t, \quad
+  z_t \equiv \log Z_t.
+\]
+La inflación es
+\[
+  \pi_{t+1} \equiv p_{t+1} - p_t,
+\]
+y la tasa de interés nominal se define a partir del precio del bono
+$Q_t$ como
+\[
+  I_t \equiv \frac{1}{Q_t}
+  \quad\Rightarrow\quad
+  i_t \equiv \log I_t = - \log Q_t .
+\]
+Además, definimos
+\[
+  \rho \equiv - \log \beta,
+\]
+de modo que $\rho$ es la “tasa de descuento” en términos logarítmicos.
+
+\paragraph{Desglose de términos en \eqref{eq:euler10}.}
+
+\begin{table}[H]
+  \centering
+  \small
+  \begin{tabular}{l p{0.68\textwidth}}
+    \hline
+    Símbolo & Definición y papel económico \\
+    \hline
+    $c_t$ 
+      & $\log C_t$. Consumo actual (en logaritmos). \\
+    $E_t\{c_{t+1}\}$ 
+      & Consumo futuro esperado. Resume las expectativas del hogar sobre su senda de consumo. \\
+    $i_t$ 
+      & Logaritmo de la tasa de interés nominal bruta: $i_t = -\log Q_t$. Es el costo de oportunidad de consumir hoy en lugar de ahorrar. \\
+    $E_t\{\pi_{t+1}\}$ 
+      & Inflación esperada entre $t$ y $t+1$, donde $\pi_{t+1} = p_{t+1} - p_t$. Mide la pérdida esperada de poder adquisitivo de los activos nominales. \\
+    $\rho$ 
+      & $\rho = -\log \beta$. Captura la impaciencia del hogar: cuanto mayor es $\rho$, más valora el consumo presente respecto al futuro. \\
+    $z_t$ 
+      & $\log Z_t$. Choque de preferencias (``shifter''), que modifica la utilidad marginal del consumo. \\
+    $\sigma$ 
+      & Curvatura de la utilidad del consumo. Controla la aversión al riesgo y la elasticidad de sustitución intertemporal ($1/\sigma$). \\
+    $\rho_z$ 
+      & Parámetro de persistencia del proceso AR(1) de $z_t$: $z_t = \rho_z z_{t-1} + \varepsilon_{z,t}$. \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsubsection*{Derivación paso a paso}
+
+\paragraph{1. Reescribir la ecuación de Euler en términos logarítmicos.}
+
+Partimos de \eqref{eq:euler8} y usamos que
+\[
+  \frac{C_{t+1}}{C_t}
+  = \exp(c_{t+1}-c_t),\quad
+  \frac{Z_{t+1}}{Z_t}
+  = \exp(z_{t+1}-z_t),\quad
+  \frac{P_t}{P_{t+1}}
+  = \exp(-\pi_{t+1}).
+\]
+Sustituyendo en \eqref{eq:euler8}:
+\[
+  Q_t
+  =
+  \beta E_t\left\{
+    \exp\bigl(
+      -\sigma(c_{t+1}-c_t)
+      + (z_{t+1}-z_t)
+      - \pi_{t+1}
+    \bigr)
+  \right\}.
+\]
+
+Definimos $i_t \equiv -\log Q_t$ y $\rho \equiv -\log \beta$. Entonces
+$\log Q_t = -i_t$ y $\log \beta = -\rho$, y podemos escribir
+\[
+  \exp(-i_t)
+  =
+  \exp(-\rho)\,
+  E_t\left\{
+    \exp\bigl(
+      -\sigma(c_{t+1}-c_t)
+      + (z_{t+1}-z_t)
+      - \pi_{t+1}
+    \bigr)
+  \right\}.
+\]
+
+Multiplicando ambos lados por $\exp(\rho)$:
+\[
+  \exp(\rho - i_t)
+  =
+  E_t\left\{
+    \exp\bigl(
+      -\sigma(c_{t+1}-c_t)
+      + (z_{t+1}-z_t)
+      - \pi_{t+1}
+    \bigr)
+  \right\}.
+\]
+
+\textit{(Nota didáctica: aquí simplemente hemos pasado de una igualdad en
+términos de $Q_t$ y $\beta$ a una igualdad en términos de sus logaritmos
+$i_t$ y $\rho$. Esto facilita la aproximación lineal posterior.)}
+
+\paragraph{2. Aproximación de primer orden (log-linealización).}
+
+El siguiente paso consiste en aproximar la expresión anterior alrededor de un
+estado estacionario con inflación y crecimiento del consumo constantes. Para
+pequeñas desviaciones en torno a ese estado estacionario, usamos que
+\[
+  \exp(x) \approx 1 + x 
+  \quad\text{cuando $x$ es pequeño.}
+\]
+
+La igualdad anterior se puede reescribir de forma esquemática como:
+\[
+  1
+  =
+  E_t\left\{
+    \exp\bigl(
+      i_t - \rho
+      -\sigma(c_{t+1}-c_t)
+      - \pi_{t+1}
+      + (z_{t+1}-z_t)
+    \bigr)
+  \right\},
+\]
+donde hemos reorganizado términos para que el lado izquierdo sea $1$.
+Aplicando la aproximación de primer orden $\exp(x)\approx 1+x$ y tomando
+desviaciones respecto al estado estacionario, obtenemos aproximadamente:
+\begin{equation}
+  0
+  \;\approx\;
+  E_t\left\{
+    i_t - \rho
+    - \sigma(c_{t+1}-c_t)
+    - \pi_{t+1}
+    + (z_{t+1}-z_t)
+  \right\}.
+  \label{eq:euler_bruta_lin}
+\end{equation}
+
+\textit{(Nota didáctica: la ecuación \eqref{eq:euler_bruta_lin} dice que,
+en promedio, la combinación lineal de la tasa de interés, el crecimiento
+del consumo, la inflación y el choque de preferencias debe ser cercana a cero
+si el hogar está optimizando intertemporalmente.)}
+
+\paragraph{3. Reorganizar en términos de consumo.}
+
+Tomando expectativas condicionales a la información en $t$,
+\eqref{eq:euler_bruta_lin} se puede escribir como:
+\[
+  0
+  \approx
+  i_t - \rho
+  - \sigma\bigl(E_t\{c_{t+1}\} - c_t\bigr)
+  - E_t\{\pi_{t+1}\}
+  + E_t\{z_{t+1}\} - z_t .
+\]
+
+Despejamos el término de consumo:
+\begin{align*}
+  \sigma\bigl(E_t\{c_{t+1}\} - c_t\bigr)
+  &\approx
+  i_t - E_t\{\pi_{t+1}\} - \rho
+  + E_t\{z_{t+1}\} - z_t, \\
+  E_t\{c_{t+1}\} - c_t
+  &\approx
+  \frac{1}{\sigma}
+  \left[
+    i_t - E_t\{\pi_{t+1}\} - \rho
+    + E_t\{z_{t+1}\} - z_t
+  \right].
+\end{align*}
+
+\paragraph{4. Uso del proceso AR(1) para el choque de preferencias.}
+
+Suponemos que el choque de preferencias $z_t$ sigue un proceso AR(1):
+\[
+  z_t = \rho_z z_{t-1} + \varepsilon_{z,t},
+\]
+de donde se obtiene
+\[
+  E_t\{z_{t+1}\} = \rho_z z_t
+  \quad\Rightarrow\quad
+  E_t\{z_{t+1}\} - z_t = (\rho_z - 1) z_t = - (1-\rho_z) z_t.
+\]
+
+Sustituyendo en la expresión anterior:
+\[
+  E_t\{c_{t+1}\} - c_t
+  \approx
+  \frac{1}{\sigma}
+  \left[
+    i_t - E_t\{\pi_{t+1}\} - \rho
+    - (1-\rho_z) z_t
+  \right].
+\]
+
+Cambiamos de lado $c_t$ y multiplicamos por $-1$:
+\[
+  c_t
+  \approx
+  E_t\{c_{t+1}\}
+  - \frac{1}{\sigma}
+    \bigl(i_t - E_t\{\pi_{t+1}\} - \rho\bigr)
+  + \frac{1}{\sigma}(1-\rho_z)\,z_t,
+\]
+que es precisamente la ecuación (10),
+\eqref{eq:euler10}.
+
+\subsubsection*{Interpretación económica de la ecuación (10)}
+
+Es útil reescribir \eqref{eq:euler10} usando la tasa de interés real esperada:
+\[
+  r_t \equiv i_t - E_t\{\pi_{t+1}\}.
+\]
+Entonces:
+\begin{equation}
+  c_t
+  =
+  E_t\{c_{t+1}\}
+  - \frac{1}{\sigma}(r_t - \rho)
+  + \frac{1}{\sigma}(1-\rho_z)\,z_t .
+  \label{eq:euler10_real}
+\end{equation}
+
+\begin{itemize}
+  \item El término $r_t - \rho$ mide cuánto se desvía la tasa de interés
+        real esperada $r_t$ de la tasa de descuento del hogar $\rho$.
+        Si $r_t$ aumenta por encima de $\rho$, el término
+        $-\frac{1}{\sigma}(r_t - \rho)$ es negativo:
+        el hogar reduce el consumo actual $c_t$ en relación con el consumo
+        futuro esperado $E_t\{c_{t+1}\}$ para aprovechar el mayor rendimiento
+        del ahorro. Esto es la \textbf{sustitución intertemporal del consumo}.
+  \item El término $\frac{1}{\sigma}(1-\rho_z)\,z_t$ refleja el efecto del
+        choque de preferencias. Si $z_t$ aumenta (el hogar valora más el
+        consumo actual) y $0 \le \rho_z < 1$, el término es positivo: 
+        para que la condición de Euler vuelva a cumplirse, el consumo actual
+        $c_t$ debe aumentar, reduciendo así la utilidad marginal del consumo.
+  \item El parámetro $\sigma$ aparece en el denominador: cuanto mayor es
+        $\sigma$ (mayor aversión al riesgo y menor elasticidad de sustitución
+        intertemporal), \emph{menor} es la respuesta de $c_t$ a un cambio dado
+        en $(r_t - \rho)$ o en $z_t$. Es decir, las decisiones de consumo son
+        menos sensibles a la tasa de interés real y a los choques de
+        preferencias.
+\end{itemize}
+
+\textit{En resumen:} la ecuación (10) muestra cómo el consumo actual se ajusta
+para equilibrar tres fuerzas: (i) las expectativas de consumo futuro,
+(ii) la comparación entre la tasa de interés real esperada y la tasa de
+descuento del hogar y (iii) los choques de preferencias que hacen más o menos
+atractivo consumir hoy.
+
+\subsubsection*{Ecuación (11): demanda de saldos reales log-linealizada}
+
+En la versión del modelo donde la política monetaria se formula en términos
+de la oferta de dinero, es necesario introducir una ecuación de demanda de
+saldos reales. De forma log-lineal (ignorando una constante aditiva para no
+cargar la notación), Galí postula:
+\begin{equation}
+  m_t - p_t = c_t - \eta i_t .
+  \tag{11}\label{eq:money_demand}
+\end{equation}
+
+\paragraph{Notación y símbolos.}
+
+Recordamos que las letras minúsculas denotan logaritmos naturales de las
+variables correspondientes:
+\[
+  m_t \equiv \log M_t, \quad
+  p_t \equiv \log P_t, \quad
+  c_t \equiv \log C_t,
+  \quad
+  i_t \equiv \log I_t,
+\]
+donde $M_t$ es la cantidad de dinero nominal, $P_t$ el nivel de precios,
+$C_t$ el consumo y $I_t$ la tasa de interés nominal bruta.
+
+\begin{table}[H]
+  \centering
+  \small
+  \begin{tabularx}{0.9\textwidth}{lX}
+    \hline
+    Símbolo & Definición y papel económico \\
+    \hline
+    $m_t$ 
+      & $\log M_t$. Logaritmo de la cantidad nominal de dinero. \\
+    $p_t$ 
+      & $\log P_t$. Logaritmo del nivel de precios. \\
+    $m_t - p_t$ 
+      & $\log(M_t/P_t)$. Saldos reales demandados: poder adquisitivo que los
+        agentes mantienen en forma de dinero. \\
+    $c_t$ 
+      & $\log C_t$. Logaritmo del consumo (escala de la actividad económica).
+        Funciona como proxy de ingreso / volumen de transacciones. \\
+    $i_t$ 
+      & Logaritmo de la tasa de interés nominal bruta. Representa el
+        \emph{costo de oportunidad} de mantener dinero en lugar de bonos. \\
+    $\eta$ (eta)
+      & \emph{Semielasticidad de la demanda de dinero respecto a la tasa de
+        interés}, con $\eta \ge 0$. Mide cuán sensible es la demanda de
+        saldos reales ante cambios en $i_t$. \\
+    \hline
+  \end{tabularx}
+\end{table}
+
+\subsubsection*{De dónde sale la forma funcional}
+
+En esta sección del capítulo, la ecuación \eqref{eq:money_demand} se introduce
+de manera \emph{reducida}: no se deriva explícitamente de un problema de
+optimización, sino que se postula como una relación empíricamente razonable
+entre saldos reales, nivel de actividad y tasa de interés.
+
+Una forma estándar de partir es una función de demanda de dinero del tipo:
+\[
+  \frac{M_t}{P_t}
+  = \Phi(C_t, i_t),
+\]
+donde:
+\begin{itemize}
+  \item $\Phi$ crece con el nivel de gasto/transacciones ($C_t$),
+  \item $\Phi$ decrece con la tasa de interés nominal ($i_t$), que mide el
+        rendimiento de los activos alternativos al dinero.
+\end{itemize}
+
+Si se asume una forma log-lineal simple:
+\begin{equation}
+  \log\left(\frac{M_t}{P_t}\right)
+  = \alpha + \psi\,c_t - \eta\,i_t,
+  \label{eq:money_demand_general}
+\end{equation}
+con $\psi > 0$ y $\eta \ge 0$, entonces:
+
+- el término $\psi c_t$ recoge el \textbf{motivo transacción}:
+  más consumo $\Rightarrow$ más dinero demandado;
+- el término $-\eta i_t$ recoge el \textbf{motivo de costo de oportunidad}:
+  si sube $i_t$, mantener dinero es más caro $\Rightarrow$ menos saldos reales.
+
+En el texto se simplifica esta expresión normalizando la pendiente respecto a
+$c_t$ a la unidad ($\psi = 1$) y absorbiendo la constante $\alpha$ en el
+nivel estacionario de las variables. Con esa normalización, la ecuación
+\eqref{eq:money_demand_general} se reduce exactamente a:
+\[
+  m_t - p_t = c_t - \eta i_t,
+\]
+que es la ecuación (11).
+
+\subsubsection*{Interpretación económica didáctica}
+
+La ecuación \eqref{eq:money_demand} puede leerse como:
+\[
+  \text{(saldos reales demandados)}
+  =
+  \text{(escala de la actividad)}
+  -
+  \text{(penalización por el costo de oportunidad del dinero)}.
+\]
+
+\begin{itemize}
+  \item \textbf{Efecto del consumo ($c_t$).}  
+        Si $c_t$ aumenta (el hogar está consumiendo más, la economía está
+        más activa), la demanda de saldos reales aumenta uno a uno:
+        \[
+          \frac{\partial (m_t - p_t)}{\partial c_t} = 1.
+        \]
+        Didácticamente: más compras $\Rightarrow$ hace falta más dinero
+        en la cartera para efectuar esas transacciones.
+
+  \item \textbf{Efecto de la tasa de interés nominal ($i_t$).}  
+        El término $-\eta i_t$ indica que, si sube $i_t$, los saldos reales
+        demandados caen:
+        \[
+          \frac{\partial (m_t - p_t)}{\partial i_t} = -\eta < 0.
+        \]
+        Intuición: a mayor tasa de interés, más caro es “tener el dinero
+        parado” en saldos líquidos en lugar de colocarlo en bonos que pagan
+        interés. Entonces los hogares reducen su demanda de dinero.
+
+  \item \textbf{El papel de $\eta$ (eta).}  
+        Cuanto mayor es $\eta$, más sensible es la demanda de dinero al costo
+        de oportunidad. Una $\eta$ pequeña describe una demanda de dinero
+        poco sensible a $i_t$ (dinero casi “necesario” independientemente del
+        interés); una $\eta$ grande describe una demanda que responde mucho
+        a los cambios en la tasa de interés.
+\end{itemize}
+
+\subsubsection*{Comentario sobre microfundamentos}
+
+Más adelante en el capítulo (cuando se introduce una función de utilidad que
+incluye explícitamente los saldos reales, o una restricción de tipo
+\emph{cash-in-advance}), puede mostrarse que una ecuación de la forma
+\eqref{eq:money_demand} aparece como condición de primer orden del problema
+del hogar. Es decir, en una versión más rica del modelo, la demanda de dinero
+no es sólo una ecuación “ad hoc”, sino el resultado de maximizar utilidad
+sujeto a restricciones tecnológicas y financieras.
+
+Para los fines de la parte básica del capítulo, sin embargo, basta trabajar
+con la versión reducida:
+\[
+  m_t - p_t = c_t - \eta i_t,
+\]
+que permite cerrar el modelo cuando la autoridad monetaria fija una senda
+para la oferta de dinero en lugar de fijar directamente la tasa de interés.
 
 
 
@@ -1171,8 +2029,8 @@ $Q_t$ en equilibrio.
 
 \section{Conclusion}
 
-\begin{thebibliography}{99}
-\bibitem{} Reference here.
-\end{thebibliography}
+%\begin{thebibliography}{99}
+%\bibitem{} Reference here.
+%\end{thebibliography}
 
 \end{document}
