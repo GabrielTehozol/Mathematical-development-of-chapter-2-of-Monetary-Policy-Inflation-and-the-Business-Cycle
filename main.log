@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.8)  18 NOV 2025 12:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.8)  28 NOV 2025 07:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -229,6 +229,10 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
+
+
+LaTeX Warning: Label `eq:produccion_log' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -419,7 +423,187 @@ Overfull \hbox (90.92285pt too wide) detected at line 1972
 
 [30]
 
-[31] (./main.aux
+[31]
+
+[32]
+
+[33]
+
+[34]
+
+[35]
+
+[36]
+
+[37]
+
+[38]
+
+[39]
+
+[40]
+
+[41]
+
+[42]
+
+[43]
+
+[44]
+
+[45]
+
+[46]
+
+[47]
+
+[48]
+
+[49]
+
+[50]
+
+[51]
+
+[52]
+
+[53]
+
+[54]
+
+[55]
+
+[56]
+Underfull \hbox (badness 5548) in paragraph at lines 3802--3803
+[]|\T1/cmr/m/n/12 Nivel de con-sumo to-tal
+ []
+
+
+
+[57]
+
+[58]
+
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 4018--4019
+[]|\T1/cmr/m/n/12 Afecta la desu-til-i-dad
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 4021--4022
+\T1/cmr/m/n/12 marginal del con-sumo al
+ []
+
+
+
+[60]
+
+[61]
+
+[62]
+Underfull \hbox (badness 4013) in paragraph at lines 4195--4196
+[]|\T1/cmr/m/n/12 Corrige la tasa nom-i-nal
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 4201--4202
+\T1/cmr/m/n/12 hog-ar (tasa de de-s-cuen-to
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 4204--4205
+\T1/cmr/m/n/12 tertem-po-rales (choque de
+ []
+
+
+
+[63]
+
+[64]
+
+[65]
+
+[66]
+
+[67]
+
+[68]
+Underfull \hbox (badness 3138) in paragraph at lines 4586--4587
+[]|\T1/cmr/m/n/12 Multiplicador de pro-duc-
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 4592--4593
+[]|\T1/cmr/m/n/12 Mide la per-sis-ten-cia del
+ []
+
+
+
+[69]
+
+[70]
+
+[71]
+
+[72]
+
+[73]
+<inflacion_vs_precio_optimo_eq7.png, id=426, 433.62pt x 330.2739pt>
+File: inflacion_vs_precio_optimo_eq7.png Graphic file (type png)
+<use inflacion_vs_precio_optimo_eq7.png>
+Package pdftex.def Info: inflacion_vs_precio_optimo_eq7.png  used on input line 4887.
+(pdftex.def)             Requested size: 328.82707pt x 250.46648pt.
+
+
+[74 <./inflacion_vs_precio_optimo_eq7.png>]
+Underfull \hbox (badness 3138) in paragraph at lines 4921--4922
+[]|\T1/cmr/m/n/12 Variación log-a-rít-mi-ca del
+ []
+
+
+Underfull \hbox (badness 3417) in paragraph at lines 4924--4925
+\T1/cmr/m/n/12 de em-pre-sas que re-op-ti-
+ []
+
+
+
+[75]
+
+[76]
+<inflacion_vs_gap_precios_eq8.png, id=438, 425.1885pt x 331.9602pt>
+File: inflacion_vs_gap_precios_eq8.png Graphic file (type png)
+<use inflacion_vs_gap_precios_eq8.png>
+Package pdftex.def Info: inflacion_vs_gap_precios_eq8.png  used on input line 5096.
+(pdftex.def)             Requested size: 328.82707pt x 256.74477pt.
+
+
+[77]
+Underfull \hbox (badness 2894) in paragraph at lines 5127--5128
+[]|\T1/cmr/m/n/12 Cantidad de-man-da-da del
+ []
+
+
+Underfull \hbox (badness 2435) in paragraph at lines 5132--5133
+[]|\T1/cmr/m/n/12 Índice de pre-cios agre-ga-do de la
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 5133--5134
+[]|\T1/cmr/m/n/12 Referencia para el pre-cio
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 5139--5140
+[]|\T1/cmr/m/n/12 Determina la sen-si-bil-i-dad
+ []
+
+
+
+[78 <./inflacion_vs_gap_precios_eq8.png>]
+
+[79]
+
+[80] (./main.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
@@ -427,20 +611,24 @@ LaTeX Info: Redefining \% on input line 8.
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 5490 strings out of 475322
- 87543 string characters out of 5769397
- 492606 words of memory out of 5000000
- 28280 multiletter control sequences out of 15000+600000
- 579825 words of font info for 91 fonts, out of 8000000 for 9000
+ 5566 strings out of 475322
+ 89131 string characters out of 5769397
+ 496506 words of memory out of 5000000
+ 28346 multiletter control sequences out of 15000+600000
+ 582907 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 57i,12n,65p,366b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti2074.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (31 pages, 510344 bytes).
+ 57i,16n,65p,635b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti2074.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (80 pages, 917335 bytes).
 PDF statistics:
- 783 PDF objects out of 1000 (max. 8388607)
- 192 compressed objects within 2 object streams
+ 1047 PDF objects out of 1200 (max. 8388607)
+ 323 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -158,3 +158,55 @@ plt.tight_layout()
 plt.savefig("ls_phi_pendiente.png", dpi=300)
 plt.savefig("ls_phi_pendiente.pdf")
 plt.close()
+
+
+# Parámetros
+theta = 0.75
+epsilon = 6.0
+one_minus_eps = 1.0 - epsilon
+
+# Rango de precios relativos P*_t / P_{t-1}
+p_rel = np.linspace(0.9, 1.2, 200)  # de -10% a +20% respecto al nivel previo
+
+# Inflación implícita por la ecuación (7)
+# Pi^{1-eps} = theta + (1-theta)*(p_rel)^{1-eps}
+Pi_power = theta + (1 - theta) * (p_rel ** one_minus_eps)
+Pi = Pi_power ** (1.0 / one_minus_eps)
+
+plt.figure()
+plt.plot(p_rel, Pi)
+plt.axhline(1.0, linestyle='--', linewidth=0.8)
+plt.axvline(1.0, linestyle='--', linewidth=0.8)
+plt.xlabel(r'Relación de precios $P_t^* / P_{t-1}$')
+plt.ylabel(r'Inflación bruta $\Pi_t$')
+plt.title(r'Ley de movimiento del nivel de precios bajo Calvo (Ecuación (7))')
+plt.grid(True)
+plt.savefig('inflacion_vs_precio_optimo_eq7.png', dpi=300, bbox_inches='tight')
+plt.close()
+
+
+
+
+
+
+
+# Parámetro de rigidez Calvo
+theta = 0.75
+one_minus_theta = 1.0 - theta
+
+# Rango de gaps de precios p_t^* - p_{t-1}
+gap = np.linspace(-0.10, 0.10, 200)  # de -10% a +10% en términos logarítmicos aproximados
+
+# Inflación implícita por la ecuación (8)
+pi = one_minus_theta * gap
+
+plt.figure()
+plt.plot(gap, pi)
+plt.axhline(0, linewidth=0.8)
+plt.axvline(0, linewidth=0.8)
+plt.xlabel(r'Gap de precios $p_t^* - p_{t-1}$')
+plt.ylabel(r'Inflación $\pi_t$')
+plt.title(r'Relación lineal: $\pi_t = (1-\theta)(p_t^* - p_{t-1})$')
+plt.grid(True)
+plt.savefig('inflacion_vs_gap_precios_eq8.png', dpi=300, bbox_inches='tight')
+plt.close()
