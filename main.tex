@@ -5242,13 +5242,4402 @@ Y_{t+k\mid t}
 
 Podemos fijar \(P_{t+k}=1\) sin pérdida de generalidad (normalización) y representar \(Y\) en función de \(P_t^*\). 
 
+%========================================
+% Ecuación (10)
+%========================================
+\subsubsection*{Ecuación (10): Condición de primer orden para el precio óptimo bajo Calvo}
+
+La Ecuación (10) es la condición de primer orden que determina el precio óptimo \(P_t^*\) fijado por las empresas que tienen la oportunidad de reajustar en el periodo \(t\). Bajo rigideces de precios a la Calvo, este precio se elige tomando en cuenta que, con probabilidad \(\theta^k\), seguirá vigente en los periodos futuros \(t+k\). La condición de optimalidad se escribe como:
+\begin{equation}
+\sum_{k=0}^{\infty} \theta^k
+E_t\!\left\{
+  \Lambda_{t,t+k}\,
+  Y_{t+k\mid t}\,
+  \frac{1}{P_{t+k}}\,
+  \bigl(P_t^* - M_{t+k\mid t}\bigr)
+\right\}
+= 0.
+\tag{10}
+\end{equation}
+
+\subsubsection*{Tabla de símbolos relevantes (Ecuación 10)}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{p{0.19\textwidth} p{0.41\textwidth} p{0.30\textwidth}}
+    \hline
+    \textbf{Término} & \textbf{Definición rigurosa} & \textbf{Rol económico} \\
+    \hline
+    \(P_t^*\) 
+      & Precio nominal fijado en \(t\) por las empresas que reoptimizan. 
+      & Variable de elección de la empresa; se mantiene fijo mientras no pueda reajustar. \\
+    \(Y_{t+k\mid t}\) 
+      & Producción (ventas) en el periodo \(t+k\) de una empresa cuyo último reajuste se realizó en \(t\). 
+      & Cantidad demandada de su bien al precio \(P_t^*\). \\
+    \(M_{t+k\mid t}\) 
+      & Costo marginal nominal de la empresa en el periodo \(t+k\), dado que su último reajuste fue en \(t\). 
+      & Costo de producir una unidad adicional de output. \\
+    \(P_{t+k}\) 
+      & Índice de precios agregado de la economía en el periodo \(t+k\). 
+      & Deflactor de magnitudes nominales a reales. \\
+    \(\Lambda_{t,t+k}\) 
+      & Factor estocástico de descuento: \(\Lambda_{t,t+k} \equiv \beta^k \frac{U_{c,t+k}}{U_{c,t}}\). 
+      & Convierte magnitudes reales futuras en valor presente desde el punto de vista del hogar. \\
+    \(\theta \in [0,1)\) 
+      & Probabilidad de \emph{no} poder reajustar el precio en un periodo. 
+      & Determina la duración esperada del precio \(P_t^*\): \(1/(1-\theta)\). \\
+    \(M \equiv \dfrac{\epsilon}{\epsilon - 1}\) 
+      & Markup deseado bajo competencia monopolística y precios flexibles. 
+      & Relaciona el precio óptimo con el costo marginal en el caso sin rigideces. \\
+    \hline
+  \end{tabular}
+  \caption{Símbolos usados en la Ecuación (10).}
+\end{table}
+
+\subsubsection*{Problema de la empresa y construcción de la condición de primer orden}
+
+\paragraph{1. Flujo de beneficios y rigidez de Calvo}
+
+Considere una empresa representativa que en el periodo \(t\) tiene la oportunidad de reajustar su precio. Si decide fijar \(P_t^*\), este precio seguirá vigente en los periodos futuros mientras la empresa no vuelva a tener oportunidad de reajustar. Bajo Calvo:
+
+\begin{itemize}
+  \item Con probabilidad \(1-\theta\), en el siguiente periodo podrá reajustar de nuevo.
+  \item Con probabilidad \(\theta\), el precio \(P_t^*\) seguirá vigente.
+\end{itemize}
+
+La probabilidad de que el precio fijado en \(t\) continúe vigente en el periodo \(t+k\) es \(\theta^k\). Dado esto, el valor presente (desde \(t\)) de los beneficios reales esperados generados por el precio \(P_t^*\) es:
+\begin{equation}
+\max_{P_t^*}
+\;
+\sum_{k=0}^{\infty} \theta^k\,
+E_t\!\left\{
+  \Lambda_{t,t+k}\,
+  \left[
+    \frac{P_t^*}{P_{t+k}}\,Y_{t+k\mid t}
+    \;-\;
+    \frac{M_{t+k\mid t}}{P_{t+k}}\,Y_{t+k\mid t}
+  \right]
+\right\}.
+\tag{10.a}
+\end{equation}
+
+Dentro de corchetes se encuentra el beneficio real en \(t+k\):
+\[
+\underbrace{\frac{P_t^*}{P_{t+k}} Y_{t+k\mid t}}_{\text{ingreso real}}
+-
+\underbrace{\frac{M_{t+k\mid t}}{P_{t+k}} Y_{t+k\mid t}}_{\text{costo real}}.
+\]
+
+\paragraph{2. Derivada respecto a \(P_t^*\): intuición}
+
+Para obtener la condición de primer orden, derivamos el valor presente de beneficios reales con respecto a \(P_t^*\). Nótese que \(P_t^*\) afecta los beneficios de dos maneras:
+
+\begin{itemize}
+  \item Directamente, a través del término de ingreso \(\frac{P_t^*}{P_{t+k}} Y_{t+k\mid t}\).
+  \item Indirectamente, a través de la cantidad demandada \(Y_{t+k\mid t}\), que depende de \(P_t^*\) mediante la restricción de demanda (Ecuación (9)):
+  \[
+  Y_{t+k\mid t}
+  =
+  \left(\frac{P_t^*}{P_{t+k}}\right)^{-\epsilon} C_{t+k}.
+  \]
+\end{itemize}
+
+La derivada total de los beneficios reales de la empresa en \(t+k\) con respecto a \(P_t^*\) es, esquemáticamente:
+\begin{align}
+\frac{\partial}{\partial P_t^*}
+\left[
+  \left(\frac{P_t^*}{P_{t+k}}
+         - \frac{M_{t+k\mid t}}{P_{t+k}}\right) Y_{t+k\mid t}
+\right]
+&=
+\underbrace{\frac{1}{P_{t+k}} Y_{t+k\mid t}}_{\text{efecto directo}}
++
+\underbrace{\left(\frac{P_t^*}{P_{t+k}}
+              - \frac{M_{t+k\mid t}}{P_{t+k}}\right)
+            \frac{\partial Y_{t+k\mid t}}{\partial P_t^*}}_{\text{efecto vía demanda}}.
+\tag{10.b}
+\end{align}
+
+La parte clave es el efecto vía demanda, pues \(Y_{t+k\mid t}\) responde al cambio en el precio a través de la elasticidad de sustitución \(\epsilon\). Sustituyendo la forma de la demanda, se obtiene:
+\[
+\frac{\partial Y_{t+k\mid t}}{\partial P_t^*}
+=
+-\epsilon
+\left(\frac{P_t^*}{P_{t+k}}\right)^{-\epsilon-1}
+\frac{1}{P_{t+k}} C_{t+k}
+=
+-\epsilon
+\frac{1}{P_t^*}\,
+Y_{t+k\mid t}.
+\]
+
+Reemplazando en (10.b), y reordenando factores comunes, se puede escribir la derivada de los beneficios en una forma proporcional a:
+\[
+\frac{Y_{t+k\mid t}}{P_{t+k}}
+\bigl(P_t^* - M_{t+k\mid t}\bigr),
+\]
+donde el coeficiente de proporcionalidad (que depende de \(\epsilon\)) no altera el hecho de que la condición de primer orden establezca la suma igual a cero.
+
+\paragraph{3. Condición de primer orden agregada}
+
+Al imponer que la derivada del valor presente (10.a) respecto a \(P_t^*\) sea igual a cero, obtenemos:
+\begin{align}
+0
+&=
+\sum_{k=0}^{\infty}
+\theta^k\,
+E_t\!\left\{
+  \Lambda_{t,t+k}\,
+  Y_{t+k\mid t}\,
+  \frac{1}{P_{t+k}}\,
+  \bigl(P_t^* - M_{t+k\mid t}\bigr)
+\right\},
+\tag{10.c}
+\end{align}
+que coincide con la Ecuación (10). Esta condición puede interpretarse como la igualdad (en promedio descontado) entre el \emph{beneficio marginal} y el \emph{costo marginal} de aumentar el precio \(P_t^*\).
+
+\subsubsection*{Interpretación económica de la Ecuación (10)}
+
+La Ecuación (10) resume el comportamiento de fijación de precios bajo rigideces a la Calvo:
+
+\[
+\sum_{k=0}^{\infty} \theta^k
+E_t\!\left\{
+  \Lambda_{t,t+k}\,
+  Y_{t+k\mid t}\,
+  \frac{1}{P_{t+k}}\,
+  \bigl(P_t^* - M_{t+k\mid t}\bigr)
+\right\}
+= 0.
+\]
+
+\begin{itemize}
+  \item \textbf{Carácter prospectivo (forward-looking):}  
+  El precio \(P_t^*\) no se fija mirando sólo al coste actual, sino a la \emph{trayectoria esperada} de costos marginales nominales \(M_{t+k\mid t}\), cantidades \(Y_{t+k\mid t}\) y nivel de precios \(P_{t+k}\), ponderados por el factor de descuento del hogar \(\Lambda_{t,t+k}\) y por la probabilidad \(\theta^k\) de que el precio siga vigente.
+
+  \item \textbf{Peso de cada periodo futuro:}  
+  El término \(\theta^k \Lambda_{t,t+k} Y_{t+k\mid t} / P_{t+k}\) actúa como un \emph{peso} que indica cuán importante es el periodo \(t+k\) en la decisión de precios de hoy.  
+  \begin{itemize}
+    \item \(\theta^k\) captura la probabilidad de que el precio fijado en \(t\) permanezca hasta \(t+k\).
+    \item \(\Lambda_{t,t+k}\) refleja el descuento intertemporal desde el punto de vista del hogar accionista.
+    \item \(Y_{t+k\mid t} / P_{t+k}\) da el tamaño del mercado (en unidades reales) relevante para la empresa en ese periodo.
+  \end{itemize}
+
+  \item \textbf{Interpretación del término \(\bigl(P_t^* - M_{t+k\mid t}\bigr)\):}  
+  Este término mide el \emph{margen nominal} entre el precio fijado y el costo marginal nominal en \(t+k\).  
+  La Ecuación (10) exige que el promedio (descontado y ponderado) de ese margen, multiplicado por el volumen de ventas, sea nulo. En equilibrio, la empresa elige \(P_t^*\) de modo que esta condición se satisfaga, lo que equivale a fijar un precio que internaliza su efecto sobre la cantidad demandada y los beneficios futuros.
+
+  \item \textbf{Caso límite: precios flexibles (\(\theta = 0\)):}  
+  Si no hubiera rigideces de Calvo (\(\theta = 0\)), sólo el término \(k=0\) aparece en la suma:
+  \[
+  E_t\!\left\{
+    \Lambda_{t,t}\,
+    Y_{t\mid t}\,
+    \frac{1}{P_t}\,
+    \bigl(P_t^* - M_{t\mid t}\bigr)
+  \right\}
+  = 0.
+  \]
+  Como \(\Lambda_{t,t} = 1\) y los demás factores son positivos, esto implica:
+  \[
+  P_t^* = M_{t\mid t},
+  \]
+  es decir, el precio óptimo iguala al costo marginal nominal (o, si se incluye explícitamente el markup deseado \(M = \epsilon/(\epsilon - 1)\), el precio se fija como un markup constante sobre el costo marginal).  
+  Bajo precios flexibles, la fijación de precios es “estática” y no mira hacia el futuro, en contraste con el caso \(\theta>0\).
+
+  \item \textbf{Punto de partida de la Curva de Phillips Nuevo Keynesiana:}  
+  Al log-linealizar la Ecuación (10) y combinarla con la Ecuación (8), se obtiene una relación entre inflación y costo marginal real (o brecha del producto), que es la Curva de Phillips Nuevo Keynesiana. En esa forma, el precio óptimo \(p_t^*\) aparece como una combinación ponderada de los costos marginales esperados, y su efecto sobre la inflación se canaliza a través de la rigidez de precios (\(\theta\)).
+\end{itemize}
+
+\subsubsection*{Sugerencia de gráfico y código: precio óptimo como promedio ponderado de costos marginales esperados}
+
+Si resolvemos algebraicamente la Ecuación (10) en su versión log-lineal (que el texto desarrolla en ecuaciones posteriores), el precio óptimo en términos reales puede interpretarse como una media ponderada de los costos marginales reales esperados. Para ilustrar esta idea de forma simple, podemos suponer una trayectoria dada de costos marginales reales \(\{mc_{t+k}\}\) y mostrar cómo el precio real óptimo \(p_t^*\) se aproxima a un promedio ponderado de esos \(mc_{t+k}\).
+
+%========================================
+% Ecuación (11)
+%========================================
+\subsubsection*{Ecuación (11): Regla log-linealizada de fijación de precios óptimos}
+
+La Ecuación (11) es la versión log-linealizada de la condición de primer orden de fijación de precios (Ecuación (10)). Expresa el \emph{precio óptimo en logaritmos} que fija una empresa que reajusta en \(t\), \(p_t^*\), como la suma de:
+\begin{itemize}
+  \item el logaritmo del markup deseado \(\mu\), y
+  \item un promedio ponderado de los costos marginales (en log) esperados, \(\psi_{t+k\mid t}\).
+\end{itemize}
+
+Formalmente:
+\begin{equation}
+p_t^*
+=
+\mu
++
+(1 - \beta\theta)
+\sum_{k=0}^{\infty}
+(\beta\theta)^k
+E_t\{\psi_{t+k\mid t}\}.
+\tag{11}
+\end{equation}
+
+\subsubsection*{Tabla de símbolos relevantes (Ecuación 11)}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{p{0.19\textwidth} p{0.41\textwidth} p{0.30\textwidth}}
+    \hline
+    \textbf{Término} & \textbf{Definición rigurosa} & \textbf{Rol económico} \\
+    \hline
+    \(p_t^*\)
+      & Logaritmo del precio óptimo \(P_t^*\) fijado por las empresas que reajustan en \(t\). 
+      & Variable de elección en el problema de fijación de precios. \\
+    \(\mu\)
+      & Logaritmo del markup deseado o “natural”; si \(M \equiv \dfrac{\epsilon}{\epsilon-1}\), entonces \(\mu \equiv \log M\). 
+      & Nivel (en log) del margen de beneficio al que la empresa aspira en el estado estacionario. \\
+    \(\psi_{t+k\mid t}\)
+      & Logaritmo del costo marginal nominal \(M_{t+k\mid t}\) para una empresa que reajustó por última vez en \(t\). Puede interpretarse como el costo marginal (en log) relevante para fijar precios. 
+      & Resume la información sobre los costos futuros que la empresa intenta trasladar a sus precios. \\
+    \(\beta \in (0,1)\)
+      & Factor de descuento intertemporal del hogar (y, por tanto, de los accionistas de la empresa). 
+      & Descuenta el valor de los beneficios futuros. \\
+    \(\theta \in [0,1)\)
+      & Probabilidad de \emph{no} poder reajustar el precio en un periodo. 
+      & Determina la duración esperada de un precio y el peso de los periodos futuros en la decisión actual. \\
+    \((\beta\theta)^k\)
+      & Producto del descuento intertemporal \(\beta^k\) y de la probabilidad de que el precio siga vigente \(\theta^k\). 
+      & Peso relativo de los costos marginales en el periodo \(t+k\) en la decisión de \(p_t^*\). \\
+    \(1 - \beta\theta\)
+      & Factor de normalización. 
+      & Garantiza que los pesos \((1-\beta\theta)(\beta\theta)^k\) sumen a uno. \\
+    \hline
+  \end{tabular}
+  \caption{Símbolos usados en la Ecuación (11).}
+\end{table}
+
+\subsubsection*{De la condición de primer orden no lineal a la regla log-lineal de precios}
+
+\paragraph{1. Recordatorio de la condición de primer orden (Ecuación 10)}
+
+La Ecuación (10) impone que la suma descontada y ponderada de los márgenes nominales esperados sea igual a cero:
+\begin{equation}
+\sum_{k=0}^{\infty} \theta^k
+E_t\!\left\{
+  \Lambda_{t,t+k}\,
+  Y_{t+k\mid t}\,
+  \frac{1}{P_{t+k}}\,
+  \bigl(P_t^* - M_{t+k\mid t}\bigr)
+\right\}
+= 0.
+\tag{10}
+\end{equation}
+Aquí, \(\Lambda_{t,t+k}\) es el factor estocástico de descuento, \(Y_{t+k\mid t}\) las ventas futuras cuando el último reajuste fue en \(t\), \(P_{t+k}\) el nivel de precios agregado y \(M_{t+k\mid t}\) el costo marginal nominal.
+
+\paragraph{2. Estado estacionario y expansión de primer orden}
+
+La log-linealización se efectúa alrededor de un estado estacionario con:
+\begin{itemize}
+  \item inflación cero (o constante), de modo que \(P_t = \bar{P}\), \(P_{t+k} = \bar{P}\),
+  \item factor de descuento determinista: \(\Lambda_{t,t+k} = \beta^k\),
+  \item costo marginal nominal constante \(\bar{M}\) y precio \(\bar{P}\) que satisfacen la condición de markup deseado:
+  \[
+  \bar{P} = M \cdot \bar{MC}, 
+  \quad M \equiv \frac{\epsilon}{\epsilon-1},
+  \]
+  y en logaritmos:
+  \[
+  \bar{p} = \mu + \bar{\psi},
+  \]
+  donde \(\bar{p} \equiv \log \bar{P}\) y \(\bar{\psi} \equiv \log \bar{MC}\).
+\end{itemize}
+
+To\-mamos desviaciones (en log) respecto a ese estado estacionario. Denotamos:
+\[
+p_t^* - \bar{p}, 
+\quad
+\psi_{t+k\mid t} - \bar{\psi},
+\]
+como las desviaciones de precio óptimo y de costo marginal.
+
+\paragraph{3. Linealización de la condición de primer orden}
+
+Usando que, cerca del estado estacionario, factores como
+\[
+\frac{\Lambda_{t,t+k}Y_{t+k\mid t}}{P_{t+k}}
+\]
+pueden aproximarse por su valor estacionario \(\beta^k \bar{Y} / \bar{P}\) más términos de orden superior, la condición (10) puede escribirse, a primer orden, como:
+\begin{equation}
+\sum_{k=0}^{\infty}
+\theta^k \beta^k
+E_t\!\left\{
+  \bigl(p_t^* - \psi_{t+k\mid t} - \mu\bigr)
+\right\}
+= 0,
+\tag{11.a}
+\end{equation}
+donde:
+\begin{itemize}
+  \item hemos pasado de niveles nominales \((P_t^*, M_{t+k\mid t})\) a logaritmos \((p_t^*, \psi_{t+k\mid t})\),
+  \item \(\mu\) recoge el término constante asociado al markup deseado.
+\end{itemize}
+
+La interpretación de (11.a) es: el promedio (ponderado por \((\beta\theta)^k\)) de la diferencia entre el precio óptimo en log \(p_t^*\) y el “nivel deseado” \(\mu + \psi_{t+k\mid t}\) debe ser cero.
+
+\paragraph{4. Resolución para \(p_t^*\) como promedio ponderado}
+
+Reescribimos (11.a) separando \(p_t^*\) de los costos:
+\begin{align}
+0
+&=
+\sum_{k=0}^{\infty}
+(\beta\theta)^k
+E_t\!\left\{
+  p_t^* - \mu - \psi_{t+k\mid t}
+\right\} \notag\\[0.2cm]
+&=
+\left[
+  p_t^* - \mu
+\right]
+\sum_{k=0}^{\infty} (\beta\theta)^k
+-
+\sum_{k=0}^{\infty}
+(\beta\theta)^k
+E_t\{\psi_{t+k\mid t}\}.
+\tag{11.b}
+\end{align}
+El primer término usa que \(p_t^* - \mu\) es común para todos los \(k\). La suma geométrica es:
+\[
+\sum_{k=0}^{\infty} (\beta\theta)^k
+=
+\frac{1}{1-\beta\theta},
+\quad \text{para } |\beta\theta|<1.
+\]
+
+Sustituyendo:
+\begin{equation}
+\left(p_t^* - \mu\right)\frac{1}{1-\beta\theta}
+=
+\sum_{k=0}^{\infty}
+(\beta\theta)^k
+E_t\{\psi_{t+k\mid t}\}.
+\tag{11.c}
+\end{equation}
+Multiplicando ambos lados por \(1-\beta\theta\), obtenemos:
+\begin{equation}
+p_t^*
+=
+\mu
++
+(1-\beta\theta)
+\sum_{k=0}^{\infty}
+(\beta\theta)^k
+E_t\{\psi_{t+k\mid t}\},
+\end{equation}
+que es precisamente la Ecuación (11).
+
+Obsérvese que los pesos:
+\[
+\omega_k \equiv (1-\beta\theta)(\beta\theta)^k,
+\]
+satisfacen:
+\[
+\sum_{k=0}^{\infty} \omega_k
+=
+(1-\beta\theta)\sum_{k=0}^{\infty}(\beta\theta)^k
+=
+(1-\beta\theta)\frac{1}{1-\beta\theta}
+=
+1,
+\]
+lo que confirma que la suma es un \emph{promedio ponderado} de los costos marginales esperados.
+
+\subsubsection*{Interpretación económica de la Ecuación (11)}
+
+La Ecuación (11):
+\[
+p_t^*
+=
+\mu
++
+(1-\beta\theta)
+\sum_{k=0}^{\infty}
+(\beta\theta)^k
+E_t\{\psi_{t+k\mid t}\},
+\]
+resume en forma compacta la lógica de fijación de precios bajo rigideces:
+
+\begin{itemize}
+  \item \textbf{Precio óptimo como markup sobre costos esperados:}  
+  El precio en log fijado por la empresa es el markup deseado \(\mu\) más un promedio ponderado de los costos marginales (en log) que se esperan a lo largo de la vida útil del precio (mientras no se pueda reajustar).
+
+  \item \textbf{Prospectivo (“forward-looking”):}  
+  La empresa no sólo considera el costo actual, sino toda la trayectoria esperada \(\{\psi_{t+k\mid t}\}_{k\ge 0}\), con pesos decrecientes \((\beta\theta)^k\).  
+  \begin{itemize}
+    \item \(\theta^k\) refleja la probabilidad de que el precio siga vigente en \(t+k\).
+    \item \(\beta^k\) incorpora el descuento intertemporal.
+  \end{itemize}
+
+  \item \textbf{Importancia de la rigidez \(\theta\):}  
+  Cuando \(\theta\) es grande (precios muy rígidos), los periodos futuros reciben mucho peso, y el precio actual se fija de forma más “promediada” frente a shocks transitorios de costos.  
+  Si \(\theta\to 0\) (precios casi flexibles), los pesos se concentran en \(k=0\) y:
+  \[
+  p_t^* \approx \mu + \psi_{t\mid t},
+  \]
+  es decir, el precio se ajusta casi exclusivamente al costo marginal actual más el markup.
+
+  \item \textbf{Vínculo directo con la Curva de Phillips NK:}  
+  La Ecuación (11), combinada con la Ecuación (8),
+  \[
+  \pi_t = (1-\theta)\,(p_t^* - p_{t-1}),
+  \]
+  y con las relaciones que conectan \(\psi_{t+k\mid t}\) con el costo marginal real y la brecha del producto, permite derivar la Curva de Phillips Nuevo Keynesiana:
+  \[
+  \pi_t = \beta E_t\{\pi_{t+1}\} + \kappa \,\hat{mc}_t,
+  \]
+  donde \(\hat{mc}_t\) es el costo marginal real (o una función de la brecha del producto), y \(\kappa\) depende de \(\theta\), \(\beta\) y \(\epsilon\). En este sentido, la Ecuación (11) es el “eslabón microeconómico” que transforma información sobre costos en dinámica de inflación.
+\end{itemize}
+
+\subsubsection*{Sugerencia de gráfico y código: pesos de \((\beta\theta)^k\) en el promedio de costos}
+
+Una forma de visualizar la Ecuación (11) es representar los pesos:
+\[
+\omega_k = (1-\beta\theta)(\beta\theta)^k
+\]
+como función del horizonte \(k\). Esto muestra qué tan importante es cada periodo futuro en la fijación del precio presente.
+
+%========================================
+% Ecuación (12)
+%========================================
+\subsubsection*{Ecuación (12): Equilibrio en el mercado de bienes}
+
+La Ecuación (12) impone la condición de equilibrio (\emph{market clearing}) en el mercado agregado de bienes. En el modelo básico nuevo keynesiano considerado, el \emph{único} componente de la demanda de bienes es el consumo del hogar representativo, por lo que la producción agregada debe igualar al consumo agregado:
+
+\begin{equation}
+Y_t = C_t.
+\tag{12}
+\end{equation}
+
+\subsubsection*{Tabla de símbolos relevantes (Ecuación 12)}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{p{0.19\textwidth} p{0.41\textwidth} p{0.30\textwidth}}
+    \hline
+    \textbf{Término} & \textbf{Definición rigurosa} & \textbf{Rol económico} \\
+    \hline
+    \(Y_t\)
+      & Índice de producto agregado en el periodo \(t\). Se obtiene agregando la producción de todos los bienes diferenciados \(i \in [0,1]\) mediante un índice de tipo CES. 
+      & Representa la oferta total de bienes finales disponible en la economía en el periodo \(t\). \\[0.1cm]
+    \(C_t\)
+      & Índice de consumo agregado del hogar representativo en el periodo \(t\), definido también a partir de un índice CES sobre el vector de consumos \(\{C_t(i)\}_{i\in[0,1]}\). 
+      & Representa la demanda total de bienes finales; en este modelo coincide con el uso total de la producción. \\
+    \hline
+  \end{tabular}
+  \caption{Símbolos usados en la Ecuación (12).}
+\end{table}
+
+\subsubsection*{Origen microeconómico de la condición \(Y_t = C_t\)}
+
+\paragraph{1. Equilibrio bien por bien}
+
+Para cada bien diferenciado \(i\), la condición de equilibrio en el mercado requiere que:
+\begin{equation}
+Y_t(i) = C_t(i)
+\quad \text{para todo } i \in [0,1], \; \text{y para todo } t.
+\tag{12.a}
+\end{equation}
+Es decir, la cantidad producida del bien \(i\) debe igualar la cantidad consumida de ese mismo bien. No se consideran ni inversión, ni gasto público, ni exportaciones netas: toda la producción se destina al consumo privado.
+
+\paragraph{2. Agregación mediante el índice CES}
+
+El consumo agregado se define a partir de un índice de elasticidad de sustitución constante (CES). Por ejemplo, el índice de consumo agregado es:
+\begin{equation}
+C_t
+=
+\left(
+\int_0^1
+C_t(i)^{\frac{\epsilon-1}{\epsilon}}\, \mathrm{d}i
+\right)^{\!\frac{\epsilon}{\epsilon-1}},
+\tag{12.b}
+\end{equation}
+y, de modo análogo, el producto agregado puede definirse (dado el equilibrio bien por bien) como:
+\begin{equation}
+Y_t
+=
+\left(
+\int_0^1
+Y_t(i)^{\frac{\epsilon-1}{\epsilon}}\, \mathrm{d}i
+\right)^{\!\frac{\epsilon}{\epsilon-1}}.
+\tag{12.c}
+\end{equation}
+
+Sustituyendo la condición de equilibrio individual \(Y_t(i) = C_t(i)\) en \eqref{12.c}, se obtiene:
+\begin{align}
+Y_t
+&=
+\left(
+\int_0^1
+\bigl(Y_t(i)\bigr)^{\frac{\epsilon-1}{\epsilon}}\, \mathrm{d}i
+\right)^{\!\frac{\epsilon}{\epsilon-1}}
+=
+\left(
+\int_0^1
+\bigl(C_t(i)\bigr)^{\frac{\epsilon-1}{\epsilon}}\, \mathrm{d}i
+\right)^{\!\frac{\epsilon}{\epsilon-1}}
+=
+C_t.
+\tag{12.d}
+\end{align}
+Por lo tanto, el índice de producto agregado coincide exactamente con el índice de consumo agregado:
+\[
+Y_t = C_t,
+\]
+que es la Ecuación (12).
+
+\subsubsection*{Interpretación económica de la Ecuación (12)}
+
+La condición
+\[
+Y_t = C_t
+\]
+tiene varias implicaciones económicas importantes en el modelo:
+
+\begin{itemize}
+  \item \textbf{Equilibrio del mercado de bienes:}  
+  La producción total de la economía se destina completamente al consumo del hogar representativo. No hay otros usos de la producción (inversión, gasto público, exportaciones netas), de modo que el mercado de bienes se limpia exclusivamente a través del consumo.
+
+  \item \textbf{Identidad oferta–demanda:}  
+  En cada periodo, la oferta agregada de bienes \(Y_t\) debe igualar la demanda agregada \(C_t\). Esto implica que cualquier cambio en la demanda de consumo se refleja uno a uno en la producción, sujeto a las restricciones tecnológicas y a las rigideces nominales del modelo.
+
+  \item \textbf{Puente entre decisiones intertemporales y producto:}  
+  La Ecuación (3), que proviene de la condición de Euler del hogar, estaba formulada en términos de consumo:
+  \[
+  c_t
+  =
+  E_t\{c_{t+1}\}
+  - \frac{1}{\sigma}
+    \bigl(i_t - E_t\{\pi_{t+1}\} - \rho\bigr)
+  + \frac{1}{\sigma}(1-\rho_z)z_t.
+  \]
+  Al tomar logaritmos de \(Y_t = C_t\) y definir \(y_t \equiv \log Y_t\), \(c_t \equiv \log C_t\), se tiene:
+  \[
+  y_t = c_t.
+  \]
+  De este modo, la ecuación de Euler puede reescribirse directamente en términos del producto:
+  \begin{equation}
+  y_t
+  =
+  E_t\{y_{t+1}\}
+  - \frac{1}{\sigma}
+    \bigl(i_t - E_t\{\pi_{t+1}\} - \rho\bigr)
+  + \frac{1}{\sigma}(1-\rho_z)z_t,
+  \tag{13}
+  \end{equation}
+  que es la \emph{Ecuación IS Dinámica} (DIS). La Ecuación (12) es, por tanto, la pieza que permite traducir la decisión intertemporal de consumo del hogar en una relación entre producto actual, expectativas de producto futuro y tasa de interés real.
+
+  \item \textbf{Simplicidad contable del modelo básico:}  
+  Esta especificación de equilibrio (sin inversión ni gasto público) hace que la demanda agregada coincida exactamente con el consumo privado, lo que simplifica la estructura del modelo. En extensiones más ricas (con inversión, gasto público o sector externo), la condición de equilibrio se generaliza a:
+  \[
+  Y_t = C_t + I_t + G_t + NX_t,
+  \]
+  pero en el modelo básico nuevo keynesiano utilizado aquí se abstrae de esos componentes para focalizarse en el vínculo entre política monetaria, demanda agregada y precios.
+\end{itemize}
+
+%========================================
+% Ecuación (13)
+%========================================
+\subsubsection*{Ecuación (13): Ecuación IS Dinámica (DIS) en términos de producto}
+
+La Ecuación (13) constituye la versión log-lineal de la \emph{Ecuación IS Dinámica} (DIS) del modelo nuevo keynesiano básico. Relaciona el nivel actual de producto con:
+\begin{itemize}
+  \item las expectativas de producto futuro,
+  \item la tasa de interés real esperada, y
+  \item los shocks de preferencias intertemporales.
+\end{itemize}
+
+En su forma estándar:
+\begin{equation}
+y_t
+=
+E_t\{y_{t+1}\}
+-
+\frac{1}{\sigma}
+\bigl(
+  i_t - E_t\{\pi_{t+1}\} - \rho
+\bigr)
++
+\frac{1}{\sigma}(1 - \rho_z)z_t.
+\tag{13}
+\label{eq:DIS_13}
+\end{equation}
+
+\subsubsection*{Tabla de símbolos relevantes (Ecuación 13)}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{p{0.19\textwidth} p{0.41\textwidth} p{0.30\textwidth}}
+    \hline
+    \textbf{Término} & \textbf{Definición rigurosa} & \textbf{Rol económico} \\
+    \hline
+    \(y_t\)
+      & Logaritmo del producto agregado \(Y_t\). 
+      & Nivel de demanda/oferta agregada actual de la economía. \\
+    \(E_t\{y_{t+1}\}\)
+      & Valor esperado, dado \(t\), del logaritmo del producto agregado en \(t+1\). 
+      & Producción (demanda agregada) esperada para el periodo siguiente; ancla las decisiones actuales. \\
+    \(i_t\)
+      & Tasa de interés nominal a corto plazo (en desviaciones logarítmicas respecto al estado estacionario). 
+      & Componente nominal de la tasa de interés real relevante para las decisiones intertemporales. \\
+    \(E_t\{\pi_{t+1}\}\)
+      & Inflación esperada para el periodo \(t+1\), \(\pi_{t+1} \equiv p_{t+1} - p_t\). 
+      & Ajusta la tasa nominal para obtener la tasa de interés real esperada. \\
+    \(\rho\)
+      & Tasa de descuento subjetiva, \(\rho \equiv -\log \beta\). 
+      & Nivel de referencia de la tasa de interés real consistente con preferencias y estado estacionario. \\
+    \(z_t\)
+      & Shock (en log) a las preferencias intertemporales, asociado al shifter \(Z_t\). Sigue un proceso AR(1): \(z_t = \rho_z z_{t-1} + \varepsilon_{z,t}\). 
+      & Shock de demanda agregada vía preferencias por el consumo presente vs. futuro. \\
+    \(\rho_z\)
+      & Coeficiente autorregresivo del proceso para \(z_t\). 
+      & Mide la persistencia de los shocks de preferencias. \\
+    \(\sigma > 0\)
+      & Parámetro que es el inverso de la elasticidad de sustitución intertemporal del consumo. 
+      & Determina la sensibilidad de \(y_t\) ante variaciones en la tasa de interés real. \\
+    \hline
+  \end{tabular}
+  \caption{Símbolos usados en la Ecuación (13).}
+\end{table}
+
+\subsubsection*{Derivación de la Ecuación IS Dinámica a partir de las ecuaciones (3) y (12)}
+
+La Ecuación (13) se obtiene combinando:
+\begin{itemize}
+  \item la condición de Euler del hogar (Ecuación (3)), formulada en términos de consumo,
+  \item y la condición de equilibrio en el mercado de bienes (Ecuación (12)), que iguala producto y consumo agregados.
+\end{itemize}
+
+\paragraph{1. Condición de Euler en términos de consumo (Ecuación 3)}
+
+La Ecuación (3) expresa la decisión óptima intertemporal del hogar en términos de consumo:
+\begin{equation}
+c_t
+=
+E_t\{c_{t+1}\}
+-
+\frac{1}{\sigma}
+\bigl(
+  i_t - E_t\{\pi_{t+1}\} - \rho
+\bigr)
++
+\frac{1}{\sigma}(1 - \rho_z)z_t,
+\tag{3}
+\label{eq:Euler_consumo}
+\end{equation}
+donde \(c_t \equiv \log C_t\) es el logaritmo del consumo agregado.
+
+\paragraph{2. Equilibrio en el mercado de bienes (Ecuación 12) y paso a logaritmos}
+
+La condición de equilibrio agregada es:
+\begin{equation}
+Y_t = C_t.
+\tag{12}
+\label{eq:market_clearing}
+\end{equation}
+Tomando logaritmos y trabajando en torno a un estado estacionario común, se tiene:
+\begin{equation}
+y_t = c_t,
+\quad
+E_t\{y_{t+1}\} = E_t\{c_{t+1}\},
+\tag{12'}
+\end{equation}
+donde \(y_t \equiv \log Y_t\).
+
+\paragraph{3. Sustitución de consumo por producto}
+
+Sustituimos \(c_t = y_t\) y \(E_t\{c_{t+1}\} = E_t\{y_{t+1}\}\) en la Ecuación de Euler \eqref{eq:Euler_consumo}. Obtenemos:
+\begin{align}
+y_t
+&=
+E_t\{y_{t+1}\}
+-
+\frac{1}{\sigma}
+\bigl(
+  i_t - E_t\{\pi_{t+1}\} - \rho
+\bigr)
++
+\frac{1}{\sigma}(1 - \rho_z)z_t.
+\tag{13}
+\end{align}
+Esta es exactamente la Ecuación IS Dinámica (13).
+
+\subsubsection*{Interpretación económica de la Ecuación IS Dinámica}
+
+La Ecuación \eqref{eq:DIS_13} puede leerse de manera intuitiva como:
+\[
+y_t
+=
+E_t\{y_{t+1}\}
+-
+\frac{1}{\sigma}
+\Bigl(r_t - \rho\Bigr)
++
+\frac{1}{\sigma}(1 - \rho_z)z_t,
+\]
+donde
+\[
+r_t \equiv i_t - E_t\{\pi_{t+1}\}
+\]
+es la tasa de interés real esperada (para el periodo \(t+1\)). Así, la ecuación se interpreta como:
+
+\begin{itemize}
+  \item \textbf{Carácter prospectivo (\emph{forward-looking}):}  
+  La producción actual \(y_t\) está positivamente relacionada con la producción esperada futura \(E_t\{y_{t+1}\}\).  
+  En equilibrio, los hogares eligen una senda de consumo (y por la Ecuación (12), de producto) que equilibra el costo intertemporal de consumir hoy vs. mañana. Si esperan que el producto futuro sea elevado, tienden a consumir más hoy, elevando el producto actual.
+
+  \item \textbf{Rol de la tasa de interés real:}  
+  El término
+  \[
+  - \frac{1}{\sigma}
+  \bigl(
+    i_t - E_t\{\pi_{t+1}\} - \rho
+  \bigr)
+  =
+  -\frac{1}{\sigma}(r_t - \rho)
+  \]
+  recoge el efecto de la tasa de interés real esperada \(r_t\) relativa a la tasa de descuento \(\rho\).  
+  \begin{itemize}
+    \item Si \(r_t > \rho\), el costo de oportunidad de consumir hoy (en términos de consumo futuro) es alto. Los hogares prefieren posponer consumo, lo que reduce \(y_t\) dado \(E_t\{y_{t+1}\}\).
+    \item Si \(r_t < \rho\), el consumo presente es relativamente barato en términos intertemporales, lo que eleva el producto actual.
+    \item El parámetro \(\sigma\) (inverso de la elasticidad de sustitución intertemporal) controla \emph{cuánto} reacciona el producto a una variación dada en la tasa real: cuanto mayor es \(\sigma\), menor es la sensibilidad de \(y_t\) ante cambios en \(r_t\).
+  \end{itemize}
+
+  \item \textbf{Impacto de shocks de preferencias \(z_t\):}  
+  El término
+  \[
+  \frac{1}{\sigma}(1 - \rho_z)z_t
+  \]
+  refleja el efecto de un shock de preferencias que altera el valor relativo que los hogares asignan al consumo en el tiempo.  
+  \begin{itemize}
+    \item Si \(z_t\) aumenta (por ejemplo, un mayor “apetito” por el consumo presente), el consumo y, por la Ecuación (12), el producto \(y_t\) se elevan.
+    \item El factor \((1-\rho_z)\) indica que sólo la parte \emph{no} puramente persistente del shock tiene efecto inmediato sobre la dinámica de consumo/producto en esta representación log-lineal.
+  \end{itemize}
+
+  \item \textbf{Conexión con la política monetaria:}  
+  La autoridad monetaria controla (directa o indirectamente) la tasa nominal \(i_t\). Dado \(E_t\{\pi_{t+1}\}\) y \(\rho\), la ecuación IS muestra el canal a través del cual la política monetaria, al modificar \(i_t\), altera la tasa real \(r_t\) y, por esa vía, la demanda agregada \(y_t\).
+
+  \item \textbf{Punto de partida para la versión en brechas:}  
+  Más adelante, al introducir el producto natural \(y_{n,t}\) y definir la brecha del producto \(\tilde{y}_t \equiv y_t - y_{n,t}\), la Ecuación (13) se reescribe en términos de \(\tilde{y}_t\) y de la \emph{tasa natural de interés} \(r_{n,t}\). Esto conduce a la forma canónica de la IS dinámica en brechas:
+  \[
+  \tilde{y}_t
+  =
+  E_t\{\tilde{y}_{t+1}\}
+  -
+  \frac{1}{\sigma}
+  \bigl(
+    i_t - E_t\{\pi_{t+1}\} - r_{n,t}
+  \bigr),
+  \]
+  donde la política monetaria es neutral sólo si alinea la tasa real ex post con la tasa natural \(r_{n,t}\).
+\end{itemize}
 
 
+%========================================
+% Ecuación (14)
+%========================================
+\subsubsection*{Ecuación (14): Relación producto–empleo bajo tecnología agregada}
 
-\section{Conclusion}
+La Ecuación (14) proporciona una relación aproximada de equilibrio entre el empleo agregado, el producto agregado y el nivel de tecnología. Es una restricción tecnológica que se obtiene a partir de la función de producción y de la agregación de las decisiones de las empresas:
 
-%\begin{thebibliography}{99}
-%\bibitem{} Reference here.
-%\end{thebibliography}
+\begin{equation}
+n_t
+=
+\frac{1}{1 - \alpha}\,\bigl(y_t - a_t\bigr).
+\tag{14}
+\label{eq:relacion_n_y_a_14}
+\end{equation}
+
+\subsubsection*{Tabla de símbolos relevantes (Ecuación 14)}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{p{0.19\textwidth} p{0.41\textwidth} p{0.30\textwidth}}
+    \hline
+    \textbf{Término} & \textbf{Definición rigurosa} & \textbf{Rol económico} \\
+    \hline
+    \(n_t\)
+      & Logaritmo del empleo agregado \(N_t\), entendido como horas trabajadas totales en la economía. 
+      & Insumo total de trabajo utilizado en la producción del bien final. \\[0.1cm]
+    \(y_t\)
+      & Logaritmo del producto agregado \(Y_t\). 
+      & Resultado de la producción agregada; coincide con la demanda agregada en equilibrio. \\[0.1cm]
+    \(a_t\)
+      & Logaritmo del nivel de tecnología agregada \(A_t\). 
+      & Captura variaciones exógenas en la productividad total de los factores. \\[0.1cm]
+    \(\alpha\)
+      & Parámetro tecnológico tal que \(1-\alpha\) es la elasticidad del producto con respecto al trabajo en la función de producción. 
+      & Determina en qué medida cambios en el trabajo afectan el producto, y viceversa. \\[0.1cm]
+    \(d_t\)
+      & (Sólo en la derivación) Término que recoge la dispersión de precios relativa entre firmas. 
+      & Mide ineficiencias debidas a la heterogeneidad de precios; es de orden superior y se descarta en la aproximación de primer orden. \\
+    \hline
+  \end{tabular}
+  \caption{Símbolos usados en la Ecuación (14) y en su derivación.}
+\end{table}
+
+\subsubsection*{Derivación a partir de la función de producción y la agregación}
+
+La Ecuación (14) se obtiene a partir de tres elementos:
+\begin{enumerate}
+  \item La función de producción a nivel de empresa.
+  \item La forma en que se agrega la producción de las distintas empresas.
+  \item Una aproximación de primer orden que ignora la dispersión de precios.
+\end{enumerate}
+
+\paragraph{1. Función de producción individual (Ecuación (5))}
+
+Cada empresa \(i\) produce un bien diferenciado utilizando trabajo como único factor variable:
+\begin{equation}
+Y_t(i) = A_t \, N_t(i)^{1-\alpha},
+\tag{5}
+\end{equation}
+donde \(A_t\) es el nivel de tecnología común y \(N_t(i)\) es el empleo de la empresa \(i\).
+
+Tomando logaritmos:
+\begin{equation}
+y_t(i)
+=
+\log Y_t(i)
+=
+a_t + (1-\alpha)\,n_t(i),
+\tag{14.a}
+\label{eq:log_prod_individual}
+\end{equation}
+con \(a_t \equiv \log A_t\) y \(n_t(i) \equiv \log N_t(i)\).
+
+\paragraph{2. Agregación del producto y aparición de la dispersión de precios}
+
+El producto agregado se construye a partir del agregado CES de los bienes diferenciados. Bajo competencia monopolística y demanda CES, puede mostrarse que el producto agregado se puede escribir como:
+\begin{equation}
+Y_t
+=
+A_t \, N_t^{1-\alpha} \, \Delta_t,
+\tag{14.b}
+\label{eq:Yt_con_dispersion}
+\end{equation}
+donde:
+\begin{itemize}
+  \item \(N_t\) es el empleo agregado, que recoge la utilización total de trabajo,
+  \item \(\Delta_t\) es un término de \emph{dispersión de precios}, definido como un funcional de los precios relativos \(\{P_t(i)/P_t\}\).
+\end{itemize}
+
+Definiendo \(d_t \equiv \log \Delta_t\), tomar logaritmos en \eqref{eq:Yt_con_dispersion} da:
+\begin{equation}
+y_t
+=
+a_t + (1-\alpha)n_t + d_t.
+\tag{14.c}
+\label{eq:relacion_y_a_n_d}
+\end{equation}
+
+Reordenando:
+\begin{equation}
+(1-\alpha)n_t
+=
+y_t - a_t - d_t.
+\tag{14.d}
+\end{equation}
+
+\paragraph{3. Aproximación de primer orden: ignorando \(d_t\)}
+
+El término \(d_t\) mide la ineficiencia asociada a la dispersión de precios derivada de las rigideces nominales (distintas empresas con precios distintos, alejados del óptimo común). Sin embargo, alrededor de un estado estacionario con inflación cero y precios relativamente homogéneos, dicho término es de \emph{orden superior} en la aproximación de primer orden.
+
+Por tanto, en el análisis linealizado se impone:
+\begin{equation}
+d_t \approx 0
+\quad \Rightarrow \quad
+(1-\alpha)n_t \approx y_t - a_t.
+\tag{14.e}
+\end{equation}
+
+Despejando \(n_t\):
+\begin{equation}
+n_t
+\approx
+\frac{1}{1-\alpha}\bigl(y_t - a_t\bigr),
+\tag{14.f}
+\end{equation}
+que, al adoptar la igualdad en la notación estándar de la solución linealizada, se escribe como:
+\begin{equation}
+n_t
+=
+\frac{1}{1-\alpha}\bigl(y_t - a_t\bigr),
+\tag{14}
+\end{equation}
+que es precisamente la Ecuación (14).
+
+\subsubsection*{Interpretación económica de la Ecuación (14)}
+
+La Ecuación \eqref{eq:relacion_n_y_a_14} ofrece una lectura directa en términos de tecnología y utilización del trabajo:
+
+\begin{itemize}
+  \item \textbf{Relación producto–empleo corregida por tecnología:}  
+  El término \(y_t - a_t\) recoge el componente del producto que no se explica por la tecnología (es decir, el “esfuerzo” en términos de insumo trabajo). La ecuación indica que el empleo (en logaritmos) es proporcional a esta “parte no explicada por la productividad”, con factor de proporcionalidad \(1/(1-\alpha)\).
+
+  \item \textbf{Productividad y necesidad de empleo:}  
+  Para un nivel dado de producto \(y_t\), un aumento en el nivel tecnológico \(a_t\) reduce la cantidad de trabajo necesaria:
+  \[
+  \frac{\partial n_t}{\partial a_t}
+  =
+  -\frac{1}{1-\alpha} < 0.
+  \]
+  Un shock tecnológico positivo permite sostener el mismo nivel de output con menos empleo (o un mayor output con el mismo empleo).
+
+  \item \textbf{Elasticidad del producto respecto al trabajo:}  
+  El parámetro \(1-\alpha\) es la elasticidad del producto respecto al trabajo en la función de producción Cobb–Douglas. Invirtiendo esta relación, la Ecuación (14) expresa la elasticidad del empleo con respecto al producto:
+  \[
+  \frac{\partial n_t}{\partial y_t}
+  =
+  \frac{1}{1-\alpha} > 1
+  \quad \text{si } 0 < \alpha < 1.
+  \]
+  Esto significa que para mantener una variación dada en \(y_t\), el empleo debe ajustarse más que proporcionalmente cuando la participación del trabajo en la producción (representada por \(1-\alpha\)) es menor.
+
+  \item \textbf{Papel en la determinación del costo marginal:}  
+  La relación entre \(y_t\), \(n_t\) y \(a_t\) es crucial para derivar el \emph{costo marginal real}. Combinando la Ecuación (14) con la condición de oferta de trabajo del hogar (Ecuación (2)),
+  \[
+  w_t - p_t = \sigma c_t + \phi n_t,
+  \]
+  se obtiene una expresión que vincula el salario real (por tanto, el costo marginal) con el producto y la tecnología. Esta relación es un insumo central para la Curva de Phillips Nuevo Keynesiana, en la que la inflación depende del costo marginal real y de sus expectativas futuras.
+
+  \item \textbf{Dispersión de precios e ineficiencia:}  
+  Aunque \(d_t\) se ignora en la aproximación de primer orden, su presencia en \eqref{eq:relacion_y_a_n_d} recuerda que, con precios rígidos y heterogéneos, la producción no se asigna eficientemente entre las empresas. En un análisis de segundo orden (bienestar), \(d_t\) deja de ser despreciable y las rigideces de precios se traducen en pérdidas de eficiencia reales.
+\end{itemize}
+
+%========================================
+% Ecuación (15)
+%========================================
+\subsubsection*{Ecuación (15): Costo marginal individual vs. costo marginal promedio}
+
+La Ecuación (15) describe cómo se relaciona el costo marginal nominal (en logaritmos) de una firma que fijó su precio por última vez en \(t\) con:
+\begin{itemize}
+  \item el costo marginal nominal promedio de la economía en \(t+k\), y
+  \item la posición relativa de su precio con respecto al nivel de precios agregado.
+\end{itemize}
+
+En forma compacta:
+\begin{equation}
+\psi_{t+k\mid t}
+=
+\psi_{t+k}
++
+\alpha\bigl(n_{t+k\mid t} - n_{t+k}\bigr)
+=
+\psi_{t+k}
++
+\frac{\alpha}{1-\alpha}\bigl(y_{t+k\mid t} - y_{t+k}\bigr)
+=
+\psi_{t+k}
+-
+\frac{\alpha\epsilon}{1-\alpha}\bigl(p^*_t - p_{t+k}\bigr).
+\tag{15}
+\label{eq:psi_15}
+\end{equation}
+
+\subsubsection*{Tabla de símbolos relevantes (Ecuación 15)}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{p{0.19\textwidth} p{0.41\textwidth} p{0.30\textwidth}}
+    \hline
+    \textbf{Término} & \textbf{Definición rigurosa} & \textbf{Rol económico} \\
+    \hline
+    \(\psi_{t+k\mid t}\)
+      & Logaritmo del costo marginal nominal de una firma que fijó su último precio en \(t\), evaluado en el periodo \(t+k\). 
+      & Costo marginal relevante para esa firma al producir con el precio fijo \(P^*_t\). \\[0.1cm]
+    \(\psi_{t+k}\)
+      & Logaritmo del costo marginal nominal promedio de la economía en el periodo \(t+k\). 
+      & Referencia agregada de costos marginales; sirve de “benchmark” para comparar a las firmas individuales. \\[0.1cm]
+    \(n_{t+k\mid t}\)
+      & Logaritmo del empleo de la firma que fijó su precio en \(t\), en el periodo \(t+k\). 
+      & Insumo trabajo utilizado por esa firma para atender su demanda futura. \\[0.1cm]
+    \(n_{t+k}\)
+      & Logaritmo del empleo agregado en el periodo \(t+k\). 
+      & Nivel de empleo promedio en la economía. \\[0.1cm]
+    \(y_{t+k\mid t}\)
+      & Logaritmo del output de la firma que fijó su precio en \(t\), en el periodo \(t+k\). 
+      & Producción individual resultante de la demanda a su precio relativo \(P^*_t\). \\[0.1cm]
+    \(y_{t+k}\)
+      & Logaritmo del output agregado en el periodo \(t+k\). 
+      & Nivel de producto total de la economía. \\[0.1cm]
+    \(p^*_t\)
+      & Logaritmo del precio óptimo fijado por la firma (o cohorte de firmas) que reajusta en \(t\). 
+      & Precio nominal individual que permanece fijo mientras no haya nueva oportunidad de ajuste. \\[0.1cm]
+    \(p_{t+k}\)
+      & Logaritmo del índice de precios agregado en \(t+k\). 
+      & Nivel promedio de precios de la economía en ese periodo. \\[0.1cm]
+    \(\alpha\)
+      & Parámetro tecnológico tal que \(1-\alpha\) es la elasticidad del producto respecto al trabajo en la función de producción. 
+      & Determina cómo se traduce una variación en el empleo en el costo marginal. \\[0.1cm]
+    \(\epsilon\)
+      & Elasticidad de sustitución entre los distintos bienes diferenciados. 
+      & Mide la sensibilidad de la demanda de un bien ante cambios en su precio relativo. \\
+    \hline
+  \end{tabular}
+  \caption{Símbolos usados en la Ecuación (15) y su derivación.}
+\end{table}
+
+\subsubsection*{Derivación paso a paso de la Ecuación (15)}
+
+La Ecuación (15) se construye a partir de tres piezas:
+\begin{enumerate}
+  \item la relación entre el costo marginal y el empleo de la firma,
+  \item la relación entre empleo y producto (individual y agregado),
+  \item y la restricción de demanda que vincula el producto relativo con el precio relativo.
+\end{enumerate}
+
+\paragraph{1. Costo marginal individual vs. promedio (primer tramo de (15))}
+
+De la teoría de la firma con función de producción Cobb--Douglas en trabajo,
+\[
+Y_t(i) = A_t N_t(i)^{1-\alpha},
+\]
+se obtiene que el costo marginal real (y, por tanto, el nominal en logaritmos) depende positivamente del salario real y negativamente del producto marginal del trabajo. Al log-linearizar alrededor de un estado estacionario común se obtiene una relación de la forma:
+\begin{equation}
+\psi_{t+k\mid t}
+=
+\psi_{t+k}
++
+\alpha\bigl(n_{t+k\mid t} - n_{t+k}\bigr),
+\tag{15.a}
+\label{eq:psi_vs_n}
+\end{equation}
+es decir, el costo marginal logarítmico de la firma que fijó precio en \(t\) difiere del costo marginal promedio en una magnitud proporcional a la desviación de su empleo respecto al empleo agregado. Cuanto mayor empleo relativo utiliza la firma, mayor será su costo marginal relativo.
+
+\paragraph{2. Uso de la relación producto–empleo (segunda igualdad de (15))}
+
+Recordemos la relación aproximada producto–empleo–tecnología (Ecuación (14)), aplicada tanto al nivel individual como al agregado:
+\begin{align}
+n_{t+k\mid t} &= \frac{1}{1-\alpha}\bigl(y_{t+k\mid t} - a_{t+k}\bigr), \tag{15.b}\\
+n_{t+k}      &= \frac{1}{1-\alpha}\bigl(y_{t+k}      - a_{t+k}\bigr). \tag{15.c}
+\end{align}
+Restando \((15.c)\) de \((15.b)\):
+\begin{equation}
+n_{t+k\mid t} - n_{t+k}
+=
+\frac{1}{1-\alpha}\bigl(y_{t+k\mid t} - y_{t+k}\bigr),
+\tag{15.d}
+\label{eq:diff_n_y}
+\end{equation}
+donde la tecnología \(a_{t+k}\) se cancela al ser común a todas las firmas.
+
+Sustituyendo \eqref{eq:diff_n_y} en \eqref{eq:psi_vs_n}:
+\begin{equation}
+\psi_{t+k\mid t}
+=
+\psi_{t+k}
++
+\alpha\,\frac{1}{1-\alpha}\bigl(y_{t+k\mid t} - y_{t+k}\bigr)
+=
+\psi_{t+k}
++
+\frac{\alpha}{1-\alpha}\bigl(y_{t+k\mid t} - y_{t+k}\bigr).
+\tag{15.e}
+\label{eq:psi_vs_y}
+\end{equation}
+Esta es la segunda igualdad de la Ecuación (15).
+
+\paragraph{3. Restricción de demanda y precios relativos (tercer tramo de (15))}
+
+La restricción de demanda que enfrenta la firma que fijó su precio en \(t\) viene dada (en niveles) por la Ecuación (9):
+\begin{equation}
+Y_{t+k\mid t}
+=
+\left(\frac{P^*_t}{P_{t+k}}\right)^{-\epsilon} C_{t+k},
+\tag{9}
+\label{eq:demand_9}
+\end{equation}
+donde \(C_{t+k}\) es el consumo agregado en \(t+k\).
+
+Tomando logaritmos,
+\begin{equation}
+y_{t+k\mid t}
+=
+-\epsilon\bigl(p^*_t - p_{t+k}\bigr) + c_{t+k},
+\tag{15.f}
+\end{equation}
+mientras que, por equilibrio en el mercado de bienes,
+\begin{equation}
+y_{t+k} = c_{t+k}.
+\tag{15.g}
+\end{equation}
+
+Restando \((15.g)\) de \((15.f)\):
+\begin{equation}
+y_{t+k\mid t} - y_{t+k}
+=
+-\epsilon\bigl(p^*_t - p_{t+k}\bigr).
+\tag{15.h}
+\label{eq:diff_y_p}
+\end{equation}
+
+Sustituyendo \eqref{eq:diff_y_p} en \eqref{eq:psi_vs_y}:
+\begin{align}
+\psi_{t+k\mid t}
+&=
+\psi_{t+k}
++
+\frac{\alpha}{1-\alpha}\bigl(y_{t+k\mid t} - y_{t+k}\bigr) \\
+&=
+\psi_{t+k}
++
+\frac{\alpha}{1-\alpha}\bigl[-\epsilon\bigl(p^*_t - p_{t+k}\bigr)\bigr] \\
+&=
+\psi_{t+k}
+-
+\frac{\alpha\epsilon}{1-\alpha}\bigl(p^*_t - p_{t+k}\bigr),
+\tag{15}
+\end{align}
+que es la tercera igualdad de la Ecuación (15).
+
+\subsubsection*{Interpretación económica de la Ecuación (15)}
+
+La Ecuación \eqref{eq:psi_15} ofrece una interpretación clara del vínculo entre precios relativos, demanda y costos marginales:
+
+\begin{itemize}
+  \item \textbf{Costo marginal individual vs. promedio:}  
+  El costo marginal nominal (en logaritmos) de una firma que fijó su precio en \(t\) (\(\psi_{t+k\mid t}\)) es igual al costo marginal promedio \(\psi_{t+k}\) más (o menos) un ajuste que recoge cómo difiere su producción de la producción agregada, o, equivalentemente, cómo difiere su precio relativo del nivel de precios agregado.
+
+  \item \textbf{Efecto del precio relativo sobre la demanda y el costo:}  
+  Si una firma fija un precio por encima del promedio futuro esperado, \(p^*_t - p_{t+k} > 0\), entonces:
+  \[
+  y_{t+k\mid t} - y_{t+k}
+  =
+  -\epsilon\bigl(p^*_t - p_{t+k}\bigr) < 0.
+  \]
+  Es decir, su producción (y ventas) será menor que la producción agregada. Dado que la función de producción presenta rendimientos decrecientes en el trabajo, un menor nivel de producción se asocia con un menor empleo relativo y, por tanto, con un \emph{menor} costo marginal relativo. Esto queda reflejado en el signo negativo del término:
+  \[
+  -\frac{\alpha\epsilon}{1-\alpha}\bigl(p^*_t - p_{t+k}\bigr).
+  \]
+
+  \item \textbf{Papel de \(\alpha\): rendimientos a escala en el trabajo}  
+  El parámetro \(\alpha\) controla la intensidad con la que una desviación de producción se traduce en una desviación del costo marginal:
+  \begin{itemize}
+    \item Si \(\alpha = 0\) (rendimientos constantes a escala en el trabajo), se tiene:
+      \[
+      \psi_{t+k\mid t} = \psi_{t+k},
+      \]
+      es decir, el costo marginal es el mismo para todas las firmas, independientemente de su nivel de producción o de su precio relativo.
+    \item Si \(0 < \alpha < 1\), el costo marginal individual se reduce cuando la firma produce menos (por un precio relativamente alto) y aumenta cuando produce más (por un precio relativamente bajo).
+  \end{itemize}
+
+  \item \textbf{Papel de \(\epsilon\): sensibilidad de la demanda a los precios relativos}  
+  La elasticidad de sustitución \(\epsilon\) amplifica o atenúa el efecto de un cambio en el precio relativo sobre la demanda de la firma. Un \(\epsilon\) alto implica que una pequeña diferencia de precio relativo induce una gran variación en la cantidad demandada y, por ende, en el costo marginal relativo.
+
+  \item \textbf{Relevancia para la NKPC:}  
+  La Ecuación (15) es crucial para sustituir \(\psi_{t+k\mid t}\) en la regla de fijación de precios (Ecuación (11)). De este modo, la condición de optimalidad de precios, que originalmente está formulada en términos de costos marginales individuales, puede reescribirse en términos de:
+  \begin{itemize}
+    \item el costo marginal promedio \(\psi_{t+k}\), y
+    \item la diferencia \(p^*_t - p_{t+k}\), que a su vez se relaciona con la inflación vía la ley de movimiento del nivel de precios.
+  \end{itemize}
+  Esta sustitución es un paso esencial en la derivación de la Curva de Phillips Nuevo Keynesiana (Ecuación (22)), donde la inflación se expresa como función del costo marginal real y de sus expectativas futuras.
+\end{itemize}
+
+%========================================
+% Ecuación (16)
+%========================================
+\subsubsection*{Ecuación (16): Regla recursiva de fijación de precios óptimos}
+
+La Ecuación (16) es la forma \emph{recursiva} y log-linealizada de la condición de fijación de precios óptimos por parte de las empresas que pueden reajustar su precio en el periodo \(t\). Resume la decisión de fijar el precio óptimo \(p^*_t\) como una combinación de:
+\begin{itemize}
+  \item el precio óptimo esperado para el periodo siguiente, \(E_t\{p^*_{t+1}\}\), y
+  \item el nivel de precios actual \(p_t\) ajustado por la desviación del \emph{markup} promedio respecto a su nivel deseado, \(\hat{\mu}_t\).
+\end{itemize}
+
+En forma compacta:
+\begin{equation}
+p^*_t
+=
+\beta\theta\,E_t\{p^*_{t+1}\}
++
+(1-\beta\theta)\bigl(p_t - \epsilon\,\hat{\mu}_t\bigr),
+\tag{16}
+\label{eq:pstar_16}
+\end{equation}
+donde \(\beta\theta \in (0,1)\) es el factor de descuento efectivo que combina el descuento intertemporal \(\beta\) y la rigidez de precios \(\theta\).
+
+\subsubsection*{Tabla de símbolos relevantes (Ecuación 16)}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{p{0.19\textwidth} p{0.41\textwidth} p{0.30\textwidth}}
+    \hline
+    \textbf{Término} & \textbf{Definición rigurosa} & \textbf{Rol económico} \\
+    \hline
+    \(p^*_t\)
+      & Logaritmo del precio óptimo fijado en el periodo \(t\) por la cohorte de empresas que puede reajustar precios. 
+      & Variable de elección de las firmas; precio que maximiza el valor presente de beneficios mientras el precio permanezca fijo. \\[0.1cm]
+    \(E_t\{p^*_{t+1}\}\)
+      & Expectativa condicional (formada en \(t\)) del logaritmo del precio óptimo que fijarán las empresas que ajusten en \(t+1\). 
+      & Componente \emph{prospectivo}: introduce la naturaleza hacia adelante de la fijación de precios. \\[0.1cm]
+    \(p_t\)
+      & Logaritmo del nivel de precios agregado \(P_t\). 
+      & Referencia para el precio promedio de la economía en el periodo actual. \\[0.1cm]
+    \(\hat{\mu}_t\)
+      & Desviación del \emph{markup} promedio respecto a su nivel deseado: \(\hat{\mu}_t \equiv \mu_t - \mu\), donde \(\mu_t = p_t - \psi_t\) y \(\mu\) es el \emph{markup} de estado estacionario. 
+      & Mide cuánto difiere el margen actual precio–costo del margen “natural” o sin fricciones; es la señal de presión de costos que impulsa los ajustes de precios. \\[0.1cm]
+    \(\psi_t\)
+      & Logaritmo del costo marginal nominal promedio en \(t\). 
+      & Junto con \(p_t\), determina el \emph{markup} promedio \(\mu_t\). \\[0.1cm]
+    \(\beta\)
+      & Factor de descuento intertemporal del hogar/empresa, con \(0<\beta<1\). 
+      & Descuenta los beneficios futuros; reduce el peso de costos y precios lejanos en el tiempo. \\[0.1cm]
+    \(\theta\)
+      & Fracción de empresas que \emph{no} reajusta su precio en un periodo dado. 
+      & Parámetro de rigidez nominal: cuanto mayor es \(\theta\), más persistentes son los precios individuales. \\[0.1cm]
+    \(\epsilon\)
+      & Coeficiente compuesto (distinto de la elasticidad de sustitución entre variedades), igual a
+        \(\displaystyle \epsilon = \frac{1-\alpha}{1-\alpha+\alpha\varepsilon}\),
+        donde \(\varepsilon\) es la elasticidad de sustitución entre bienes diferenciados. 
+      & Traduce la brecha de \emph{markup} \(\hat{\mu}_t\) en una corrección sobre el precio óptimo: mide cuán sensible es el precio deseado a la desviación del \emph{markup} respecto a su nivel natural. \\
+    \hline
+  \end{tabular}
+  \caption{Símbolos usados en la Ecuación (16) y su interpretación económica.}
+\end{table}
+
+\subsubsection*{Derivación paso a paso de la Ecuación (16)}
+
+La Ecuación (16) se obtiene a partir de la versión en suma infinita de la regla de fijación de precios log-linealizada. El punto de partida es la expresión:
+\begin{equation}
+p^*_t
+=
+(1-\beta\theta)\sum_{k=0}^{\infty}(\beta\theta)^k
+E_t\bigl\{\,p_{t+k} - \epsilon\,\hat{\mu}_{t+k}\bigr\},
+\tag{21}
+\label{eq:pstar_21}
+\end{equation}
+que puede interpretarse como el \emph{promedio ponderado (descontado)} de los precios agregados futuros, ajustados por la brecha de \emph{markup} futura \(\hat{\mu}_{t+k}\). Los pesos \((1-\beta\theta)(\beta\theta)^k\) suman uno y combinan:
+\begin{itemize}
+  \item la probabilidad de que el precio fijado hoy siga vigente en \(t+k\) (\(\theta^k\)),
+  \item y el descuento temporal de los beneficios futuros (\(\beta^k\)).
+\end{itemize}
+
+\paragraph{1. Desplazar un periodo hacia adelante la ecuación de suma infinita}
+
+Consideremos la misma relación, pero ahora vista desde el periodo \(t+1\). Análogamente a \eqref{eq:pstar_21}:
+\begin{equation}
+p^*_{t+1}
+=
+(1-\beta\theta)\sum_{j=0}^{\infty}(\beta\theta)^j
+E_{t+1}\bigl\{\,p_{t+1+j} - \epsilon\,\hat{\mu}_{t+1+j}\bigr\}.
+\tag{16.a}
+\label{eq:pstar_tplus1}
+\end{equation}
+Tomando expectativas condicionales en \(t\) de \eqref{eq:pstar_tplus1} y utilizando la propiedad de iteración de expectativas (\(E_t E_{t+1} = E_t\)):
+\begin{align}
+E_t\{p^*_{t+1}\}
+&=
+(1-\beta\theta)\sum_{j=0}^{\infty}(\beta\theta)^j
+E_t\bigl\{\,p_{t+1+j} - \epsilon\,\hat{\mu}_{t+1+j}\bigr\}.
+\tag{16.b}
+\label{eq:Et_pstar_tplus1}
+\end{align}
+
+\paragraph{2. Reescritura de la suma de \(p^*_t\) separando el primer término}
+
+Volvemos a \eqref{eq:pstar_21} y separamos explícitamente el término para \(k=0\) del resto de la suma:
+\begin{align}
+p^*_t
+&=
+(1-\beta\theta)\Bigl[
+  E_t\{p_t - \epsilon\,\hat{\mu}_t\}
+  +
+  \sum_{k=1}^{\infty}(\beta\theta)^k
+  E_t\bigl\{\,p_{t+k} - \epsilon\,\hat{\mu}_{t+k}\bigr\}
+  \Bigr].
+\tag{16.c}
+\label{eq:pstar_split}
+\end{align}
+Obsérvese que el término para \(k=0\) es simplemente \(E_t\{p_t - \epsilon\,\hat{\mu}_t\} = p_t - \epsilon\,\hat{\mu}_t\), ya que \(p_t\) y \(\hat{\mu}_t\) son conocidos en \(t\).
+
+En la parte de la suma para \(k\geq 1\), hacemos el cambio de índice \(j = k-1\). Entonces:
+\[
+\sum_{k=1}^{\infty}(\beta\theta)^k
+E_t\bigl\{\,p_{t+k} - \epsilon\,\hat{\mu}_{t+k}\bigr\}
+=
+\beta\theta
+\sum_{j=0}^{\infty}(\beta\theta)^j
+E_t\bigl\{\,p_{t+1+j} - \epsilon\,\hat{\mu}_{t+1+j}\bigr\}.
+\]
+Sustituyendo en \eqref{eq:pstar_split}:
+\begin{align}
+p^*_t
+&=
+(1-\beta\theta)\bigl(p_t - \epsilon\,\hat{\mu}_t\bigr)
++
+(1-\beta\theta)\,\beta\theta
+\sum_{j=0}^{\infty}(\beta\theta)^j
+E_t\bigl\{\,p_{t+1+j} - \epsilon\,\hat{\mu}_{t+1+j}\bigr\}.
+\tag{16.d}
+\label{eq:pstar_split2}
+\end{align}
+
+\paragraph{3. Identificación de la suma con \(E_t\{p^*_{t+1}\}\)}
+
+Compare ahora \eqref{eq:Et_pstar_tplus1} y la suma que aparece en \eqref{eq:pstar_split2}. Por \eqref{eq:Et_pstar_tplus1}, tenemos:
+\[
+E_t\{p^*_{t+1}\}
+=
+(1-\beta\theta)
+\sum_{j=0}^{\infty}(\beta\theta)^j
+E_t\bigl\{\,p_{t+1+j} - \epsilon\,\hat{\mu}_{t+1+j}\bigr\}.
+\]
+Sustituyendo esta expresión en \eqref{eq:pstar_split2}:
+\begin{align}
+p^*_t
+&=
+(1-\beta\theta)\bigl(p_t - \epsilon\,\hat{\mu}_t\bigr)
++
+\beta\theta\,E_t\{p^*_{t+1}\}.
+\tag{16.e}
+\end{align}
+Reordenando términos se obtiene exactamente la Ecuación (16):
+\begin{equation}
+\boxed{
+p^*_t
+=
+\beta\theta\,E_t\{p^*_{t+1}\}
++
+(1-\beta\theta)\bigl(p_t - \epsilon\,\hat{\mu}_t\bigr)
+}
+\tag{16}
+\end{equation}
+que es la forma recursiva de la regla de fijación de precios óptimos.
+
+\subsubsection*{Interpretación económica de la Ecuación (16)}
+
+La Ecuación \eqref{eq:pstar_16} encapsula de manera muy clara la lógica de fijación de precios en el modelo Nuevo Keynesiano con precios a la Calvo:
+
+\begin{itemize}
+  \item \textbf{Naturaleza hacia adelante (\emph{forward-looking}):}  
+  El término \(\beta\theta\,E_t\{p^*_{t+1}\}\) indica que el precio que las firmas fijan hoy está fuertemente influido por el precio óptimo que anticipan fijar en el futuro.  
+  \begin{itemize}
+    \item Si \(\theta\) es grande (precios muy rígidos), es muy probable que el precio fijado hoy permanezca vigente en periodos futuros. En consecuencia, las empresas otorgan un peso importante al precio óptimo futuro, ya que desean que el precio de hoy sea coherente con las condiciones futuras.
+    \item Si \(\theta\) es pequeño (precios muy flexibles), el término \(\beta\theta\) es pequeño y la empresa se centra principalmente en las condiciones actuales.
+  \end{itemize}
+
+  \item \textbf{Corrección en función del \emph{markup} actual:}  
+  El componente \((1-\beta\theta)\bigl(p_t - \epsilon\,\hat{\mu}_t\bigr)\) refleja el ajuste de precios motivado por:
+  \begin{itemize}
+    \item el nivel actual de precios agregados \(p_t\), y
+    \item la desviación del \emph{markup} promedio \(\hat{\mu}_t\).
+  \end{itemize}
+  Si el \emph{markup} promedio actual es inferior al deseado (\(\hat{\mu}_t < 0\)), esto significa que los costos marginales están relativamente altos en comparación con los precios vigentes. Para restablecer el margen de beneficio, las firmas desearán fijar un precio óptimo \(p^*_t\) relativamente mayor que \(p_t\), lo que está recogido en el término \(-\epsilon\,\hat{\mu}_t\).
+
+  \item \textbf{Peso relativo de presente vs. futuro:}  
+  Los coeficientes \(\beta\theta\) y \((1-\beta\theta)\) determinan cómo se ponderan:
+  \begin{itemize}
+    \item las condiciones futuras (vía \(E_t\{p^*_{t+1}\}\)), y
+    \item las condiciones actuales (vía \(p_t\) y \(\hat{\mu}_t\)).
+  \end{itemize}
+  Cuanto mayor sea \(\theta\), mayor será el peso de las expectativas futuras en la fijación de precios de hoy; cuanto menor sea \(\theta\), más “miope” parecerá el comportamiento de precios de las empresas.
+
+  \item \textbf{Puente hacia la Curva de Phillips Nuevo Keynesiana (NKPC):}  
+  La Ecuación (16) es esencial porque permite, junto con la ley de movimiento del nivel de precios (Ecuación (8), \(\pi_t = (1-\theta)(p^*_t - p_{t-1})\)), eliminar la variable \(p^*_t\) y obtener una relación que vincula directamente la inflación con:
+  \begin{itemize}
+    \item sus expectativas futuras (\(\beta E_t\{\pi_{t+1}\}\)), y
+    \item la brecha de \emph{markup} \(\hat{\mu}_t\), proporcional al costo marginal real.
+  \end{itemize}
+  Ese resultado es la versión canónica de la Curva de Phillips Nuevo Keynesiana:
+  \[
+  \pi_t = \beta E_t\{\pi_{t+1}\} - \lambda\,\hat{\mu}_t,
+  \]
+  donde \(\lambda\) es una función de \(\theta\), \(\beta\) y los parámetros tecnológicos. Así, la Ecuación (16) constituye el eslabón microfundado que conecta las decisiones de fijación de precios de las firmas con la dinámica de la inflación agregada.
+\end{itemize}
+
+
+%========================================
+% Ecuación (17)
+%========================================
+\subsubsection*{Ecuación (17): Curva de Phillips Nuevo Keynesiana (CPNK) en términos del \emph{markup}}
+
+La Ecuación (17) resume la dinámica de la inflación en el Modelo Básico Nuevo Keynesiano cuando se combinan:
+\begin{itemize}
+  \item la ley de movimiento del nivel de precios bajo precios a la Calvo, y
+  \item la regla óptima de fijación de precios de las empresas.
+\end{itemize}
+El resultado es la denominada \emph{Curva de Phillips Nuevo Keynesiana} (CPNK) en su versión expresada en función de la brecha del \emph{markup}.
+
+En forma compacta:
+\begin{equation}
+  \pi_t = \beta E_t\{\pi_{t+1}\} - \lambda\,\hat{\mu}_t,
+  \tag{17}
+  \label{eq:NKPC_17}
+\end{equation}
+donde \(\lambda>0\) es la pendiente de la Curva de Phillips.
+
+\subsubsection*{Tabla de símbolos relevantes (Ecuación 17)}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{p{0.19\textwidth} p{0.41\textwidth} p{0.30\textwidth}}
+    \hline
+    \textbf{Término} & \textbf{Definición rigurosa} & \textbf{Rol económico} \\
+    \hline
+    \(\pi_t\)
+      & Tasa de inflación log-linealizada en el periodo \(t\):
+        \(\pi_t \equiv p_t - p_{t-1}\), donde \(p_t = \log P_t\). 
+      & Mide el cambio porcentual (aproximado) en el nivel de precios agregado entre \(t-1\) y \(t\). \\[0.1cm]
+    \(E_t\{\pi_{t+1}\}\)
+      & Expectativa condicional, formada en \(t\), de la inflación en \(t+1\). 
+      & Componente \emph{prospectivo}: recoge el carácter hacia adelante de la inflación en el modelo NK. \\[0.1cm]
+    \(\mu_t\)
+      & \emph{Markup} promedio en \(t\):
+        \(\mu_t \equiv p_t - \psi_t\), donde \(\psi_t\) es el logaritmo del costo marginal nominal promedio. 
+      & Mide el margen entre el precio agregado y el costo marginal nominal promedio. \\[0.1cm]
+    \(\mu\)
+      & \emph{Markup} deseado o “natural” de estado estacionario:
+        \(\mu \equiv \log M\), con \(M = \frac{\varepsilon}{\varepsilon-1}\), donde \(\varepsilon\) es la elasticidad de sustitución entre variedades. 
+      & Nivel de referencia del margen precio–costo en ausencia de fricciones nominales. \\[0.1cm]
+    \(\hat{\mu}_t\)
+      & Brecha del \emph{markup}:
+        \(\hat{\mu}_t \equiv \mu_t - \mu\). 
+      & Variable de “presión de costos”: si \(\hat{\mu}_t<0\), los costos reales son altos relativamente a los precios, empujando al alza los precios óptimos. \\[0.1cm]
+    \(\beta\)
+      & Factor de descuento intertemporal del hogar/empresa, con \(0<\beta<1\). 
+      & Descuenta la inflación futura en la determinación de la inflación presente. \\[0.1cm]
+    \(\theta\)
+      & Fracción de empresas que \emph{no} reajusta su precio en un periodo dado (parámetro de Calvo). 
+      & Índice de rigidez nominal: cuanto mayor es \(\theta\), más persistentes son los precios individuales. \\[0.1cm]
+    \(\epsilon\)
+      & Parámetro compuesto:
+        \[
+          \epsilon
+          \equiv
+          \frac{1-\alpha}{\,1-\alpha + \alpha\varepsilon\,},
+        \]
+        donde \(\alpha\) proviene de la tecnología \(Y_t(i)=A_tN_t(i)^{1-\alpha}\) y \(\varepsilon\) es la elasticidad de sustitución entre variedades. 
+      & Vincula el \emph{markup} promedio con el costo marginal real y la respuesta de precios a choques de costos. \\[0.1cm]
+    \(\lambda\)
+      & Pendiente de la CPNK:
+        \[
+          \lambda
+          \equiv
+          \frac{(1-\theta)(1-\beta\theta)}{\theta}\,\epsilon.
+        \]
+      & Mide cuán sensible es la inflación a la brecha del \emph{markup}. Disminuye cuando la rigidez de precios \(\theta\) aumenta. \\
+    \hline
+  \end{tabular}
+  \caption{Símbolos usados en la Ecuación (17) y su interpretación económica.}
+\end{table}
+
+\subsubsection*{Derivación paso a paso de la Ecuación (17)}
+
+El punto de partida son dos relaciones clave del bloque de precios:
+
+\begin{enumerate}
+  \item \textbf{Ley de movimiento del nivel de precios (Ecuación 8)}  
+  La dinámica del índice de precios bajo precios a la Calvo se resume en:
+  \begin{equation}
+    \pi_t = (1-\theta)\bigl(p^*_t - p_{t-1}\bigr),
+    \tag{8}
+    \label{eq:pi_8}
+  \end{equation}
+  donde \(p^*_t\) es el logaritmo del precio óptimo fijado por las empresas que pueden reajustar en \(t\).
+
+  \item \textbf{Regla recursiva de fijación de precios óptimos (Ecuación 16)}  
+  La decisión óptima de precios satisface:
+  \begin{equation}
+    p^*_t
+    =
+    \beta\theta\,E_t\{p^*_{t+1}\}
+    +
+    (1-\beta\theta)\bigl(p_t - \epsilon\,\hat{\mu}_t\bigr).
+    \tag{16}
+    \label{eq:pstar_16_again}
+  \end{equation}
+\end{enumerate}
+
+El objetivo es eliminar \(p^*_t\) y \(E_t\{p^*_{t+1}\}\) de \eqref{eq:pi_8} y \eqref{eq:pstar_16_again} para obtener una relación directa entre la inflación y la brecha de \emph{markup}.
+
+\paragraph{1. Expresar \(p^*_t - p_{t-1}\) en términos de inflación y \(p^*_t - p_t\)}
+
+Partimos de la identidad:
+\[
+p^*_t - p_{t-1}
+=
+(p^*_t - p_t) + (p_t - p_{t-1})
+=
+(p^*_t - p_t) + \pi_t.
+\]
+Sustituyendo en \eqref{eq:pi_8}:
+\begin{align}
+\pi_t
+&=
+(1-\theta)\,\bigl[(p^*_t - p_t) + \pi_t\bigr] \notag \\
+&=
+(1-\theta)(p^*_t - p_t) + (1-\theta)\pi_t.
+\end{align}
+Reordenando para despejar \(\pi_t\):
+\begin{align}
+\pi_t - (1-\theta)\pi_t
+&=
+(1-\theta)(p^*_t - p_t), \notag\\[0.1cm]
+\theta\,\pi_t
+&=
+(1-\theta)(p^*_t - p_t).
+\end{align}
+Por tanto:
+\begin{equation}
+  \pi_t
+  =
+  \frac{1-\theta}{\theta}\,\bigl(p^*_t - p_t\bigr).
+  \label{eq:pi_pstar_gap}
+\end{equation}
+
+\paragraph{2. Usar la Ecuación (16) para reescribir \((p^*_t - p_t)\)}
+
+De \eqref{eq:pstar_16_again}:
+\[
+p^*_t - p_t
+=
+\beta\theta\,E_t\{p^*_{t+1}\}
++
+(1-\beta\theta)\bigl(p_t - \epsilon\,\hat{\mu}_t\bigr)
+- p_t.
+\]
+Agrupando términos en \(p_t\):
+\begin{align}
+p^*_t - p_t
+&=
+\beta\theta\,E_t\{p^*_{t+1}\}
++
+(1-\beta\theta)p_t
+- (1-\beta\theta)\epsilon\,\hat{\mu}_t
+- p_t \notag\\[0.1cm]
+&=
+\beta\theta\,E_t\{p^*_{t+1}\}
+-
+\beta\theta\,p_t
+-
+(1-\beta\theta)\epsilon\,\hat{\mu}_t.
+\end{align}
+Es decir:
+\begin{equation}
+  p^*_t - p_t
+  =
+  \beta\theta\bigl(E_t\{p^*_{t+1}\} - p_t\bigr)
+  -
+  (1-\beta\theta)\epsilon\,\hat{\mu}_t.
+  \label{eq:pstar_minus_p}
+\end{equation}
+
+\paragraph{3. Sustituir \eqref{eq:pstar_minus_p} en \eqref{eq:pi_pstar_gap}}
+
+Insertando \eqref{eq:pstar_minus_p} en \eqref{eq:pi_pstar_gap}:
+\begin{align}
+\pi_t
+&=
+\frac{1-\theta}{\theta}
+\left[
+  \beta\theta\bigl(E_t\{p^*_{t+1}\} - p_t\bigr)
+  -
+  (1-\beta\theta)\epsilon\,\hat{\mu}_t
+\right] \notag\\[0.1cm]
+&=
+(1-\theta)\beta\,\bigl(E_t\{p^*_{t+1}\} - p_t\bigr)
+-
+\frac{(1-\theta)(1-\beta\theta)}{\theta}\,\epsilon\,\hat{\mu}_t.
+\label{eq:pi_with_pstar_next}
+\end{align}
+
+\paragraph{4. Relacionar \(E_t\{p^*_{t+1}\} - p_t\) con la inflación esperada}
+
+Aplicamos el mismo argumento un periodo hacia adelante. A partir de \eqref{eq:pi_pstar_gap} desplazada a \(t+1\):
+\[
+\pi_{t+1}
+=
+\frac{1-\theta}{\theta}\,\bigl(p^*_{t+1} - p_t\bigr)
+\quad\Rightarrow\quad
+p^*_{t+1} - p_t
+=
+\frac{\theta}{1-\theta}\,\pi_{t+1}.
+\]
+Tomando expectativas condicionales en \(t\):
+\[
+E_t\{p^*_{t+1} - p_t\}
+=
+\frac{\theta}{1-\theta}\,E_t\{\pi_{t+1}\}.
+\]
+Sustituyendo en \eqref{eq:pi_with_pstar_next}:
+\begin{align}
+\pi_t
+&=
+(1-\theta)\beta\,
+\frac{\theta}{1-\theta}E_t\{\pi_{t+1}\}
+-
+\frac{(1-\theta)(1-\beta\theta)}{\theta}\,\epsilon\,\hat{\mu}_t \notag\\[0.1cm]
+&=
+\beta\theta\,E_t\{\pi_{t+1}\}
+-
+\frac{(1-\theta)(1-\beta\theta)}{\theta}\,\epsilon\,\hat{\mu}_t.
+\end{align}
+Definiendo:
+\begin{equation}
+  \lambda
+  \equiv
+  \frac{(1-\theta)(1-\beta\theta)}{\theta}\,\epsilon,
+  \label{eq:lambda_def}
+\end{equation}
+obtenemos finalmente la Ecuación (17):
+\begin{equation}
+  \boxed{
+    \pi_t
+    =
+    \beta\,E_t\{\pi_{t+1}\}
+    -
+    \lambda\,\hat{\mu}_t
+  }.
+\end{equation}
+
+\subsubsection*{Forma alternativa en términos de costo marginal real}
+
+Dado que el \emph{markup} promedio está definido como \(\mu_t = p_t - \psi_t\), el costo marginal real logarítmico promedio es:
+\[
+m c_t \equiv \psi_t - p_t = -\mu_t.
+\]
+Si \(\bar{m}c\) denota el valor de estado estacionario del costo marginal real, se tiene:
+\[
+\hat{m}c_t \equiv m c_t - \bar{m}c = -(\mu_t - \mu) = -\hat{\mu}_t.
+\]
+Sustituyendo \(\hat{\mu}_t = -\hat{m}c_t\) en \eqref{eq:NKPC_17}:
+\begin{equation}
+  \pi_t
+  =
+  \beta E_t\{\pi_{t+1}\}
+  +
+  \lambda\,\hat{m}c_t,
+  \tag{17'}
+  \label{eq:NKPC_mc}
+\end{equation}
+que es la versión estándar de la CPNK escrita en función del costo marginal real.
+
+\subsubsection*{Interpretación económica de la Ecuación (17)}
+
+La Ecuación \eqref{eq:NKPC_17} concentra varios elementos clave del enfoque Nuevo Keynesiano:
+
+\begin{itemize}
+  \item \textbf{Inflación hacia adelante (\emph{forward-looking}):}  
+  El término \(\beta E_t\{\pi_{t+1}\}\) muestra que la inflación actual depende de la inflación que las empresas esperan para el futuro. Como los precios se fijan bajo rigidez de Calvo y pueden permanecer vigentes varios periodos, las firmas internalizan la inflación futura al fijar sus precios hoy.
+
+  \item \textbf{La brecha del \emph{markup} como forzador de la inflación:}  
+  La variable \(\hat{\mu}_t\) resume la discrepancia entre:
+  \[
+  \text{\emph{markup} promedio actual} \quad \mu_t
+  \quad \text{y el \emph{markup} deseado} \quad \mu.
+  \]
+  \begin{itemize}
+    \item Si \(\hat{\mu}_t<0\), los costos marginales reales están elevados relativamente a los precios: las firmas desean subir sus precios para restaurar el margen, lo que genera presiones inflacionarias (\(\pi_t\) aumenta).
+    \item Si \(\hat{\mu}_t>0\), el \emph{markup} es “demasiado alto” y, en ausencia de otros factores, tendería a generarse presión desinflacionaria.
+  \end{itemize}
+
+  \item \textbf{La pendiente de la CPNK (\(\lambda\)):}  
+  El parámetro \(\lambda\) determina la sensibilidad de la inflación a la brecha de \emph{markup}. De su definición \eqref{eq:lambda_def} se desprende que:
+  \begin{itemize}
+    \item \(\lambda\) es \emph{decreciente} en la rigidez de precios \(\theta\):  
+    cuanto más rígidos son los precios (mayor \(\theta\)), más lenta es la respuesta de la inflación a un mismo choque de costos.
+    \item \(\lambda\) aumenta cuando la respuesta de precios a los costos (capturada por \(\epsilon\)) es mayor, o cuando los precios se ajustan con mayor frecuencia (menor \(\theta\)).
+  \end{itemize}
+
+  \item \textbf{Versión en términos de costo marginal real:}  
+  Al reescribir la ecuación como en \eqref{eq:NKPC_mc}, la inflación responde positivamente a la desviación del costo marginal real respecto a su estado estacionario:
+  \[
+    \hat{m}c_t \uparrow
+    \quad\Rightarrow\quad
+    \pi_t \uparrow.
+  \]
+  Esta forma es especialmente útil para conectar la CPNK con la brecha del producto, ya que el costo marginal real está íntimamente ligado al nivel de actividad económica vía condiciones de oferta laboral y tecnología.
+\end{itemize}
+
+% --------------------------------------------------
+% Ecuación (18): Markup promedio en función de y_t y a_t
+% --------------------------------------------------
+
+\subsection*{Ecuación (18): Markup promedio en función del producto y la tecnología}
+
+La Ecuación (18) expresa el \emph{logaritmo del markup promedio} de la economía, $\mu_t$,
+como una combinación lineal del producto agregado $y_t$ y del nivel de tecnología $a_t$.
+Esta ecuación resume cómo las condiciones reales (demanda y productividad) se traducen en
+presión sobre los márgenes de ganancia de las firmas.
+
+\begin{equation}
+  \mu_t
+  \;=\;
+  -\left( \sigma + \phi + \frac{\alpha}{1-\alpha} \right) y_t
+  \;+\;
+  \left( \frac{1+\phi}{1-\alpha} \right) a_t
+  \;+\;
+  \log(1-\alpha)
+  \tag{18}
+\end{equation}
+
+donde, por definición,
+\[
+\mu_t \;\equiv\; p_t - \psi_t
+\]
+es el logaritmo del markup promedio, i.e. la diferencia entre el logaritmo del nivel
+de precios agregado $p_t$ y el logaritmo del costo marginal nominal promedio $\psi_t$.
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 18)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.18\textwidth} p{0.18\textwidth} p{0.55\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$\mu_t$  & Variable (log) &
+Markup promedio en logaritmos: $\mu_t \equiv p_t - \psi_t$. Mide el margen de ganancia
+promedio de las empresas sobre su costo marginal nominal. \\[4pt]
+
+$y_t$    & Variable (log) &
+Logaritmo del producto agregado ($Y_t$). Refleja el nivel de actividad económica y
+la demanda de trabajo. \\[4pt]
+
+$a_t$    & Variable (log) &
+Logaritmo del nivel de tecnología ($A_t$). Captura el estado de la productividad
+total de los factores. \\[4pt]
+
+$\sigma$ & Parámetro &
+Inverso de la elasticidad de sustitución intertemporal del consumo. Influye en la
+sensibilidad del salario real (y por tanto del costo marginal) al nivel de producto. \\[4pt]
+
+$\phi$   & Parámetro &
+Parámetro de desutilidad del trabajo (relacionado con la elasticidad de la oferta
+de trabajo). Determina cómo responde el salario real al empleo. \\[4pt]
+
+$\alpha$ & Parámetro &
+Parámetro asociado a los rendimientos decrecientes del trabajo en la función de
+producción. Se asume que $1-\alpha$ es la elasticidad del producto respecto al trabajo. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+%---------------------------------------------
+% Origen y derivación (boceto)
+%---------------------------------------------
+
+\subsubsection*{Origen y derivación de la Ecuación (18)}
+
+La lógica de la Ecuación (18) es vincular el markup promedio $\mu_t$ con las variables reales
+agregadas del modelo. El punto de partida es:
+
+\begin{itemize}
+  \item La definición del \emph{markup promedio} como diferencia entre el logaritmo del
+  nivel de precios y el logaritmo del costo marginal nominal promedio:
+  \[
+     \mu_t \;=\; p_t - \psi_t.
+  \]
+
+  \item La expresión del costo marginal real (y, por tanto, del markup) en términos del
+  salario real y de la productividad, que puede escribirse (en forma log-lineal) como:
+  \[
+     \mu_t
+     \;=\;
+     - (w_t - p_t)
+     \;+\;
+     \bigl(a_t - \alpha n_t + \log(1-\alpha)\bigr),
+  \]
+  donde $w_t - p_t$ es el salario real y $n_t$ el logaritmo del empleo agregado.
+
+  \item La condición de oferta de trabajo del hogar (Ecuación (2)), que en logaritmos y
+  usando el equilibrio en el mercado de bienes ($c_t = y_t$) se escribe como:
+  \[
+     w_t - p_t = \sigma y_t + \phi n_t.
+  \]
+
+  \item La relación tecnológica entre producto, empleo y tecnología (Ecuación (14)):
+  \[
+     n_t = \frac{1}{1-\alpha}(y_t - a_t).
+  \]
+\end{itemize}
+
+Sustituyendo primero la ecuación de oferta de trabajo en la expresión de $\mu_t$ se elimina
+el salario real $w_t - p_t$:
+
+\begin{equation*}
+  \mu_t
+  \;=\;
+  -(\sigma y_t + \phi n_t)
+  \;+\;
+  \bigl(a_t - \alpha n_t + \log(1-\alpha)\bigr).
+\end{equation*}
+
+Luego, sustituyendo la expresión de $n_t$ en términos de $y_t$ y $a_t$ (Ecuación (14)) y
+reagrupando términos en $y_t$ y $a_t$, se obtiene, tras álgebra sencilla, que el markup
+promedio puede escribirse únicamente en función de $y_t$ y $a_t$:
+
+\begin{equation*}
+  \mu_t
+  \;=\;
+  -\left( \sigma + \phi + \frac{\alpha}{1-\alpha} \right) y_t
+  \;+\;
+  \left( \frac{1+\phi}{1-\alpha} \right) a_t
+  \;+\;
+  \log(1-\alpha),
+\end{equation*}
+
+lo cual coincide con la Ecuación (18).
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Interpretación económica}
+
+La Ecuación (18) es crucial porque conecta el \emph{markup promedio} ---la variable que impulsa
+la inflación en la Curva de Phillips Nuevo Keynesiana (Ecuación (17))--- con el lado real
+de la economía:
+
+\begin{itemize}
+  \item \textbf{Relación negativa con el producto $y_t$:}  
+  El coeficiente que multiplica $y_t$ es negativo:
+  \[
+    -\left(\sigma + \phi + \frac{\alpha}{1-\alpha}\right) < 0.
+  \]
+  Cuando el producto agregado $y_t$ aumenta, la demanda de trabajo se incrementa, lo que
+  eleva el salario real y, en consecuencia, el costo marginal real de las empresas.
+  Dado que los precios no se ajustan de manera totalmente flexible (rigidez de Calvo),
+  el aumento del costo marginal se traduce en una reducción del markup promedio $\mu_t$.
+
+  \item \textbf{Relación positiva con la tecnología $a_t$:}  
+  El coeficiente que acompaña a $a_t$ es positivo:
+  \[
+    \frac{1+\phi}{1-\alpha} > 0.
+  \]
+  Una mejora en la tecnología aumenta la productividad del trabajo. Para un nivel dado de
+  producto, se requiere menos empleo; ello reduce el costo marginal y permite a las firmas
+  sostener un mayor markup promedio, ceteris paribus.
+
+  \item \textbf{Papel de los parámetros estructurales:}  
+  Los parámetros $\sigma$, $\phi$ y $\alpha$ controlan la magnitud de la respuesta del
+  markup a cambios en $y_t$ y $a_t$:
+  \begin{itemize}
+    \item Un $\sigma$ grande implica que el salario real es muy sensible al nivel de
+    producto (por el lado de la utilidad marginal del consumo), intensificando la caída
+    del markup cuando $y_t$ aumenta.
+    \item Un $\phi$ grande refleja una oferta de trabajo menos elástica: el salario real
+    reacciona con fuerza a cambios en el empleo, elevando el costo marginal y reduciendo
+    el markup cuando la economía está más activa.
+    \item Un $\alpha$ mayor acentúa los rendimientos decrecientes del trabajo, haciendo
+    que aumentos en $y_t$ requieran incrementos relativamente mayores en $n_t$ y, por
+    tanto, en el costo marginal.
+  \end{itemize}
+\end{itemize}
+
+Esta caracterización del markup promedio es el insumo esencial para construir la relación
+entre la \emph{brecha del producto} y la inflación. Al evaluar la Ecuación (18) en el equilibrio
+de precios flexibles se obtiene el producto natural $y_{n,t}$ (Ecuación (19)), y la diferencia
+entre $\mu_t$ y el markup deseado $\mu$ conduce a la expresión:
+
+\[
+  \hat{\mu}_t
+  \;=\;
+  -\left( \sigma + \phi + \frac{\alpha}{1-\alpha} \right) \tilde{y}_t,
+\]
+
+donde $\tilde{y}_t \equiv y_t - y_{n,t}$ es la brecha del producto. Esta última relación se
+sustituye en la Curva de Phillips Nuevo Keynesiana en términos del markup (Ecuación (17)) para
+obtener su forma estándar en función de la brecha del producto (Ecuación (22)).
+
+% --------------------------------------------------
+% Ecuación (19): Nivel natural de producto
+% --------------------------------------------------
+
+\subsection*{Ecuación (19): Nivel Natural de Output}
+
+La Ecuación (19) define el \emph{nivel natural de producto} $y_{n,t}$ como el nivel de
+producción que prevalecería en la economía si los precios fueran completamente flexibles
+y el markup promedio fuera igual a su valor deseado (sin fricciones).
+
+Partiendo de la relación general entre el markup promedio y el producto (Ecuación (18)),
+al imponer precios flexibles se obtiene:
+
+\begin{equation}
+  \mu
+  \;=\;
+  -\left( \sigma + \phi + \frac{\alpha}{1-\alpha} \right) y_{n,t}
+  \;+\;
+  \left( \frac{1+\phi}{1-\alpha} \right) a_t
+  \;+\;
+  \log(1-\alpha)
+  \tag{19}
+\end{equation}
+
+donde $\mu$ es el logaritmo del markup deseado (constante) bajo precios flexibles.
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 19)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.18\textwidth} p{0.20\textwidth} p{0.52\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$\mu$        & Parámetro (log) &
+Logaritmo del markup deseado o "sin fricciones". Bajo precios flexibles el markup
+promedio es constante e igual a $\mu$. \\[4pt]
+
+$y_{n,t}$    & Variable (log) &
+Nivel natural de producto: logaritmo de la producción de equilibrio que prevalecería
+con precios completamente flexibles en el período $t$. \\[4pt]
+
+$a_t$        & Variable (log) &
+Logaritmo del nivel de tecnología agregada ($A_t$). Es el shock real que desplaza el
+producto natural. \\[4pt]
+
+$\sigma$     & Parámetro &
+Inverso de la elasticidad de sustitución intertemporal del consumo. Afecta cómo el
+salario real responde al nivel de producto. \\[4pt]
+
+$\phi$       & Parámetro &
+Parámetro asociado a la desutilidad del trabajo (relacionado con la elasticidad de la
+oferta laboral). Controla la respuesta del salario real al empleo. \\[4pt]
+
+$\alpha$     & Parámetro &
+Parámetro de rendimientos decrecientes del trabajo en la función de producción. Se
+asume que $1-\alpha$ es la elasticidad del producto respecto al trabajo. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+%---------------------------------------------
+% Origen de la Ecuación (19)
+%---------------------------------------------
+
+\subsubsection*{Origen de la Ecuación (19)}
+
+Recordemos la relación general entre el markup promedio y el producto (Ecuación (18)):
+
+\begin{equation*}
+  \mu_t
+  \;=\;
+  -\left( \sigma + \phi + \frac{\alpha}{1-\alpha} \right) y_t
+  \;+\;
+  \left( \frac{1+\phi}{1-\alpha} \right) a_t
+  \;+\;
+  \log(1-\alpha).
+\end{equation*}
+
+Bajo \textbf{precios flexibles} se cumple:
+
+\begin{itemize}
+  \item El markup promedio es constante e igual al markup deseado:
+  \[
+    \mu_t = \mu.
+  \]
+  \item El nivel de producto de equilibrio se denomina \emph{nivel natural de output}:
+  \[
+    y_t = y_{n,t}.
+  \]
+\end{itemize}
+
+Sustituyendo estas igualdades en la Ecuación (18) se obtiene directamente la Ecuación (19):
+
+\begin{equation*}
+  \mu
+  \;=\;
+  -\left( \sigma + \phi + \frac{\alpha}{1-\alpha} \right) y_{n,t}
+  \;+\;
+  \left( \frac{1+\phi}{1-\alpha} \right) a_t
+  \;+\;
+  \log(1-\alpha).
+\end{equation*}
+
+Es decir, el nivel natural de producto $y_{n,t}$ queda determinado exclusivamente por el
+estado de la tecnología $a_t$ y por los parámetros estructurales del modelo.
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Interpretación económica}
+
+La Ecuación (19) cumple tres funciones clave en el modelo:
+
+\begin{itemize}
+  \item \textbf{Define el punto de referencia real de la economía.}  
+  $y_{n,t}$ es el nivel de output que prevalecería en ausencia de rigideces nominales.
+  Todas las brechas que importan para la dinámica de la inflación y la política monetaria
+  se miden en torno a este nivel.
+
+  \item \textbf{Es independiente de la política monetaria y de shocks de preferencias.}  
+  Bajo precios flexibles, la política monetaria no puede afectar de manera persistente
+  las variables reales; el nivel natural de output está completamente determinado por
+  la tecnología $a_t$ y los parámetros reales. Los shocks de preferencias $z_t$ no
+  influyen en $y_{n,t}$.
+
+  \item \textbf{Es la base para definir la brecha del producto.}  
+  Una vez que se conoce $y_{n,t}$, se define la brecha del producto como:
+  \[
+    \tilde{y}_t \equiv y_t - y_{n,t},
+  \]
+  que es la variable que aparece en la Curva de Phillips Nuevo Keynesiana en su forma
+  más familiar. Restando la Ecuación (19) de la Ecuación (18) se obtiene la relación
+  entre el \emph{markup gap} y la brecha del producto (Ecuación (21)), paso crucial
+  para reescribir la NKPC en términos de $\tilde{y}_t$.
+\end{itemize}
+
+% --------------------------------------------------
+% Ecuación (20): Nivel natural de producto (forma reducida)
+% --------------------------------------------------
+
+\subsection*{Ecuación (20): Nivel Natural de Producto en forma reducida}
+
+La Ecuación (20) presenta el \emph{nivel natural de producto} $y_{n,t}$ como una función
+lineal del shock tecnológico $a_t$, al despejar $y_{n,t}$ de la Ecuación (19). Esta es la
+forma analítica compacta del nivel natural de output:
+
+\begin{equation}
+  y_{n,t} \;=\; \psi_{ya}\, a_t \;+\; \psi_y
+  \tag{20}
+\end{equation}
+
+donde los coeficientes $\psi_{ya}$ y $\psi_y$ son combinaciones de parámetros
+estructurales del modelo.
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 20)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.18\textwidth} p{0.20\textwidth} p{0.52\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$y_{n,t}$   & Variable (log) &
+Nivel natural de output: logaritmo de la producción de equilibrio que prevalecería
+si los precios fueran flexibles en el período $t$. \\[4pt]
+
+$a_t$       & Variable (log) &
+Logaritmo del nivel de tecnología agregada. Es el shock real que desplaza el nivel
+natural de producto. \\[4pt]
+
+$\psi_{ya}$ & Parámetro &
+Coeficiente que mide la sensibilidad del nivel natural de output $y_{n,t}$ frente
+a los shocks tecnológicos $a_t$. \\[4pt]
+
+$\psi_y$    & Parámetro &
+Término constante (intercepto) del nivel natural de output. Resume el efecto
+combinado de los parámetros estructurales y del markup deseado. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+%---------------------------------------------
+% Definición de los coeficientes \psi_{ya} y \psi_y
+%---------------------------------------------
+
+\subsubsection*{Definición de los coeficientes}
+
+Los coeficientes $\psi_{ya}$ y $\psi_y$ se definen como:
+
+\begin{align*}
+  \psi_{ya} &\equiv
+  \frac{1+\phi}{\sigma (1-\alpha) + \phi + \alpha}, \\[6pt]
+  \psi_y &\equiv
+  -\,\frac{(1-\alpha)\bigl(\mu - \log(1-\alpha)\bigr)}
+          {\sigma (1-\alpha) + \phi + \alpha},
+\end{align*}
+
+donde:
+
+\begin{itemize}
+  \item $\sigma$ es el inverso de la elasticidad de sustitución intertemporal del consumo.
+  \item $\phi$ es el inverso de la elasticidad de la oferta de trabajo.
+  \item $\alpha$ es el parámetro asociado a los rendimientos decrecientes del trabajo en la función de producción.
+  \item $\mu$ es el logaritmo del markup deseado (sin fricciones) bajo precios flexibles.
+\end{itemize}
+
+Por construcción, se cumple $\psi_{ya} > 0$, de modo que los aumentos en $a_t$
+incrementan el nivel natural de output.
+
+%---------------------------------------------
+% Origen de la Ecuación (20)
+%---------------------------------------------
+
+\subsubsection*{Origen de la Ecuación (20)}
+
+La Ecuación (20) se obtiene directamente al despejar $y_{n,t}$ en la Ecuación (19):
+
+\begin{equation*}
+  \mu
+  \;=\;
+  -\left( \sigma + \phi + \frac{\alpha}{1-\alpha} \right) y_{n,t}
+  \;+\;
+  \left( \frac{1+\phi}{1-\alpha} \right) a_t
+  \;+\;
+  \log(1-\alpha),
+\end{equation*}
+
+que puede reordenarse como:
+
+\begin{equation*}
+  \left( \sigma (1-\alpha) + \phi + \alpha \right) y_{n,t}
+  \;=\;
+  (1+\phi)\, a_t
+  \;-\;
+  (1-\alpha)\bigl(\mu - \log(1-\alpha)\bigr).
+\end{equation*}
+
+Dividiendo ambos lados por $\sigma (1-\alpha) + \phi + \alpha$ se obtiene:
+
+\begin{equation*}
+  y_{n,t}
+  \;=\;
+  \underbrace{\frac{1+\phi}{\sigma (1-\alpha) + \phi + \alpha}}_{\psi_{ya}} a_t
+  \;+\;
+  \underbrace{
+  -\,\frac{(1-\alpha)\bigl(\mu - \log(1-\alpha)\bigr)}
+          {\sigma (1-\alpha) + \phi + \alpha}
+  }_{\psi_y},
+\end{equation*}
+
+lo que coincide con la Ecuación (20):
+\[
+  y_{n,t} = \psi_{ya} a_t + \psi_y.
+\]
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Interpretación económica}
+
+La Ecuación (20) tiene varias implicaciones centrales:
+
+\begin{itemize}
+  \item \textbf{Neutralidad monetaria en el equilibrio flexible.}  
+  El nivel natural de output depende únicamente del shock tecnológico $a_t$ y de los
+  parámetros reales del modelo; la política monetaria y los shocks de preferencias
+  $z_t$ no afectan $y_{n,t}$.
+
+  \item \textbf{Impacto de la tecnología.}  
+  Dado que $\psi_{ya} > 0$, un aumento en $a_t$ (mejora de la productividad agregada)
+  incrementa el nivel natural de output. El coeficiente $\psi_{ya}$ gobierna el tamaño
+  de esta respuesta.
+
+  \item \textbf{Rol del markup deseado $\mu$.}  
+  El término constante $\psi_y$ incorpora el efecto del poder de mercado. Un markup
+  más alto ($\mu$ mayor) reduce el nivel natural de output (vía un $\psi_y$ más
+  negativo), aun cuando no altera la sensibilidad de $y_{n,t}$ a la tecnología
+  ($\psi_{ya}$).
+
+  \item \textbf{Base para la brecha del producto.}  
+  Una vez que $y_{n,t}$ está expresado en función de $a_t$, puede definirse la
+  \emph{brecha del producto} como $\tilde{y}_t \equiv y_t - y_{n,t}$. Al combinar
+  esta definición con la relación entre el markup y el producto (Ecuación (18)),
+  se obtiene que la brecha del markup $\hat{\mu}_t$ es proporcional y opuesta a
+  $\tilde{y}_t$ (Ecuación (21)), paso clave para reescribir la CPNK en su forma
+  estándar.
+\end{itemize}
+
+% --------------------------------------------------
+% Ecuación (21): Brecha de markup y brecha del producto
+% --------------------------------------------------
+
+\subsection*{Ecuación (21): Brecha del \textit{markup} y brecha del producto}
+
+La Ecuación (21) vincula de forma directa la \emph{brecha del markup} con la
+\emph{brecha del producto}. Es el paso final que permite pasar de una Curva de
+Phillips formulada en términos de márgenes a una formulada en términos de
+output gap.
+
+\begin{equation}
+  \hat{\mu}_t
+  \;=\;
+  -\left(
+    \sigma + \phi + \frac{\alpha}{1-\alpha}
+  \right)
+  (y_t - y_{n,t})
+  \;=\;
+  -\left(
+    \sigma + \phi + \frac{\alpha}{1-\alpha}
+  \right)\tilde{y}_t
+  \tag{21}
+\end{equation}
+
+donde hemos definido la \emph{brecha del producto} como
+$\tilde{y}_t \equiv y_t - y_{n,t}$.
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 21)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.18\textwidth} p{0.20\textwidth} p{0.52\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$\hat{\mu}_t$ & Variable (log) &
+Brecha del \textit{markup}: diferencia entre el markup promedio actual 
+y el markup deseado (sin fricciones), $\hat{\mu}_t \equiv \mu_t - \mu$. \\[4pt]
+
+$y_t$ & Variable (log) &
+Producto agregado actual (logaritmo del output). \\[4pt]
+
+$y_{n,t}$ & Variable (log) &
+Nivel natural de producto: producción de equilibrio bajo precios flexibles. \\[4pt]
+
+$\tilde{y}_t$ & Variable (log) &
+Brecha del producto: $\tilde{y}_t \equiv y_t - y_{n,t}$. Mide el exceso de demanda
+o capacidad ociosa. \\[4pt]
+
+$\sigma$ & Parámetro &
+Inverso de la elasticidad de sustitución intertemporal del consumo. \\[4pt]
+
+$\phi$ & Parámetro &
+Inverso de la elasticidad de la oferta de trabajo. \\[4pt]
+
+$\alpha$ & Parámetro &
+Parámetro asociado a los rendimientos decrecientes del trabajo en la función
+de producción. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+%---------------------------------------------
+% Origen de la Ecuación (21)
+%---------------------------------------------
+
+\subsubsection*{Origen de la Ecuación (21)}
+
+La Ecuación (21) se obtiene restando la relación del markup bajo precios
+flexibles (Ecuación (19)) de la relación general del markup (Ecuación (18)):
+
+\begin{align*}
+  \mu_t
+  &= -\Bigl(\sigma + \phi + \frac{\alpha}{1-\alpha}\Bigr) y_t
+     + \Bigl(\frac{1+\phi}{1-\alpha}\Bigr)a_t
+     + \log(1-\alpha), \tag{18}\\[4pt]
+  \mu
+  &= -\Bigl(\sigma + \phi + \frac{\alpha}{1-\alpha}\Bigr) y_{n,t}
+     + \Bigl(\frac{1+\phi}{1-\alpha}\Bigr)a_t
+     + \log(1-\alpha). \tag{19}
+\end{align*}
+
+Restando (19) de (18) miembro a miembro:
+
+\begin{equation*}
+  \mu_t - \mu
+  \;=\;
+  -\Bigl(\sigma + \phi + \frac{\alpha}{1-\alpha}\Bigr)
+   (y_t - y_{n,t}),
+\end{equation*}
+
+es decir,
+
+\begin{equation*}
+  \hat{\mu}_t
+  \;=\;
+  -\Bigl(\sigma + \phi + \frac{\alpha}{1-\alpha}\Bigr)\tilde{y}_t,
+\end{equation*}
+
+lo cual coincide con la Ecuación (21).
+
+El coeficiente
+\(
+  \sigma + \phi + \frac{\alpha}{1-\alpha}
+\)
+es estrictamente positivo, por lo que la relación entre $\hat{\mu}_t$ y
+$\tilde{y}_t$ es negativa y proporcional.
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Interpretación económica}
+
+\begin{itemize}
+  \item \textbf{Relación inversa entre brecha del producto y margen.}  
+  Cuando el producto actual $y_t$ se sitúa por encima de su nivel natural
+  $y_{n,t}$ (esto es, $\tilde{y}_t > 0$), la demanda de trabajo aumenta, lo que
+  eleva el salario real y el costo marginal. Dado que los precios no se ajustan
+  perfectamente, el markup promedio cae por debajo de su nivel deseado:
+  $\hat{\mu}_t < 0$.
+
+  \item \textbf{Presión de costos como origen de la inflación.}  
+  En la Curva de Phillips Nuevo Keynesiana formulada en términos de markup
+  (Ecuación (17)),
+  \[
+    \pi_t = \beta E_t\{\pi_{t+1}\} - \lambda \hat{\mu}_t,
+  \]
+  la inflación es impulsada por $-\lambda \hat{\mu}_t$. Usando (21),
+  una brecha positiva del producto ($\tilde{y}_t>0$) implica un
+  $\hat{\mu}_t<0$, lo que genera un efecto positivo sobre la inflación, dando
+  lugar a la forma estándar:
+
+  \[
+    \pi_t = \beta E_t\{\pi_{t+1}\} + \kappa \tilde{y}_t,
+  \]
+
+  donde
+  \(
+    \kappa \equiv \lambda\left( \sigma + \phi + \frac{\alpha}{1-\alpha} \right) > 0.
+  \)
+
+  \item \textbf{Cierre del lado de la oferta.}  
+  La Ecuación (21) cierra el bloque de oferta del modelo: conecta el margen
+  de beneficio con la brecha del producto, permitiendo expresar la Curva
+  de Phillips únicamente en términos de variables agregadas observables
+  (inflación y brecha del producto) y parámetros estructurales.
+\end{itemize}
+
+
+% --------------------------------------------------
+% Ecuación (22): Curva de Phillips Nuevo Keynesiana (forma canónica)
+% --------------------------------------------------
+
+\subsection*{Ecuación (22): Curva de Phillips Nuevo Keynesiana (NKPC)}
+
+La Ecuación (22) recoge la versión canónica de la Curva de Phillips
+Nuevo Keynesiana (CPNK), que relaciona la inflación actual con la
+inflación esperada futura y la brecha del producto:
+
+\begin{equation}
+  \pi_t
+  \;=\;
+  \beta E_t\{\pi_{t+1}\}
+  +
+  \kappa \tilde{y}_t
+  \tag{22}
+\end{equation}
+
+donde $\tilde{y}_t \equiv y_t - y_{n,t}$ es la brecha del producto.
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 22)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.18\textwidth} p{0.20\textwidth} p{0.52\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$\pi_t$ & Variable &
+Inflación actual: $\pi_t \equiv p_t - p_{t-1}$. \\[4pt]
+
+$E_t\{\pi_{t+1}\}$ & Variable (expectativa) &
+Inflación esperada para el período $t+1$, condicional en la información
+disponible en $t$. \\[4pt]
+
+$\tilde{y}_t$ & Variable (log) &
+Brecha del producto: $\tilde{y}_t \equiv y_t - y_{n,t}$, diferencia entre
+el producto efectivo y el nivel natural (bajo precios flexibles). \\[4pt]
+
+$\beta$ & Parámetro &
+Factor de descuento intertemporal de los hogares, $0<\beta<1$. \\[4pt]
+
+$\kappa$ & Parámetro &
+Pendiente de la Curva de Phillips Nuevo Keynesiana: mide la sensibilidad
+de la inflación a la brecha del producto. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+El parámetro $\kappa$ recoge tanto la rigidez de precios como la estructura
+real del modelo. Se define como:
+
+\begin{equation}
+  \kappa
+  \;\equiv\;
+  \lambda\left(
+    \sigma + \phi + \frac{\alpha}{1-\alpha}
+  \right),
+  \qquad
+  \lambda \equiv
+  \frac{(1-\theta)(1-\beta\theta)}{\theta}\,\epsilon
+\end{equation}
+
+donde $\theta$ es el parámetro de Calvo (probabilidad de no reajustar
+precios), $\epsilon$ la elasticidad de sustitución entre variedades,
+$\sigma$ el inverso de la elasticidad de sustitución intertemporal,
+$\phi$ el inverso de la elasticidad de oferta de trabajo y $\alpha$
+el parámetro de rendimientos decrecientes del trabajo.
+
+%---------------------------------------------
+% Origen de la Ecuación (22)
+%---------------------------------------------
+
+\subsubsection*{Origen de la Ecuación (22)}
+
+La Ecuación (22) resulta de combinar:
+
+\begin{itemize}
+  \item La Curva de Phillips en términos de brecha de \textit{markup}
+  (Ecuación (17)):
+  \[
+    \pi_t
+    =
+    \beta E_t\{\pi_{t+1}\}
+    -
+    \lambda \hat{\mu}_t,
+    \tag{17}
+  \]
+  donde $\hat{\mu}_t \equiv \mu_t - \mu$.
+
+  \item La relación entre la brecha de \textit{markup} y la brecha del
+  producto (Ecuación (21)):
+  \[
+    \hat{\mu}_t
+    =
+    -\left(
+      \sigma + \phi + \frac{\alpha}{1-\alpha}
+    \right)\tilde{y}_t.
+    \tag{21}
+  \]
+\end{itemize}
+
+Sustituyendo (21) en (17):
+
+\begin{align*}
+  \pi_t
+  &= \beta E_t\{\pi_{t+1}\}
+     - \lambda \hat{\mu}_t \\[4pt]
+  &= \beta E_t\{\pi_{t+1}\}
+     - \lambda
+     \Bigl[
+       -\Bigl(
+         \sigma + \phi + \frac{\alpha}{1-\alpha}
+       \Bigr)\tilde{y}_t
+     \Bigr] \\[4pt]
+  &= \beta E_t\{\pi_{t+1}\}
+     +
+     \underbrace{
+       \lambda\left(
+         \sigma + \phi + \frac{\alpha}{1-\alpha}
+       \right)
+     }_{\kappa}
+     \tilde{y}_t,
+\end{align*}
+
+lo cual coincide con la Ecuación (22).
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Interpretación económica}
+
+\begin{itemize}
+  \item \textbf{Carácter prospectivo de la inflación.}  
+  La inflación actual depende positivamente de la inflación esperada
+  futura, ponderada por el factor de descuento $\beta$. Esto refleja que
+  la fijación de precios en el esquema de Calvo es \emph{forward-looking}:
+  las empresas eligen su precio óptimo anticipando las condiciones futuras,
+  porque su precio puede permanecer fijo durante varios períodos.
+
+  \item \textbf{Inflación impulsada por la brecha del producto.}  
+  La brecha del producto $\tilde{y}_t$ actúa como el \emph{forzador real}
+  de la inflación. Cuando $\tilde{y}_t>0$ (demanda agregada por encima del
+  nivel natural de producción), la mayor utilización de factores empuja
+  al alza los costos marginales, reduce los markups y lleva a las empresas
+  que pueden ajustar precios a aumentarlos, generando inflación positiva.
+
+  \item \textbf{Pendiente $\kappa$ y rigidez nominal.}  
+  El parámetro $\kappa$ aumenta cuando los precios son más flexibles
+  (menor $\theta$), cuando la oferta laboral es más sensible (menor $\phi$),
+  cuando el consumo reacciona más al tipo de interés real (menor $\sigma$) o
+  cuando la demanda es más elástica ($\epsilon$ mayor). Una mayor $\kappa$
+  implica que pequeños cambios en la brecha del producto generan
+  variaciones relativamente grandes en la inflación.
+
+  \item \textbf{Bloque de oferta en el modelo NK.}  
+  Junto con la Ecuación IS Dinámica (DIS), la NKPC de (22) constituye
+  el corazón del modelo básico Nuevo Keynesiano: la DIS describe el
+  comportamiento de la demanda agregada; la Ecuación (22) describe cómo
+  la inflación responde a la actividad real y a las expectativas
+  futuras de inflación.
+\end{itemize}
+
+% --------------------------------------------------
+% Ecuación (22): Curva de Phillips Nuevo Keynesiana (forma canónica)
+% --------------------------------------------------
+
+\subsection*{Ecuación (22): Curva de Phillips Nuevo Keynesiana (NKPC)}
+
+La Ecuación (22) recoge la versión canónica de la Curva de Phillips
+Nuevo Keynesiana (CPNK), que relaciona la inflación actual con la
+inflación esperada futura y la brecha del producto:
+
+\begin{equation}
+  \pi_t
+  \;=\;
+  \beta E_t\{\pi_{t+1}\}
+  +
+  \kappa \tilde{y}_t
+  \tag{22}
+\end{equation}
+
+donde $\tilde{y}_t \equiv y_t - y_{n,t}$ es la brecha del producto.
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 22)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.18\textwidth} p{0.20\textwidth} p{0.52\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$\pi_t$ & Variable &
+Inflación actual: $\pi_t \equiv p_t - p_{t-1}$. \\[4pt]
+
+$E_t\{\pi_{t+1}\}$ & Variable (expectativa) &
+Inflación esperada para el período $t+1$, condicional en la información
+disponible en $t$. \\[4pt]
+
+$\tilde{y}_t$ & Variable (log) &
+Brecha del producto: $\tilde{y}_t \equiv y_t - y_{n,t}$, diferencia entre
+el producto efectivo y el nivel natural (bajo precios flexibles). \\[4pt]
+
+$\beta$ & Parámetro &
+Factor de descuento intertemporal de los hogares, $0<\beta<1$. \\[4pt]
+
+$\kappa$ & Parámetro &
+Pendiente de la Curva de Phillips Nuevo Keynesiana: mide la sensibilidad
+de la inflación a la brecha del producto. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+El parámetro $\kappa$ recoge tanto la rigidez de precios como la estructura
+real del modelo. Se define como:
+
+\begin{equation}
+  \kappa
+  \;\equiv\;
+  \lambda\left(
+    \sigma + \phi + \frac{\alpha}{1-\alpha}
+  \right),
+  \qquad
+  \lambda \equiv
+  \frac{(1-\theta)(1-\beta\theta)}{\theta}\,\epsilon
+\end{equation}
+
+donde $\theta$ es el parámetro de Calvo (probabilidad de no reajustar
+precios), $\epsilon$ la elasticidad de sustitución entre variedades,
+$\sigma$ el inverso de la elasticidad de sustitución intertemporal,
+$\phi$ el inverso de la elasticidad de oferta de trabajo y $\alpha$
+el parámetro de rendimientos decrecientes del trabajo.
+
+%---------------------------------------------
+% Origen de la Ecuación (22)
+%---------------------------------------------
+
+\subsubsection*{Origen de la Ecuación (22)}
+
+La Ecuación (22) resulta de combinar:
+
+\begin{itemize}
+  \item La Curva de Phillips en términos de brecha de \textit{markup}
+  (Ecuación (17)):
+  \[
+    \pi_t
+    =
+    \beta E_t\{\pi_{t+1}\}
+    -
+    \lambda \hat{\mu}_t,
+    \tag{17}
+  \]
+  donde $\hat{\mu}_t \equiv \mu_t - \mu$.
+
+  \item La relación entre la brecha de \textit{markup} y la brecha del
+  producto (Ecuación (21)):
+  \[
+    \hat{\mu}_t
+    =
+    -\left(
+      \sigma + \phi + \frac{\alpha}{1-\alpha}
+    \right)\tilde{y}_t.
+    \tag{21}
+  \]
+\end{itemize}
+
+Sustituyendo (21) en (17):
+
+\begin{align*}
+  \pi_t
+  &= \beta E_t\{\pi_{t+1}\}
+     - \lambda \hat{\mu}_t \\[4pt]
+  &= \beta E_t\{\pi_{t+1}\}
+     - \lambda
+     \Bigl[
+       -\Bigl(
+         \sigma + \phi + \frac{\alpha}{1-\alpha}
+       \Bigr)\tilde{y}_t
+     \Bigr] \\[4pt]
+  &= \beta E_t\{\pi_{t+1}\}
+     +
+     \underbrace{
+       \lambda\left(
+         \sigma + \phi + \frac{\alpha}{1-\alpha}
+       \right)
+     }_{\kappa}
+     \tilde{y}_t,
+\end{align*}
+
+lo cual coincide con la Ecuación (22).
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Interpretación económica}
+
+\begin{itemize}
+  \item \textbf{Carácter prospectivo de la inflación.}  
+  La inflación actual depende positivamente de la inflación esperada
+  futura, ponderada por el factor de descuento $\beta$. Esto refleja que
+  la fijación de precios en el esquema de Calvo es \emph{forward-looking}:
+  las empresas eligen su precio óptimo anticipando las condiciones futuras,
+  porque su precio puede permanecer fijo durante varios períodos.
+
+  \item \textbf{Inflación impulsada por la brecha del producto.}  
+  La brecha del producto $\tilde{y}_t$ actúa como el \emph{forzador real}
+  de la inflación. Cuando $\tilde{y}_t>0$ (demanda agregada por encima del
+  nivel natural de producción), la mayor utilización de factores empuja
+  al alza los costos marginales, reduce los markups y lleva a las empresas
+  que pueden ajustar precios a aumentarlos, generando inflación positiva.
+
+  \item \textbf{Pendiente $\kappa$ y rigidez nominal.}  
+  El parámetro $\kappa$ aumenta cuando los precios son más flexibles
+  (menor $\theta$), cuando la oferta laboral es más sensible (menor $\phi$),
+  cuando el consumo reacciona más al tipo de interés real (menor $\sigma$) o
+  cuando la demanda es más elástica ($\epsilon$ mayor). Una mayor $\kappa$
+  implica que pequeños cambios en la brecha del producto generan
+  variaciones relativamente grandes en la inflación.
+
+  \item \textbf{Bloque de oferta en el modelo NK.}  
+  Junto con la Ecuación IS Dinámica (DIS), la NKPC de (22) constituye
+  el corazón del modelo básico Nuevo Keynesiano: la DIS describe el
+  comportamiento de la demanda agregada; la Ecuación (22) describe cómo
+  la inflación responde a la actividad real y a las expectativas
+  futuras de inflación.
+\end{itemize}
+
+% --------------------------------------------------
+% Ecuación (23): Ecuación IS Dinámica en términos de la brecha del producto
+% --------------------------------------------------
+
+\subsection*{Ecuación (23): Ecuación IS Dinámica (DIS) en brecha del producto}
+
+La Ecuación (23) expresa la Ecuación IS Dinámica en términos de la
+\emph{brecha del producto} $\tilde{y}_t \equiv y_t - y_{n,t}$. Describe
+la dinámica de la demanda agregada relativa a su nivel natural:
+
+\begin{equation}
+  \tilde{y}_t
+  \;=\;
+  -\frac{1}{\sigma}
+  \bigl(
+    i_t - E_t\{\pi_{t+1}\} - r_{n,t}
+  \bigr)
+  \;+\;
+  E_t\{\tilde{y}_{t+1}\}
+  \tag{23}
+\end{equation}
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 23)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.19\textwidth} p{0.20\textwidth} p{0.51\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$\tilde{y}_t$ & Variable (log) &
+Brecha del producto: $\tilde{y}_t \equiv y_t - y_{n,t}$, diferencia entre
+el producto efectivo y el nivel natural bajo precios flexibles. \\[4pt]
+
+$E_t\{\tilde{y}_{t+1}\}$ & Variable (expectativa) &
+Brecha del producto esperada para el período $t+1$, condicional en la
+información disponible en $t$. \\[4pt]
+
+$i_t$ & Variable &
+Tasa de interés nominal de corto plazo fijada por la autoridad
+monetaria. \\[4pt]
+
+$E_t\{\pi_{t+1}\}$ & Variable (expectativa) &
+Inflación esperada para el período $t+1$; define junto con $i_t$ la
+tasa de interés real esperada. \\[4pt]
+
+$r_{n,t}$ & Variable &
+\emph{Tasa natural de interés} (real): tasa que prevalecería en el
+equilibrio con precios flexibles, dada la trayectoria de los shocks
+reales. \\[4pt]
+
+$\sigma$ & Parámetro &
+Inverso de la elasticidad de sustitución intertemporal del consumo;
+controla la sensibilidad de la brecha del producto a desviaciones de
+la tasa real respecto a su nivel natural. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+La tasa de interés real \emph{ex ante} se define como
+$r_t \equiv i_t - E_t\{\pi_{t+1}\}$. La Ecuación (23) puede escribirse
+equivalentemente como:
+\[
+  \tilde{y}_t
+  \;=\;
+  -\frac{1}{\sigma}\bigl(r_t - r_{n,t}\bigr)
+  +
+  E_t\{\tilde{y}_{t+1}\}.
+\]
+
+%---------------------------------------------
+% Origen de la Ecuación (23)
+%---------------------------------------------
+
+\subsubsection*{Origen de la Ecuación (23)}
+
+La Ecuación (23) se obtiene a partir de la Ecuación IS Dinámica en
+niveles (Ecuación (13)) y de la definición del Nivel Natural de
+Output $y_{n,t}$ y de la Tasa Natural de Interés $r_{n,t}$.
+
+\begin{itemize}
+  \item \textbf{Ecuación IS Dinámica en niveles (Ecuación (13)):}
+  \[
+    y_t
+    =
+    E_t\{y_{t+1}\}
+    -
+    \frac{1}{\sigma}
+    \bigl(
+      i_t - E_t\{\pi_{t+1}\} - \rho
+    \bigr)
+    +
+    \frac{1}{\sigma}(1-\rho_z)z_t.
+    \tag{13}
+  \]
+
+  \item \textbf{Nivel Natural de Output y tasa natural de interés.}  
+  El Nivel Natural de Output $y_{n,t}$ se determina por el equilibrio
+  de precios flexibles (Ecs. (19)–(20)). La dinámica asociada define
+  una \emph{tasa natural de interés} $r_{n,t}$ que resume los efectos de
+  los shocks reales (preferencias $z_t$ y tecnología $a_t$):
+  \[
+    r_{n,t}
+    =
+    \rho
+    -
+    \sigma (1-\rho_a)\psi_{ya}a_t
+    +
+    (1-\rho_z)z_t.
+    \tag{24}
+  \]
+
+  \item \textbf{Paso a brechas.}  
+  Al restar de (13) la expresión análoga para el Nivel Natural de
+  Output (obtenida imponiendo precios flexibles y sustituyendo $r_{n,t}$),
+  y usando $\tilde{y}_t \equiv y_t - y_{n,t}$, se obtiene:
+  \[
+    \tilde{y}_t
+    =
+    -\frac{1}{\sigma}\bigl(r_t - r_{n,t}\bigr)
+    +
+    E_t\{\tilde{y}_{t+1}\},
+  \]
+  que coincide con la Ecuación (23).
+\end{itemize}
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Interpretación económica}
+
+\begin{itemize}
+  \item \textbf{Demanda agregada en términos relativos.}  
+  La Ecuación (23) describe la dinámica de la demanda agregada medida en
+  relación con su potencial. La brecha del producto actual
+  $\tilde{y}_t$ depende de la brecha esperada futura
+  $E_t\{\tilde{y}_{t+1}\}$ y de la posición de la tasa real
+  $r_t$ en relación con la tasa natural $r_{n,t}$.
+
+  \item \textbf{Papel de la política monetaria.}  
+  La autoridad monetaria influye sobre la demanda agregada
+  exclusivamente a través del \emph{desalineamiento} entre la tasa
+  real que induce $r_t = i_t - E_t\{\pi_{t+1}\}$ y la tasa natural
+  $r_{n,t}$:
+  \begin{itemize}
+    \item Si $r_t > r_{n,t}$, el término
+    $-\frac{1}{\sigma}(r_t - r_{n,t})$ es negativo y la brecha del
+    producto se contrae ($\tilde{y}_t < 0$).
+    \item Si $r_t < r_{n,t}$, la política monetaria es expansiva
+    en términos relativos y la brecha del producto tiende a ser positiva.
+  \end{itemize}
+
+  \item \textbf{Carácter prospectivo de la demanda.}  
+  La presencia de $E_t\{\tilde{y}_{t+1}\}$ enfatiza que las decisiones
+  de gasto de los hogares son \emph{forward-looking}: el nivel actual
+  de demanda no solo depende de la tasa real de hoy, sino también de las
+  expectativas sobre la actividad futura.
+
+  \item \textbf{Solución hacia adelante.}  
+  Iterando la Ecuación (23) hacia adelante y suponiendo que
+  $\lim_{T\to\infty}E_t\{\tilde{y}_{t+T}\}=0$, se obtiene:
+  \begin{equation}
+    \tilde{y}_t
+    =
+    -\frac{1}{\sigma}
+    \sum_{k=0}^{\infty}
+    E_t\{r_{t+k} - r_{n,t+k}\},
+    \tag{25}
+  \end{equation}
+  lo cual muestra que la brecha del producto actual es proporcional
+  (en sentido inverso) a la suma descontada de las desviaciones
+  presentes y futuras entre la tasa real y su nivel natural.
+\end{itemize}
+
+% --------------------------------------------------
+% Ecuación (24): Tasa Natural de Interés
+% --------------------------------------------------
+
+\subsection*{Ecuación (24): Tasa Natural de Interés $r_{n,t}$}
+
+La Ecuación (24) define la \emph{tasa natural de interés real}
+$r_{n,t}$, es decir, la tasa que prevalecería en la economía si los
+precios fueran completamente flexibles y el producto se ubicara en su
+nivel natural $y_{n,t}$:
+
+\begin{equation}
+  r_{n,t}
+  \;=\;
+  \rho
+  \;-\;
+  \sigma (1 - \rho_a)\,\psi_{ya}\,a_t
+  \;+\;
+  (1 - \rho_z)\,z_t
+  \tag{24}
+\end{equation}
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 24)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.19\textwidth} p{0.20\textwidth} p{0.51\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$r_{n,t}$ & Variable &
+Tasa natural de interés real en $t$: tasa real consistente con
+$\tilde{y}_t = 0$ (brecha del producto nula) bajo precios flexibles. \\[4pt]
+
+$\rho$ & Parámetro &
+Tasa de descuento de los hogares ($\rho \equiv -\log\beta$); componente
+constante de la tasa natural. \\[4pt]
+
+$a_t$ & Variable (log) &
+Shock tecnológico: logaritmo del nivel de productividad agregada. \\[4pt]
+
+$z_t$ & Variable (log) &
+Shock de preferencias (o de impaciencia): logaritmo del proceso que
+mueve la utilidad marginal intertemporal. \\[4pt]
+
+$\sigma$ & Parámetro &
+Inverso de la elasticidad de sustitución intertemporal del consumo. \\[4pt]
+
+$\rho_a$ & Parámetro &
+Coeficiente AR(1) del proceso tecnológico
+($a_{t+1} = \rho_a a_t + \varepsilon_{a,t+1}$). \\[4pt]
+
+$\rho_z$ & Parámetro &
+Coeficiente AR(1) del shock de preferencias
+($z_{t+1} = \rho_z z_t + \varepsilon_{z,t+1}$). \\[4pt]
+
+$\psi_{ya}$ & Parámetro &
+Sensibilidad del Nivel Natural de Output al shock tecnológico:
+$y_{n,t} = \psi_{ya} a_t + \psi_y$. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+%---------------------------------------------
+% Origen de la Ecuación (24)
+%---------------------------------------------
+
+\subsubsection*{Origen de la Ecuación (24)}
+
+El punto de partida es la Ecuación IS Dinámica en niveles (Ecuación (13)):
+
+\begin{equation}
+  y_t
+  =
+  E_t\{y_{t+1}\}
+  -
+  \frac{1}{\sigma}
+  \bigl(
+    i_t - E_t\{\pi_{t+1}\} - \rho
+  \bigr)
+  +
+  \frac{1}{\sigma}(1 - \rho_z)z_t.
+  \tag{13}
+\end{equation}
+
+\begin{itemize}
+  \item \textbf{Equilibrio con precios flexibles.}  
+  Bajo precios flexibles el producto se iguala a su nivel natural,
+  $y_t = y_{n,t}$, y la tasa de interés real ex ante
+  $r_t \equiv i_t - E_t\{\pi_{t+1}\}$ coincide con la tasa natural
+  $r_{n,t}$. Sustituyendo en (13):
+
+  \[
+    y_{n,t}
+    =
+    E_t\{y_{n,t+1}\}
+    -
+    \frac{1}{\sigma}
+    \bigl(r_{n,t} - \rho\bigr)
+    +
+    \frac{1}{\sigma}(1 - \rho_z)z_t.
+  \]
+
+  Despejando $r_{n,t}$:
+
+  \[
+    r_{n,t}
+    =
+    \rho
+    +
+    \sigma\,E_t\{y_{n,t+1} - y_{n,t}\}
+    +
+    (1 - \rho_z)z_t.
+  \]
+
+  \item \textbf{Dinámica del Output Natural.}  
+  El Nivel Natural de Output viene dado por (Ecuación (20)):
+
+  \[
+    y_{n,t} = \psi_{ya} a_t + \psi_y,
+    \tag{20}
+  \]
+
+  donde $a_t$ sigue un proceso AR(1):
+
+  \[
+    a_{t+1} = \rho_a a_t + \varepsilon_{a,t+1}.
+    \tag{6}
+  \]
+
+  Tomando expectativas condicionales:
+
+  \[
+    E_t\{a_{t+1}\} = \rho_a a_t
+    \quad\Rightarrow\quad
+    E_t\{y_{n,t+1}\} - y_{n,t}
+    =
+    \psi_{ya}(\rho_a a_t - a_t)
+    =
+    \psi_{ya}(\rho_a - 1)a_t.
+  \]
+
+  \item \textbf{Sustitución final.}  
+  Sustituyendo en la expresión de $r_{n,t}$:
+
+  \[
+    r_{n,t}
+    =
+    \rho
+    +
+    \sigma\,\psi_{ya}(\rho_a - 1)a_t
+    +
+    (1 - \rho_z)z_t
+    =
+    \rho
+    -
+    \sigma (1 - \rho_a)\psi_{ya}a_t
+    +
+    (1 - \rho_z)z_t,
+  \]
+
+  que coincide con la Ecuación (24).
+\end{itemize}
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Interpretación económica}
+
+\begin{itemize}
+  \item \textbf{Tasa de referencia real de la economía.}  
+  $r_{n,t}$ es la tasa real consistente con una brecha del producto
+  nula ($\tilde{y}_t = 0$) cuando los precios son flexibles. Es, por
+  tanto, la tasa de referencia frente a la cual se evalúa la postura
+  de la política monetaria.
+
+  \item \textbf{Sensibilidad a shocks de preferencias ($z_t$).}  
+  Un aumento en $z_t$ (mayor impaciencia o preferencia por el consumo
+  presente) presiona al alza la demanda actual. Para mantener
+  $\tilde{y}_t = 0$, la tasa natural debe subir: el término
+  $(1 - \rho_z)z_t$ incrementa $r_{n,t}$.
+
+  \item \textbf{Sensibilidad a shocks tecnológicos ($a_t$).}  
+  Una mejora tecnológica $a_t$ eleva el nivel futuro de producción
+  natural. Esto induce a los hogares a querer trasladar consumo hacia
+  el futuro. Para compatibilizar decisiones óptimas de consumo y
+  producción, la tasa natural debe caer. El término
+  $-\sigma (1 - \rho_a)\psi_{ya}a_t$ refleja este efecto (coeficiente
+  negativo ante un aumento de $a_t$).
+
+  \item \textbf{Papel en la Ecuación IS en brechas.}  
+  En la Ecuación IS en términos de brecha del producto (Ecuación (23)):
+
+  \[
+    \tilde{y}_t
+    =
+    -\frac{1}{\sigma}\bigl(r_t - r_{n,t}\bigr)
+    +
+    E_t\{\tilde{y}_{t+1}\},
+    \tag{23}
+  \]
+
+  la brecha del producto se abre únicamente si la tasa real inducida
+  por la política monetaria $r_t = i_t - E_t\{\pi_{t+1}\}$ se desvía
+  de la tasa natural $r_{n,t}$. Si $r_t = r_{n,t}$, la política
+  monetaria es neutral respecto a la brecha del producto.
+
+  \item \textbf{Desafío para el Banco Central.}  
+  Dado que $r_{n,t}$ depende de shocks reales no observables
+  directamente ($a_t$, $z_t$), el banco central enfrenta el problema
+  de estimar esta tasa natural. Errores persistentes en esa estimación
+  pueden generar brechas del producto sistemáticas, con consecuencias
+  para la inflación a través de la Curva de Phillips Nuevo Keynesiana.
+\end{itemize}
+
+% --------------------------------------------------
+% Ecuación (24): Tasa Natural de Interés
+% --------------------------------------------------
+
+\subsection*{Ecuación (24): Tasa Natural de Interés $r_{n,t}$}
+
+La Ecuación (24) define la \emph{tasa natural de interés real}
+$r_{n,t}$, es decir, la tasa que prevalecería en la economía si los
+precios fueran completamente flexibles y el producto se ubicara en su
+nivel natural $y_{n,t}$:
+
+\begin{equation}
+  r_{n,t}
+  \;=\;
+  \rho
+  \;-\;
+  \sigma (1 - \rho_a)\,\psi_{ya}\,a_t
+  \;+\;
+  (1 - \rho_z)\,z_t
+  \tag{24}
+\end{equation}
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 24)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.19\textwidth} p{0.20\textwidth} p{0.51\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$r_{n,t}$ & Variable &
+Tasa natural de interés real en $t$: tasa real consistente con
+$\tilde{y}_t = 0$ (brecha del producto nula) bajo precios flexibles. \\[4pt]
+
+$\rho$ & Parámetro &
+Tasa de descuento de los hogares ($\rho \equiv -\log\beta$); componente
+constante de la tasa natural. \\[4pt]
+
+$a_t$ & Variable (log) &
+Shock tecnológico: logaritmo del nivel de productividad agregada. \\[4pt]
+
+$z_t$ & Variable (log) &
+Shock de preferencias (o de impaciencia): logaritmo del proceso que
+mueve la utilidad marginal intertemporal. \\[4pt]
+
+$\sigma$ & Parámetro &
+Inverso de la elasticidad de sustitución intertemporal del consumo. \\[4pt]
+
+$\rho_a$ & Parámetro &
+Coeficiente AR(1) del proceso tecnológico
+($a_{t+1} = \rho_a a_t + \varepsilon_{a,t+1}$). \\[4pt]
+
+$\rho_z$ & Parámetro &
+Coeficiente AR(1) del shock de preferencias
+($z_{t+1} = \rho_z z_t + \varepsilon_{z,t+1}$). \\[4pt]
+
+$\psi_{ya}$ & Parámetro &
+Sensibilidad del Nivel Natural de Output al shock tecnológico:
+$y_{n,t} = \psi_{ya} a_t + \psi_y$. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+%---------------------------------------------
+% Origen de la Ecuación (24)
+%---------------------------------------------
+
+\subsubsection*{Origen de la Ecuación (24)}
+
+El punto de partida es la Ecuación IS Dinámica en niveles (Ecuación (13)):
+
+\begin{equation}
+  y_t
+  =
+  E_t\{y_{t+1}\}
+  -
+  \frac{1}{\sigma}
+  \bigl(
+    i_t - E_t\{\pi_{t+1}\} - \rho
+  \bigr)
+  +
+  \frac{1}{\sigma}(1 - \rho_z)z_t.
+  \tag{13}
+\end{equation}
+
+\begin{itemize}
+  \item \textbf{Equilibrio con precios flexibles.}  
+  Bajo precios flexibles el producto se iguala a su nivel natural,
+  $y_t = y_{n,t}$, y la tasa de interés real ex ante
+  $r_t \equiv i_t - E_t\{\pi_{t+1}\}$ coincide con la tasa natural
+  $r_{n,t}$. Sustituyendo en (13):
+
+  \[
+    y_{n,t}
+    =
+    E_t\{y_{n,t+1}\}
+    -
+    \frac{1}{\sigma}
+    \bigl(r_{n,t} - \rho\bigr)
+    +
+    \frac{1}{\sigma}(1 - \rho_z)z_t.
+  \]
+
+  Despejando $r_{n,t}$:
+
+  \[
+    r_{n,t}
+    =
+    \rho
+    +
+    \sigma\,E_t\{y_{n,t+1} - y_{n,t}\}
+    +
+    (1 - \rho_z)z_t.
+  \]
+
+  \item \textbf{Dinámica del Output Natural.}  
+  El Nivel Natural de Output viene dado por (Ecuación (20)):
+
+  \[
+    y_{n,t} = \psi_{ya} a_t + \psi_y,
+    \tag{20}
+  \]
+
+  donde $a_t$ sigue un proceso AR(1):
+
+  \[
+    a_{t+1} = \rho_a a_t + \varepsilon_{a,t+1}.
+    \tag{6}
+  \]
+
+  Tomando expectativas condicionales:
+
+  \[
+    E_t\{a_{t+1}\} = \rho_a a_t
+    \quad\Rightarrow\quad
+    E_t\{y_{n,t+1}\} - y_{n,t}
+    =
+    \psi_{ya}(\rho_a a_t - a_t)
+    =
+    \psi_{ya}(\rho_a - 1)a_t.
+  \]
+
+  \item \textbf{Sustitución final.}  
+  Sustituyendo en la expresión de $r_{n,t}$:
+
+  \[
+    r_{n,t}
+    =
+    \rho
+    +
+    \sigma\,\psi_{ya}(\rho_a - 1)a_t
+    +
+    (1 - \rho_z)z_t
+    =
+    \rho
+    -
+    \sigma (1 - \rho_a)\psi_{ya}a_t
+    +
+    (1 - \rho_z)z_t,
+  \]
+
+  que coincide con la Ecuación (24).
+\end{itemize}
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Interpretación económica}
+
+\begin{itemize}
+  \item \textbf{Tasa de referencia real de la economía.}  
+  $r_{n,t}$ es la tasa real consistente con una brecha del producto
+  nula ($\tilde{y}_t = 0$) cuando los precios son flexibles. Es, por
+  tanto, la tasa de referencia frente a la cual se evalúa la postura
+  de la política monetaria.
+
+  \item \textbf{Sensibilidad a shocks de preferencias ($z_t$).}  
+  Un aumento en $z_t$ (mayor impaciencia o preferencia por el consumo
+  presente) presiona al alza la demanda actual. Para mantener
+  $\tilde{y}_t = 0$, la tasa natural debe subir: el término
+  $(1 - \rho_z)z_t$ incrementa $r_{n,t}$.
+
+  \item \textbf{Sensibilidad a shocks tecnológicos ($a_t$).}  
+  Una mejora tecnológica $a_t$ eleva el nivel futuro de producción
+  natural. Esto induce a los hogares a querer trasladar consumo hacia
+  el futuro. Para compatibilizar decisiones óptimas de consumo y
+  producción, la tasa natural debe caer. El término
+  $-\sigma (1 - \rho_a)\psi_{ya}a_t$ refleja este efecto (coeficiente
+  negativo ante un aumento de $a_t$).
+
+  \item \textbf{Papel en la Ecuación IS en brechas.}  
+  En la Ecuación IS en términos de brecha del producto (Ecuación (23)):
+
+  \[
+    \tilde{y}_t
+    =
+    -\frac{1}{\sigma}\bigl(r_t - r_{n,t}\bigr)
+    +
+    E_t\{\tilde{y}_{t+1}\},
+    \tag{23}
+  \]
+
+  la brecha del producto se abre únicamente si la tasa real inducida
+  por la política monetaria $r_t = i_t - E_t\{\pi_{t+1}\}$ se desvía
+  de la tasa natural $r_{n,t}$. Si $r_t = r_{n,t}$, la política
+  monetaria es neutral respecto a la brecha del producto.
+
+  \item \textbf{Desafío para el Banco Central.}  
+  Dado que $r_{n,t}$ depende de shocks reales no observables
+  directamente ($a_t$, $z_t$), el banco central enfrenta el problema
+  de estimar esta tasa natural. Errores persistentes en esa estimación
+  pueden generar brechas del producto sistemáticas, con consecuencias
+  para la inflación a través de la Curva de Phillips Nuevo Keynesiana.
+\end{itemize}
+
+% --------------------------------------------------
+% Ecuación (25): Solución hacia adelante de la DIS
+% --------------------------------------------------
+
+\subsection*{Ecuación (25): Solución hacia adelante de la Ecuación IS Dinámica}
+
+La Ecuación (25) es la solución con visión de futuro
+(\textit{forward-looking}) de la Ecuación IS Dinámica en brechas
+(Ecuación (23)). Expresa la brecha del producto actual $\tilde{y}_t$
+como la suma descontada de las desviaciones esperadas entre la tasa de
+interés real y su tasa natural:
+
+\begin{equation}
+  \tilde{y}_t
+  \;=\;
+  - \frac{1}{\sigma}
+  \sum_{k=0}^{\infty}
+  E_t\!\left\{ r_{t+k} - r_{n,t+k} \right\}
+  \tag{25}
+\end{equation}
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 25)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.19\textwidth} p{0.20\textwidth} p{0.51\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$\tilde{y}_t$ & Variable (log) &
+Brecha del producto: $\tilde{y}_t \equiv y_t - y_{n,t}$.
+Mide la desviación del producto efectivo respecto al nivel natural. \\[4pt]
+
+$r_{t+k}$ & Variable (log) &
+Tasa de interés real en $t+k$:
+$r_t \equiv i_t - E_t\{\pi_{t+1}\}$. \\[4pt]
+
+$r_{n,t+k}$ & Variable (log) &
+Tasa natural de interés en $t+k$, consistente con
+$\tilde{y}_{t+k} = 0$ bajo precios flexibles. \\[4pt]
+
+$\sigma$ & Parámetro &
+Inverso de la elasticidad de sustitución intertemporal del consumo;
+controla la sensibilidad de la demanda a la tasa real. \\[4pt]
+
+$E_t\{\cdot\}$ & Operador &
+Valor esperado condicional a la información disponible en $t$. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+%---------------------------------------------
+% Origen de la Ecuación (25)
+%---------------------------------------------
+
+\subsubsection*{Origen de la Ecuación (25)}
+
+La Ecuación (25) se deriva resolviendo hacia adelante la Ecuación IS
+Dinámica en términos de brecha del producto (Ecuación (23)).
+
+\paragraph{1. Punto de partida: Ecuación IS Dinámica en brechas.}
+
+Partimos de la Ecuación (23):
+
+\begin{equation}
+  \tilde{y}_t
+  =
+  E_t\{\tilde{y}_{t+1}\}
+  -
+  \frac{1}{\sigma}
+  \bigl( r_t - r_{n,t} \bigr),
+  \qquad
+  r_t \equiv i_t - E_t\{\pi_{t+1}\}.
+  \tag{23}
+\end{equation}
+
+\paragraph{2. Sustitución hacia adelante.}
+
+Aplicando recursivamente (23):
+
+\[
+  \tilde{y}_{t+1}
+  =
+  E_{t+1}\{\tilde{y}_{t+2}\}
+  -
+  \frac{1}{\sigma}
+  \bigl( r_{t+1} - r_{n,t+1} \bigr),
+\]
+
+y tomando expectativas condicionales en $t$:
+
+\[
+  E_t\{\tilde{y}_{t+1}\}
+  =
+  E_t\{\tilde{y}_{t+2}\}
+  -
+  \frac{1}{\sigma}
+  E_t\bigl\{ r_{t+1} - r_{n,t+1} \bigr\}.
+\]
+
+Sustituyendo de nuevo en (23):
+
+\[
+  \tilde{y}_t
+  =
+  E_t\{\tilde{y}_{t+2}\}
+  -
+  \frac{1}{\sigma}
+  \bigl( r_t - r_{n,t} \bigr)
+  -
+  \frac{1}{\sigma}
+  E_t\bigl\{ r_{t+1} - r_{n,t+1} \bigr\}.
+\]
+
+Repitiendo este procedimiento $T$ veces, obtenemos:
+
+\[
+  \tilde{y}_t
+  =
+  E_t\{\tilde{y}_{t+T}\}
+  -
+  \frac{1}{\sigma}
+  \sum_{k=0}^{T-1}
+  E_t\bigl\{ r_{t+k} - r_{n,t+k} \bigr\}.
+\]
+
+\paragraph{3. Condición terminal.}
+
+Suponiendo que los efectos de las fricciones nominales se desvanecen en
+el largo plazo o, equivalentemente,
+
+\[
+  \lim_{T \to \infty} E_t\{\tilde{y}_{t+T}\} = 0,
+\]
+
+entonces, tomando el límite cuando $T \to \infty$:
+
+\[
+  \tilde{y}_t
+  =
+  - \frac{1}{\sigma}
+  \sum_{k=0}^{\infty}
+  E_t\bigl\{ r_{t+k} - r_{n,t+k} \bigr\},
+\]
+
+que es precisamente la Ecuación (25).
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Interpretación económica}
+
+\begin{itemize}
+  \item \textbf{Brecha del producto como suma de “desviaciones de postura”.}  
+  La Ecuación (25) muestra que la brecha del producto actual
+  $\tilde{y}_t$ es proporcional (con signo negativo) a la suma de todas
+  las desviaciones esperadas futuras entre la tasa real de la economía
+  $r_{t+k}$ y la tasa natural $r_{n,t+k}$. Lo relevante no es el nivel
+  de $r_t$ en sí, sino su \emph{distancia} respecto a $r_{n,t}$ a lo
+  largo del tiempo.
+
+  \item \textbf{Rol de la política monetaria.}  
+  Dado que $r_t = i_t - E_t\{\pi_{t+1}\}$ está influido por la política
+  monetaria (vía $i_t$), la brecha del producto depende de la senda
+  esperada de la política monetaria comparada con la senda esperada de
+  la tasa natural. Una política sistemáticamente más contractiva que el
+  nivel natural ($r_{t+k} > r_{n,t+k}$ en promedio) genera
+  $\tilde{y}_t < 0$ hoy mismo.
+
+  \item \textbf{Carácter prospectivo de la demanda agregada.}  
+  La demanda actual no solo responde a la postura presente de la tasa
+  de interés real, sino también a cómo los agentes anticipan que será la
+  brecha $r_{t+k} - r_{n,t+k}$ en el futuro. Un anuncio creíble de
+  tasas reales altas persistentes (en relación con la tasa natural)
+  puede contraer la demanda actual, incluso si la tasa actual todavía
+  no ha subido completamente.
+
+  \item \textbf{Sensibilidad intertemporal ($\sigma$).}  
+  El parámetro $\sigma$ escala la respuesta de la brecha del producto:
+  cuanto mayor es $\sigma$ (menor elasticidad intertemporal), menor es
+  la reacción de $\tilde{y}_t$ ante una misma secuencia de desviaciones
+  $r_{t+k} - r_{n,t+k}$; es decir, los hogares son menos sensibles a
+  los incentivos intertemporales.
+
+  \item \textbf{Inserción en el bloque no político.}  
+  Combinada con la NKPC (Ecuación (22)) y la tasa natural de interés
+  (Ecuación (24)), la Ecuación (25) completa la descripción de cómo las
+  fricciones nominales, las expectativas y la política monetaria
+  determinan conjuntamente la trayectoria de la brecha del producto y
+  de la inflación en el Modelo Básico Nuevo Keynesiano.
+\end{itemize}
+
+
+% --------------------------------------------------
+% Ecuación (26): Regla simple de tasa de interés
+% --------------------------------------------------
+
+\subsection*{Ecuación (26): Regla simple de tasa de interés nominal}
+
+La Ecuación (26) introduce la política monetaria en el Modelo Básico
+Nuevo Keynesiano. Es una \emph{regla simple de tasa de interés} que
+describe cómo el banco central fija la tasa nominal de corto plazo
+$i_t$ en respuesta a la inflación y al nivel de actividad económica:
+
+\begin{equation}
+  i_t \;=\; \rho \;+\; \varphi_{\pi}\,\pi_t \;+\; \varphi_y\,\hat{y}_t \;+\; v_t
+  \tag{26}
+\end{equation}
+
+donde $\hat{y}_t \equiv y_t - y$ denota la desviación del producto
+respecto a su valor de estado estacionario de largo plazo $y$.
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 26)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.19\textwidth} p{0.20\textwidth} p{0.51\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$i_t$ & Variable (log) &
+Tasa de interés nominal a corto plazo. Es el instrumento de política
+monetaria fijado por el banco central. \\[4pt]
+
+$\pi_t$ & Variable (log) &
+Tasa de inflación actual. Una de las variables a las que reacciona la
+política monetaria. \\[4pt]
+
+$\hat{y}_t$ & Variable (log) &
+Desviación del producto respecto a su valor de estado estacionario:
+$\hat{y}_t \equiv y_t - y$. Mide el nivel de actividad en relación al
+promedio de largo plazo. \\[4pt]
+
+$v_t$ & Variable (log) &
+Shock exógeno de política monetaria, típicamente modelado como un
+proceso AR(1): $v_t = \rho_v v_{t-1} + \varepsilon_{v,t}$. Captura
+movimientos discrecionales o no sistemáticos en la tasa de interés. \\[4pt]
+
+$\rho$ & Parámetro &
+Tasa de descuento de los hogares, definida como $\rho \equiv -\log\beta$.
+Funciona como intercepto de la regla y se elige de modo consistente con
+un estado estacionario de inflación cero. \\[4pt]
+
+$\varphi_{\pi}$ & Parámetro &
+Intensidad de la respuesta de la tasa de interés nominal frente a la
+inflación. Se asume $\varphi_{\pi} \ge 0$. \\[4pt]
+
+$\varphi_y$ & Parámetro &
+Intensidad de la respuesta de la tasa de interés nominal frente a la
+actividad económica (desviación del producto). Se asume
+$\varphi_y \ge 0$. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+%---------------------------------------------
+% Origen y función de la Ecuación (26)
+%---------------------------------------------
+
+\subsubsection*{Origen y función de la Ecuación (26)}
+
+\begin{itemize}
+  \item \textbf{Cierre del modelo.}  
+  Antes de especificar (26), el modelo está descrito por:
+  \begin{itemize}
+    \item La Curva de Phillips Nuevo Keynesiana (NKPC, Ecuación (22)):
+      $\pi_t = \beta E_t\{\pi_{t+1}\} + \kappa \tilde{y}_t$.
+    \item La Ecuación IS Dinámica en brechas (Ecuación (23)):
+      $\tilde{y}_t = E_t\{\tilde{y}_{t+1}\}
+      - \frac{1}{\sigma}(r_t - r_{n,t})$,
+      con $r_t \equiv i_t - E_t\{\pi_{t+1}\}$.
+  \end{itemize}
+  Estas ecuaciones describen el \emph{bloque no político} del modelo:
+  determinan cómo se comportan inflación y brecha del producto dadas las
+  trayectorias de $r_t$ y $r_{n,t}$. La regla (26) añade el vínculo
+  faltante entre el instrumento de política ($i_t$) y las variables
+  endógenas (inflación y actividad), cerrando el modelo.
+
+  \item \textbf{Interpretación como regla de Taylor.}  
+  La forma de (26) es consistente con la \emph{regla de Taylor} propuesta
+  originalmente para describir la conducta de la Reserva Federal:
+  \begin{itemize}
+    \item La tasa nominal $i_t$ aumenta cuando la inflación $\pi_t$
+    supera su objetivo implícito.
+    \item La tasa nominal $i_t$ también reacciona positivamente cuando
+    el producto está por encima de su valor de referencia de largo
+    plazo ($\hat{y}_t > 0$).
+  \end{itemize}
+
+  \item \textbf{Intercepto y estado estacionario.}  
+  El término constante $\rho$ se elige para que, en ausencia de shocks
+  ($v_t = 0$) y con inflación y producto en su estado estacionario
+  ($\pi_t = 0$, $\hat{y}_t = 0$), la tasa nominal de equilibrio sea
+  compatible con la tasa real de estado estacionario y la paridad
+  de Fisher:
+  \[
+    i = \rho \quad\Rightarrow\quad r = \rho \quad\text{cuando}\quad \pi = 0.
+  \]
+\end{itemize}
+
+%---------------------------------------------
+% Interpretación económica de la regla (26)
+%---------------------------------------------
+
+\subsubsection*{Interpretación económica}
+
+\begin{itemize}
+  \item \textbf{Respuestas sistemáticas.}  
+  Los coeficientes $\varphi_{\pi}$ y $\varphi_y$ describen la respuesta
+  sistemática de la política:
+  \begin{itemize}
+    \item $\varphi_{\pi}$ mide cuánto sube (o baja) la tasa nominal
+    cuando la inflación aumenta (o disminuye).
+    \item $\varphi_y$ mide cuánto ajusta la tasa nominal al observar
+    un diferencial de actividad respecto al nivel de largo plazo.
+  \end{itemize}
+  Estos parámetros determinan la \emph{agresividad} de la política
+  monetaria frente a desviaciones de inflación y producto.
+
+  \item \textbf{Componente discrecional: el shock $v_t$.}  
+  El término $v_t$ captura perturbaciones de política monetaria que no
+  responden a la regla sistemática (por ejemplo, errores de medición,
+  cambios discrecionales, sorpresas de corto plazo). Típicamente se
+  modela como:
+  \[
+    v_t = \rho_v v_{t-1} + \varepsilon_{v,t},
+  \]
+  donde una innovación positiva $\varepsilon_{v,t}$ se interpreta como
+  un \emph{shock contractivo} (eleva $i_t$ para dada $\pi_t$ y $\hat{y}_t$).
+
+  \item \textbf{Relación con la brecha del producto.}  
+  Aunque (26) se escribe en términos de $\hat{y}_t \equiv y_t - y$, es
+  útil reescribirla en términos de la \emph{brecha del producto}
+  $\tilde{y}_t \equiv y_t - y_{n,t}$ para combinarla con (22) y (23):
+  \[
+    \hat{y}_t
+    =
+    (y_t - y_{n,t}) + (y_{n,t} - y)
+    =
+    \tilde{y}_t + \hat{y}^n_t,
+  \]
+  donde $\hat{y}^n_t \equiv y_{n,t} - y$. Entonces:
+  \begin{equation*}
+    i_t
+    =
+    \rho
+    +
+    \varphi_{\pi}\pi_t
+    +
+    \varphi_y \tilde{y}_t
+    +
+    \varphi_y \hat{y}^n_t
+    +
+    v_t,
+  \end{equation*}
+  lo que separa la reacción a la brecha del producto ($\tilde{y}_t$) de
+  la reacción automática a cambios en el producto natural
+  ($\hat{y}^n_t$).
+
+\end{itemize}
+
+%---------------------------------------------
+% Condición de unicidad del equilibrio
+%---------------------------------------------
+
+\subsubsection*{Condición de unicidad y Principio de Taylor}
+
+Al combinar la NKPC (Ecuación (22)), la DIS en brechas (Ecuación (23))
+y la regla de tasa de interés (Ecuación (26)), se obtiene un sistema
+lineal en diferencias para $(\tilde{y}_t, \pi_t)$ cuya solución es
+localmente única si y sólo si se cumple la condición:
+
+\begin{equation}
+  \kappa(\varphi_{\pi} - 1)
+  +
+  (1 - \beta)\,\varphi_y
+  \;>\; 0.
+  \tag{28}
+\end{equation}
+
+\begin{itemize}
+  \item Esta desigualdad recoge una versión log-linealizada del
+  \emph{Principio de Taylor}: la política monetaria debe reaccionar lo
+  suficientemente fuerte a la inflación (y, en menor medida, al nivel
+  de actividad) como para garantizar que el equilibrio sea único y
+  estable.
+  \item En términos intuitivos, cuando la inflación sube, la regla debe
+  implicar un aumento de la tasa nominal $i_t$ que genere un aumento
+  más que proporcional de la tasa real $r_t$ (descontando expectativas
+  de inflación), de modo que la demanda se contraiga y la inflación
+  vuelva a su objetivo.
+\end{itemize}
+
+% --------------------------------------------------
+% Ecuación (27): Sistema dinámico en (\tilde{y}_t, \pi_t)
+% --------------------------------------------------
+
+\subsection*{Ecuación (27): Dinámica conjunta de la brecha del producto y la inflación}
+
+La Ecuación (27) no es una ecuación aislada, sino el \emph{sistema de
+ecuaciones en diferencias} que resulta de combinar los tres bloques del
+Modelo Básico Nuevo Keynesiano bajo una regla de política monetaria
+(Ecuación (26)). Este sistema describe la dinámica de equilibrio de la
+brecha del producto y la inflación:
+
+\begin{equation}
+  \begin{bmatrix}
+    \tilde{y}_t \\
+    \pi_t
+  \end{bmatrix}
+  =
+  A_T
+  \begin{bmatrix}
+    E_t\{\tilde{y}_{t+1}\} \\
+    E_t\{\pi_{t+1}\}
+  \end{bmatrix}
+  +
+  B_T\,u_t
+  \tag{27}
+\end{equation}
+
+donde $\tilde{y}_t \equiv y_t - y_{n,t}$ es la brecha del producto.
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 27)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.18\textwidth} p{0.22\textwidth} p{0.50\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$\tilde{y}_t$ & Variable (log) &
+Brecha del producto: $\tilde{y}_t \equiv y_t - y_{n,t}$. Mide la
+desviación de la actividad respecto a su nivel natural. \\[4pt]
+
+$\pi_t$ & Variable (log) &
+Inflación actual. \\[4pt]
+
+$A_T$ & Matriz $2\times 2$ &
+Matriz de transición que combina parámetros estructurales y de política
+monetaria. Gobernará la dinámica prospectiva de
+$\tilde{y}_t$ y $\pi_t$. \\[4pt]
+
+$B_T$ & Vector $2\times 1$ &
+Vector de coeficientes que mide cómo los shocks exógenos afectan
+simultáneamente a $\tilde{y}_t$ y $\pi_t$. \\[4pt]
+
+$u_t$ & Escalar (shocks agregados) &
+Shock agregado que combina shocks reales (tecnología, preferencias) y
+shocks de política monetaria. \\[4pt]
+
+$\Delta$ & Escalar &
+Factor de normalización: $\Delta \equiv \dfrac{1}{\sigma + \varphi_y + \kappa\varphi_{\pi}}$. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+%---------------------------------------------
+% Definición de matrices y del shock agregado
+%---------------------------------------------
+
+\subsubsection*{Definición de $A_T$, $B_T$ y $u_t$}
+
+La fuente define las matrices y el shock agregado como:
+
+\begin{align*}
+  \Delta
+  &\equiv
+  \frac{1}{\sigma + \varphi_y + \kappa\varphi_{\pi}},
+  \\[6pt]
+  A_T
+  &\equiv
+  \Delta
+  \begin{bmatrix}
+    \sigma
+    &
+    1 - \beta\varphi_{\pi}
+    \\[4pt]
+    \sigma\kappa
+    &
+    \kappa + \beta(\sigma + \varphi_y)
+  \end{bmatrix},
+  \\[6pt]
+  B_T
+  &\equiv
+  \Delta
+  \begin{bmatrix}
+    1 \\
+    \kappa
+  \end{bmatrix},
+  \\[6pt]
+  u_t
+  &\equiv
+  \hat{r}_{n,t} - \varphi_y \hat{y}^n_t - v_t,
+\end{align*}
+
+donde:
+
+\begin{itemize}
+  \item $\hat{r}_{n,t} \equiv r_{n,t} - r_n$ es la desviación de la
+  tasa natural de interés respecto a su valor de estado estacionario.
+  \item $\hat{y}^n_t \equiv y_{n,t} - y$ es la desviación del producto
+  natural respecto a su valor de estado estacionario.
+  \item $v_t$ es el shock de política monetaria en la regla de tasa de
+  interés (Ecuación (26)).
+\end{itemize}
+
+En términos de los shocks fundamentales de tecnología ($a_t$),
+preferencias ($z_t$) y política monetaria ($v_t$), el término $u_t$ se
+puede escribir como:
+
+\begin{equation*}
+  u_t
+  =
+  -\psi_{ya}\bigl(\varphi_y + \sigma(1-\rho_a)\bigr)a_t
+  +
+  (1-\rho_z)z_t
+  -
+  v_t,
+\end{equation*}
+
+donde $\psi_{ya}$ recoge la sensibilidad del output natural a la
+tecnología (Ecuación (20)), y $\rho_a$, $\rho_z$ son los parámetros
+AR(1) de los procesos de $a_t$ y $z_t$ respectivamente.
+
+%---------------------------------------------
+% Origen del sistema (27)
+%---------------------------------------------
+
+\subsubsection*{Origen: combinación de NKPC, DIS y regla de tasa de interés}
+
+El sistema (27) es el resultado de:
+
+\begin{enumerate}
+  \item Tomar la \textbf{Curva de Phillips Nuevo Keynesiana} (NKPC,
+  Ecuación (22)):
+  \[
+    \pi_t = \beta E_t\{\pi_{t+1}\} + \kappa \tilde{y}_t.
+  \]
+
+  \item Tomar la \textbf{Ecuación IS Dinámica en brechas} (Ecuación (23)):
+  \[
+    \tilde{y}_t
+    =
+    E_t\{\tilde{y}_{t+1}\}
+    -
+    \frac{1}{\sigma}\bigl(r_t - r_{n,t}\bigr),
+    \quad
+    r_t \equiv i_t - E_t\{\pi_{t+1}\},
+  \]
+  y sustituir la \textbf{regla de tasa de interés nominal} (Ecuación (26)):
+  \[
+    i_t = \rho + \varphi_{\pi}\pi_t + \varphi_y \hat{y}_t + v_t.
+  \]
+
+  \item Reexpresar todo en términos de $\tilde{y}_t$ y $\pi_t$, usando
+  las definiciones de $y_{n,t}$, $\hat{y}_t$ y $r_{n,t}$, para eliminar
+  $i_t$ y obtener un sistema sólo en las variables no predeterminadas
+  $(\tilde{y}_t, \pi_t)$.
+\end{enumerate}
+
+El resultado algebraico se compacta en la forma matricial de la
+Ecuación (27).
+
+%---------------------------------------------
+% Implicación económica: unicidad y estabilidad
+%---------------------------------------------
+
+\subsubsection*{Implicación económica: dinámica, unicidad y Principio de Taylor}
+
+\begin{itemize}
+  \item \textbf{Variables no predeterminadas y expectativas.}  
+  Tanto la brecha del producto $\tilde{y}_t$ como la inflación $\pi_t$
+  son variables \emph{no predeterminadas}: dependen de sus valores
+  futuros esperados. El sistema (27) recoge explícitamente esta
+  naturaleza \emph{forward-looking} del modelo.
+
+  \item \textbf{Rol de $A_T$.}  
+  La matriz $A_T$ condensa la interacción entre:
+  \begin{itemize}
+    \item la rigidez nominal (vía $\kappa$ y $\beta$),
+    \item la sensibilidad intertemporal del consumo ($\sigma$),
+    \item y la agresividad de la política monetaria
+    ($\varphi_{\pi}, \varphi_y$).
+  \end{itemize}
+  Sus valores propios determinan si el equilibrio es único o si hay
+  múltiples trayectorias compatibles con las expectativas.
+
+  \item \textbf{Condición de unicidad.}  
+  Bajo el supuesto estándar de $\varphi_{\pi} \ge 0$,
+  $\varphi_y \ge 0$, la condición necesaria y suficiente para que el
+  sistema (27) tenga una solución estacionaria y localmente única es:
+  \begin{equation}
+    \kappa(\varphi_{\pi} - 1)
+    +
+    (1 - \beta)\,\varphi_y
+    \;>\; 0,
+    \tag{28}
+  \end{equation}
+  lo que constituye una versión formal del \emph{Principio de Taylor}:
+  la política monetaria debe reaccionar de manera suficientemente fuerte
+  a la inflación (y, en menor medida, a la actividad) para anclar
+  expectativas y descartar equilibrios indeterminados.
+
+  \item \textbf{Shock agregado $u_t$.}  
+  El término $u_t$ resume cómo los shocks fundamentales (tecnología,
+  preferencias y política monetaria) se transmiten a la brecha del
+  producto y a la inflación. Dado que $B_T$ tiene dimensión $2\times1$,
+  el sistema deja claro que distintas combinaciones de shocks reales y
+  de política afectan simultáneamente a ambas variables.
+\end{itemize}
+
+% --------------------------------------------------
+% Ecuación (28): Condición de unicidad y estabilidad
+% --------------------------------------------------
+
+\subsection*{Ecuación (28): Condición de unicidad del equilibrio}
+
+La Ecuación (28) no describe una relación económica directa, sino una
+\emph{condición de estabilidad y unicidad} que deben cumplir los
+parámetros estructurales del modelo y los coeficientes de la regla de
+política monetaria (Ecuación (26)) para que el sistema dinámico de
+equilibrio (Ecuación (27)) tenga una solución estacionaria y localmente
+única.
+
+\begin{equation}
+  \kappa(\varphi_{\pi} - 1) + (1 - \beta)\,\varphi_y > 0
+  \tag{28}
+\end{equation}
+
+%---------------------------------------------
+% Tabla de símbolos relevantes (Ecuación 28)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.18\textwidth} p{0.22\textwidth} p{0.50\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$\kappa$ & Parámetro &
+Pendiente de la Curva de Phillips Nuevo Keynesiana (Ecuación (22));
+mide la sensibilidad de la inflación a la brecha del producto. \\[4pt]
+
+$\varphi_{\pi}$ & Parámetro &
+Coeficiente de respuesta de la tasa de interés nominal a la inflación en
+la regla de política monetaria (Ecuación (26)). \\[4pt]
+
+$\varphi_y$ & Parámetro &
+Coeficiente de respuesta de la tasa de interés nominal al producto (o a
+la brecha del producto) en la regla de política. \\[4pt]
+
+$\beta$ & Parámetro &
+Factor de descuento intertemporal; $(1-\beta)$ está relacionado con la
+tasa de descuento $\rho \equiv -\log\beta$. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+%---------------------------------------------
+% Origen de la condición (28)
+%---------------------------------------------
+
+\subsubsection*{Origen matemático}
+
+La condición (28) se obtiene al analizar las propiedades del sistema
+dinámico representado por la Ecuación (27):
+
+\begin{equation*}
+  \begin{bmatrix} \tilde{y}_t \\ \pi_t \end{bmatrix}
+  =
+  A_T
+  \begin{bmatrix}
+    E_t\{\tilde{y}_{t+1}\} \\
+    E_t\{\pi_{t+1}\}
+  \end{bmatrix}
+  +
+  B_T u_t,
+\end{equation*}
+
+donde tanto la brecha del producto $\tilde{y}_t$ como la inflación
+$\pi_t$ son variables \emph{no predeterminadas}. La unicidad de la
+solución estacionaria requiere que los dos valores propios de la matriz
+$A_T$ se encuentren dentro del círculo unitario. Bajo el supuesto
+natural de que $\varphi_{\pi} \ge 0$ y $\varphi_y \ge 0$, esta condición
+de valores propios es equivalente a la desigualdad:
+
+\[
+  \kappa(\varphi_{\pi} - 1) + (1 - \beta)\,\varphi_y > 0.
+\]
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Implicación económica: Principio de Taylor y estabilidad}
+
+\begin{itemize}
+  \item \textbf{Regla de política suficientemente agresiva.}  
+  La condición (28) exige que la política monetaria reaccione de forma
+  suficientemente fuerte a las desviaciones de la inflación y, en menor
+  medida, del producto. De lo contrario, el sistema presenta múltiples
+  trayectorias compatibles con las expectativas (indeterminación).
+
+  \item \textbf{Estabilización de expectativas.}  
+  Para que el equilibrio sea único, cuando la inflación esperada aumenta,
+  el Banco Central debe elevar la tasa nominal $i_t$ de forma tal que la
+  \emph{tasa de interés real esperada} $r_t \equiv i_t - E_t\{\pi_{t+1}\}$
+  también aumente lo suficiente. El aumento de $r_t$ contrae la demanda
+  (Ecuación (23)) y reduce la presión inflacionaria (Ecuación (22)),
+  estabilizando así las expectativas.
+
+  \item \textbf{Principio de Taylor (caso simplificado).}  
+  En el caso simplificado donde se ignora la respuesta al producto
+  ($\varphi_y = 0$) y se toma $\beta \approx 1$, la condición (28) se
+  reduce aproximadamente a:
+  \[
+    \varphi_{\pi} > 1,
+  \]
+  lo que corresponde al conocido \emph{Principio de Taylor}: la tasa de
+  interés nominal debe aumentar más que proporcionalmente ante un aumento
+  de la inflación, de modo que la tasa real también suba y discipline a
+  la demanda agregada.
+
+  \item \textbf{Fallo de política y equilibrios de \emph{sunspots}.}  
+  Si la condición (28) no se cumple, el modelo admite equilibrios
+  indeterminados en los que la dinámica de $\tilde{y}_t$ y $\pi_t$ puede
+  estar impulsada por cambios puramente expectacionales (equilibrios de
+  \emph{sunspots}), aun en ausencia de shocks fundamentales.
+\end{itemize}
+
+
+% -----------------------------------------------
+% Ecuación (29): Respuesta de la brecha del producto al shock agregado
+% -----------------------------------------------
+
+\subsection*{Ecuación (29): Coeficiente de respuesta de la brecha del producto}
+
+La Ecuación (29) forma parte de la solución estacionaria del sistema
+Nuevo Keynesiano cerrado con una regla tipo Taylor. Especifica el
+coeficiente $\psi_y$ que vincula la brecha del producto con el shock
+agregado $u_t$ en una solución lineal del tipo:
+\[
+  \tilde{y}_t = \psi_y\,u_t.
+\]
+
+\begin{equation}
+  \psi_y = (1 - \beta \rho_u)\,\Delta_u
+  \tag{29}
+\end{equation}
+
+donde el término $\Delta_u$ recoge la interacción entre los parámetros
+estructurales del modelo y los coeficientes de política monetaria.
+
+%---------------------------------------------
+% Definición de símbolos (Ecuación 29)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.18\textwidth} p{0.22\textwidth} p{0.50\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$\tilde{y}_t$ & Variable &
+Brecha del producto: $\tilde{y}_t \equiv y_t - y_{n,t}$. \\[4pt]
+
+$u_t$ & Variable &
+Shock agregado que resume shocks reales (tasa natural, producto
+natural) y de política monetaria en el sistema reducido. \\[4pt]
+
+$\psi_y$ & Coeficiente &
+Coeficiente de la solución estacionaria lineal: mide la sensibilidad de
+la brecha del producto al shock $u_t$. \\[4pt]
+
+$\beta$ & Parámetro &
+Factor de descuento intertemporal, $0 < \beta < 1$. \\[4pt]
+
+$\rho_u$ & Parámetro &
+Coeficiente autorregresivo del shock agregado $u_t$ (procesos AR(1)). \\[4pt]
+
+$\Delta_u$ & Parámetro &
+Coeficiente compuesto positivo que agrupa parámetros estructurales del
+modelo y coeficientes de política monetaria. \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+La expresión exacta de $\Delta_u$ es:
+
+\begin{equation}
+  \Delta_u \equiv 
+  \frac{1}{
+    (1-\beta\rho_u)\,\big[\sigma (1-\rho_u)+\varphi_y\big]
+    +\kappa(\varphi_{\pi}-\rho_u)
+  }
+  \;>\; 0.
+\end{equation}
+
+%---------------------------------------------
+% Origen y método de obtención
+%---------------------------------------------
+
+\subsubsection*{Origen: método de coeficientes indeterminados}
+
+\begin{itemize}
+  \item Partimos del sistema reducido de equilibrio para
+  $(\tilde{y}_t,\pi_t)$ (Ecuación (27)), obtenido al combinar:
+  \begin{enumerate}
+    \item La Curva de Phillips Nuevo Keynesiana (Ecuación (22)).
+    \item La Ecuación IS Dinámica en términos de brecha del producto
+    (Ecuación (23)).
+    \item La Regla de tasa de interés nominal (Ecuación (26)).
+  \end{enumerate}
+
+  \item Se supone que el shock agregado $u_t$ sigue un proceso AR(1):
+  \[
+    u_t = \rho_u u_{t-1} + \varepsilon_{u,t},
+  \qquad |\rho_u| < 1.
+  \]
+
+  \item Se conjetura una solución estacionaria lineal de la forma:
+  \[
+    \tilde{y}_t = \psi_y u_t, 
+    \qquad
+    \pi_t = \psi_{\pi} u_t.
+  \]
+
+  \item Al sustituir estas conjeturas en el sistema (27) y comparar
+  coeficientes en $u_t$, se obtiene un sistema algebraico en los
+  parámetros desconocidos $(\psi_y, \psi_{\pi})$. La solución de ese
+  sistema da lugar a:
+  \[
+    \psi_y = (1 - \beta\rho_u)\,\Delta_u,
+    \qquad
+    \psi_{\pi} = \kappa\,\Delta_u,
+  \]
+  donde $\Delta_u$ viene dado por la expresión anterior.
+\end{itemize}
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Implicación económica: sensibilidad del output gap al shock agregado}
+
+\begin{itemize}
+  \item \textbf{Co-movimiento con el shock.}  
+  Dado que $\Delta_u>0$ y, en equilibrio razonable, $0<\beta<1$ y
+  $|\rho_u|<1$, el término $(1-\beta\rho_u)$ es típicamente positivo.
+  Entonces, $\psi_y>0$, de modo que la brecha del producto
+  $\tilde{y}_t$ tiende a moverse en la misma dirección que el shock
+  agregado $u_t$:
+  \[
+    u_t \uparrow \;\Rightarrow\; \tilde{y}_t \uparrow \quad
+    (\text{para } \psi_y>0).
+  \]
+
+  \item \textbf{Persistencia del shock y descuento intertemporal.}  
+  El factor $(1-\beta\rho_u)$ muestra cómo la combinación entre la
+  persistencia del shock ($\rho_u$) y el grado de paciencia de los
+  agentes ($\beta$) modula el tamaño de la respuesta de la brecha del
+  producto:
+  \begin{itemize}
+    \item Si $\rho_u$ es muy alto (shocks muy persistentes), el término
+    $(1-\beta\rho_u)$ se hace más pequeño, reduciendo $\psi_y$.
+    \item Si los agentes son muy pacientes ($\beta$ cercana a 1), también
+    se atenúa la respuesta contemporánea, porque el choque se reparte a
+    lo largo del tiempo.
+  \end{itemize}
+
+  \item \textbf{Papel de la política monetaria.}  
+  Toda la información sobre la agresividad de la política monetaria
+  respecto a inflación y producto $(\varphi_{\pi},\varphi_y)$, así como
+  sobre las rigideces nominales (a través de $\kappa$), se concentra en
+  el denominador de $\Delta_u$. Una política más agresiva (por ejemplo,
+  mayores valores de $\varphi_{\pi}$ y/o $\varphi_y$) tiende a:
+  \begin{itemize}
+    \item Aumentar el denominador de $\Delta_u$,
+    \item Reducir el valor de $\Delta_u$,
+    \item Y, por tanto, disminuir $\psi_y$.
+  \end{itemize}
+  Es decir, una política monetaria más reactiva amortigua la respuesta
+  del \emph{output gap} frente a un mismo shock $u_t$.
+
+  \item \textbf{Shocks de política contraccionista.}  
+  Recordando que el shock de política monetaria $v_t$ entra en $u_t$
+  con signo negativo, un incremento de $v_t$ (endurecimiento de la
+  política) reduce $u_t$, lo que a través de
+  $\tilde{y}_t = \psi_y u_t$ implica una caída de la brecha del producto
+  ($\tilde{y}_t<0$). En la solución conjunta del modelo, esto se
+  acompaña de una reducción de la inflación (vía el coeficiente
+  $\psi_{\pi}$).
+\end{itemize}
+
+% -----------------------------------------------
+% Ecuación (30): Respuesta de la inflación al shock agregado
+% -----------------------------------------------
+
+\subsection*{Ecuación (30): Coeficiente de respuesta de la inflación}
+
+La Ecuación (30) completa, junto con la Ecuación (29), la solución
+estacionaria del modelo Nuevo Keynesiano básico cerrado con una regla
+tipo Taylor. Especifica el coeficiente $\psi_{\pi}$ que vincula la
+inflación con el shock agregado $u_t$ en una solución lineal del tipo:
+\[
+  \pi_t = \psi_{\pi}\,u_t.
+\]
+
+\begin{equation}
+  \psi_{\pi} = \kappa\,\Delta_u
+  \tag{30}
+\end{equation}
+
+donde $\kappa$ es la pendiente de la Curva de Phillips Nuevo Keynesiana
+(NKPC) y $\Delta_u$ es un término positivo que resume la interacción
+entre parámetros estructurales y de política monetaria.
+
+%---------------------------------------------
+% Definición de símbolos (Ecuación 30)
+%---------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.18\textwidth} p{0.22\textwidth} p{0.50\textwidth}}
+\hline
+\textbf{Símbolo} & \textbf{Tipo} & \textbf{Descripción} \\
+\hline
+$\pi_t$ & Variable &
+Tasa de inflación actual en el período $t$. \\[4pt]
+
+$u_t$ & Variable &
+Shock agregado exógeno que combina shocks reales (tasa natural,
+output natural) y de política monetaria en el sistema reducido. \\[4pt]
+
+$\psi_{\pi}$ & Coeficiente &
+Coeficiente de la solución estacionaria lineal:
+$\pi_t = \psi_{\pi} u_t$; mide la sensibilidad de la inflación al shock
+$u_t$. \\[4pt]
+
+$\kappa$ & Parámetro &
+Pendiente de la NKPC (Ecuación (22)); mide la sensibilidad de la
+inflación a la brecha del producto $\tilde{y}_t$. \\[4pt]
+
+$\Delta_u$ & Parámetro &
+Coeficiente compuesto positivo que recoge parámetros estructurales
+($\sigma,\beta,\kappa$) y de política monetaria ($\varphi_{\pi},
+\varphi_y$). \\[4pt]
+\hline
+\end{tabular}
+\end{table}
+
+La expresión exacta de $\Delta_u$ es:
+\begin{equation}
+  \Delta_u \equiv 
+  \frac{1}{
+    (1-\beta\rho_u)\,\big[\sigma (1-\rho_u)+\varphi_y\big]
+    +\kappa(\varphi_{\pi}-\rho_u)
+  }
+  \;>\; 0,
+\end{equation}
+donde $\rho_u$ es el coeficiente autorregresivo del shock agregado
+$u_t$.
+
+%---------------------------------------------
+% Origen y método de obtención
+%---------------------------------------------
+
+\subsubsection*{Origen: solución estacionaria del sistema reducido}
+
+\begin{itemize}
+  \item El punto de partida es el sistema reducido de equilibrio para
+  $(\tilde{y}_t,\pi_t)$ (Ecuación (27)), obtenido al combinar:
+  \begin{enumerate}
+    \item La Curva de Phillips Nuevo Keynesiana:
+    \[
+      \pi_t = \beta E_t\{\pi_{t+1}\} + \kappa \tilde{y}_t \quad (22),
+    \]
+    \item La Ecuación IS Dinámica en términos de brecha del producto:
+    \[
+      \tilde{y}_t = E_t\{\tilde{y}_{t+1}\}
+      -\frac{1}{\sigma}(r_t - r_{n,t}) \quad (23),
+    \]
+    \item La Regla de tasa de interés nominal:
+    \[
+      i_t = \rho + \varphi_{\pi}\pi_t + \varphi_y \hat{y}_t + v_t
+      \quad (26).
+    \]
+  \end{enumerate}
+
+  \item Estos elementos se combinan para escribir un sistema matricial
+  del tipo:
+  \[
+    \begin{bmatrix} \tilde{y}_t \\ \pi_t \end{bmatrix}
+    =
+    A_T
+    \begin{bmatrix} E_t\{\tilde{y}_{t+1}\} \\ E_t\{\pi_{t+1}\}
+    \end{bmatrix}
+    +
+    B_T u_t,
+  \]
+  donde $u_t$ es el shock agregado y $A_T$, $B_T$ dependen de
+  $(\sigma,\beta,\kappa,\varphi_{\pi},\varphi_y)$.
+
+  \item Se supone que $u_t$ sigue un proceso AR(1):
+  \[
+    u_t = \rho_u u_{t-1} + \varepsilon_{u,t}, \quad |\rho_u|<1,
+  \]
+  y se conjetura una solución estacionaria lineal:
+  \[
+    \tilde{y}_t = \psi_y u_t, 
+    \qquad
+    \pi_t = \psi_{\pi} u_t.
+  \]
+
+  \item Al sustituir estas conjeturas en el sistema (27), se obtiene un
+  sistema algebraico en los dos coeficientes desconocidos
+  $(\psi_y,\psi_{\pi})$. La resolución de ese sistema produce:
+  \[
+    \psi_y = (1 - \beta\rho_u)\,\Delta_u \quad \text{(Ecuación 29)},
+    \qquad
+    \psi_{\pi} = \kappa\,\Delta_u \quad \text{(Ecuación 30)}.
+  \]
+\end{itemize}
+
+%---------------------------------------------
+% Interpretación económica
+%---------------------------------------------
+
+\subsubsection*{Implicación económica: sensibilidad de la inflación a los shocks}
+
+\begin{itemize}
+  \item \textbf{Relación con la NKPC.}  
+  La presencia de $\kappa$ en
+  \[
+    \psi_{\pi} = \kappa\,\Delta_u
+  \]
+  refleja que la inflación responde a los shocks únicamente en la medida
+  en que estos generen una brecha del producto $\tilde{y}_t$, y que la
+  intensidad de esa respuesta está gobernada por la pendiente de la
+  Curva de Phillips. Cuanto mayor es $\kappa$, más sensible es la
+  inflación a un mismo movimiento de la brecha del producto.
+
+  \item \textbf{Signo de la respuesta.}  
+  Dado que $\kappa>0$ y $\Delta_u>0$, se tiene $\psi_{\pi}>0$. Por lo
+  tanto, en la solución estacionaria:
+  \[
+    u_t \uparrow \;\Rightarrow\; \pi_t \uparrow,
+  \]
+  es decir, la inflación se mueve en la misma dirección que el shock
+  agregado.
+
+  \item \textbf{Shocks de política monetaria contraccionista.}  
+  En el caso de un shock de política monetaria $v_t$:
+  \begin{itemize}
+    \item $u_t$ incorpora $-v_t$, de modo que un shock contraccionista
+    (un aumento en $v_t$) reduce $u_t$.
+    \item Con $\psi_{\pi}>0$, la Ecuación (30) implica una caída de la
+    inflación ($\pi_t<0$) ante un shock contraccionista.
+    \item Este resultado es coherente con el mecanismo del modelo:
+    el aumento en la tasa nominal eleva la tasa real, contrae la brecha
+    del producto (Ecuación (29)), y la menor brecha del producto reduce
+    la inflación vía la NKPC (Ecuación (22)).
+  \end{itemize}
+
+  \item \textbf{Papel de la política monetaria en la estabilidad.}  
+  La magnitud de $\Delta_u$ depende de los parámetros de política
+  $(\varphi_{\pi},\varphi_y)$ y de los parámetros estructurales
+  $(\sigma,\beta,\kappa,\rho_u)$. Una política monetaria más agresiva
+  frente a la inflación y al producto:
+  \begin{itemize}
+    \item tiende a aumentar el denominador de $\Delta_u$,
+    \item reduce el valor de $\Delta_u$,
+    \item y, en consecuencia, reduce tanto $\psi_y$ (Ecuación (29)) como
+    $\psi_{\pi}$ (Ecuación (30)).
+  \end{itemize}
+  Es decir, una política más reactiva amortigua la respuesta tanto de la
+  brecha del producto como de la inflación frente a los shocks exógenos,
+  contribuyendo a la estabilidad macroeconómica.
+\end{itemize}
+
+\begin{thebibliography}{99}
+\bibitem{Gali2015}
+Galí, J. (2015).
+\textit{Monetary Policy, Inflation, and the Business Cycle:
+An Introduction to the New Keynesian Framework and Its Applications}.
+2nd ed.
+Princeton: Princeton University Press.
+
+\end{thebibliography}
 
 \end{document}

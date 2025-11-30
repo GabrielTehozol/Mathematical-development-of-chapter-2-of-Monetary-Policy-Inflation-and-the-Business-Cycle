@@ -1,6 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1764338188.1658 "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" "main.pdf" "main" 1764338189.48323 0
-  "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" 1764338186.71196 192765 2a00f27d4d17323e5c24f40e9b04df9b ""
+["pdflatex"] 1764466500.00532 "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" "main.pdf" "main" 1764466502.2075 0
+  "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" 1764466497.35968 352059 8949c8317e2affd248bf1b3bed99f69a ""
+  "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbi1200.tfm" 1136768653 3072 ccae1a240ab272417e4399fe942df546 ""
+  "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbi1440.tfm" 1136768653 3072 4dda4299ed0d9dcf48c6a8bcfdc499fc ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm" 1136768653 3584 ad49a18d8515beef6d92d4d3f197d0fd ""
@@ -13,6 +15,8 @@
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm" 1136768653 3584 3169d30142b88a27d4ab0e3468e963a2 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm" 1136768653 3584 3c76ccb63eda935a68ba65ba9da29f1a ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm2074.tfm" 1136768653 3584 8e2870ec7aa9776f59654942b0923f51 ""
+  "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti0600.tfm" 1136768653 3072 80e486733e39bf8ad2a360793cc998ae ""
+  "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti0800.tfm" 1136768653 3072 828ba0ea87cf5b727c4bfd6367195ec2 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm" 1136768653 3072 3bce340d4c075dffe6d4ec732b4c32fe ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti1095.tfm" 1136768653 3072 b73d2778cc3af44970de4de5e032d7f6 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti1200.tfm" 1136768653 3072 8b5a64dc91775463bc95e2d818524028 ""
@@ -102,6 +106,8 @@
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty" 1717359999 7243 e5dac1240636811edb77568b81818372 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/web2c/texmf.cnf" 1727217670 42021 a58d36c7ede3d2fc9f93da62d691ddff ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1731035686 92935 ab22f987f93038b61e05dc32d7c07157 ""
+  "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk" 1764360343.10165 42704 feb0646d0b9d49fba36d58b1864d686c ""
+  "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1440.600pk" 1764464183.95551 52840 a50f6167b5c87a93507dbc7c173c6381 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1763429411.30252 31928 82a4adb192f0406d3ad1f3564211d969 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1763429412.05718 40112 de65faeddcec22af520b71b3acd271f5 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1763429410.91875 49076 40f3b033ac9de66dcc3aa72ba354ebf8 ""
@@ -128,8 +134,8 @@
   "ls_n_vs_w.pdf" 1764337972.85179 19241 fe9425748f0c85df01c26614746e3a32 ""
   "ls_phi_pendiente.pdf" 1764337973.33699 17737 704d78c9aba2e9384e38300a0f37a39f ""
   "ls_shift_c.pdf" 1764337973.12957 18017 737ccca44cb9f8f6c66628b2fe0b26bd ""
-  "main.aux" 1764338189.38372 18017 e9eb26ed13a7b1f8ca25783319f45bcb "pdflatex"
-  "main.tex" 1764338186.71196 192765 2a00f27d4d17323e5c24f40e9b04df9b ""
+  "main.aux" 1764466502.01258 24348 b77b0483dbe3955c35d10eebe819fd98 "pdflatex"
+  "main.tex" 1764466497.35968 352059 8949c8317e2affd248bf1b3bed99f69a ""
   (generated)
   "main.aux"
   "main.log"
