@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.8)  29 NOV 2025 19:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.8)  30 NOV 2025 19:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -323,7 +323,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [9]
 
 [10]
-Overfull \hbox (1.53812pt too wide) in paragraph at lines 672--673
+Overfull \hbox (1.53812pt too wide) in paragraph at lines 673--674
  \T1/cmr/bx/n/12 Parámet-ros:[] \T1/cmr/m/n/12 Para may-or clar-i-dad, pre-sen-ta-mos los parámet-ros que apare-cen en la ecuación
  []
 
@@ -347,12 +347,12 @@ Overfull \hbox (1.53812pt too wide) in paragraph at lines 672--673
 <ecu8_Q_vs_gc.png, id=74, 361.35pt x 252.945pt>
 File: ecu8_Q_vs_gc.png Graphic file (type png)
 <use ecu8_Q_vs_gc.png>
-Package pdftex.def Info: ecu8_Q_vs_gc.png  used on input line 1261.
+Package pdftex.def Info: ecu8_Q_vs_gc.png  used on input line 1262.
 (pdftex.def)             Requested size: 328.82707pt x 230.18031pt.
 <ecu8_Q_vs_gz.png, id=76, 361.35pt x 252.945pt>
 File: ecu8_Q_vs_gz.png Graphic file (type png)
 <use ecu8_Q_vs_gz.png>
-Package pdftex.def Info: ecu8_Q_vs_gz.png  used on input line 1281.
+Package pdftex.def Info: ecu8_Q_vs_gz.png  used on input line 1282.
 (pdftex.def)             Requested size: 328.82707pt x 230.18031pt.
 
 
@@ -360,17 +360,17 @@ Package pdftex.def Info: ecu8_Q_vs_gz.png  used on input line 1281.
 <ecu8_Q_vs_pi.png, id=88, 361.35pt x 252.945pt>
 File: ecu8_Q_vs_pi.png Graphic file (type png)
 <use ecu8_Q_vs_pi.png>
-Package pdftex.def Info: ecu8_Q_vs_pi.png  used on input line 1296.
+Package pdftex.def Info: ecu8_Q_vs_pi.png  used on input line 1297.
 (pdftex.def)             Requested size: 328.82707pt x 230.18031pt.
 
 
 [20 <./ecu8_Q_vs_gz.png> <./ecu8_Q_vs_pi.png>]
-Underfull \hbox (badness 1270) in paragraph at lines 1348--1348
+Underfull \hbox (badness 1270) in paragraph at lines 1349--1349
 []|\T1/cmr/m/n/10.95 Curvatura de la util-i-dad del
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 1349--1349
+Underfull \hbox (badness 1210) in paragraph at lines 1350--1350
 []|\T1/cmr/m/n/10.95 Parámetro de desu-til-i-dad del
  []
 
@@ -382,7 +382,7 @@ Underfull \hbox (badness 1210) in paragraph at lines 1349--1349
 <ls_n_vs_w.pdf, id=102, 433.62pt x 289.08pt>
 File: ls_n_vs_w.pdf Graphic file (type pdf)
 <use ls_n_vs_w.pdf>
-Package pdftex.def Info: ls_n_vs_w.pdf  used on input line 1497.
+Package pdftex.def Info: ls_n_vs_w.pdf  used on input line 1498.
 (pdftex.def)             Requested size: 328.82707pt x 219.22668pt.
 
 
@@ -394,7 +394,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <ls_shift_c.pdf, id=106, 433.62pt x 289.08pt>
 File: ls_shift_c.pdf Graphic file (type pdf)
 <use ls_shift_c.pdf>
-Package pdftex.def Info: ls_shift_c.pdf  used on input line 1528.
+Package pdftex.def Info: ls_shift_c.pdf  used on input line 1529.
 (pdftex.def)             Requested size: 328.82707pt x 219.22668pt.
 
 
@@ -402,7 +402,7 @@ Package pdftex.def Info: ls_shift_c.pdf  used on input line 1528.
 <ls_phi_pendiente.pdf, id=213, 433.62pt x 289.08pt>
 File: ls_phi_pendiente.pdf Graphic file (type pdf)
 <use ls_phi_pendiente.pdf>
-Package pdftex.def Info: ls_phi_pendiente.pdf  used on input line 1557.
+Package pdftex.def Info: ls_phi_pendiente.pdf  used on input line 1558.
 (pdftex.def)             Requested size: 328.82707pt x 219.22668pt.
 
 
@@ -415,7 +415,7 @@ Package pdftex.def Info: ls_phi_pendiente.pdf  used on input line 1557.
 [28]
 
 [29]
-Overfull \hbox (90.92285pt too wide) detected at line 1972
+Overfull \hbox (90.92285pt too wide) detected at line 1973
 [] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^@ []\OML/cmm/m/it/12 :
  []
 
@@ -474,7 +474,7 @@ Overfull \hbox (90.92285pt too wide) detected at line 1972
 [55]
 
 [56]
-Underfull \hbox (badness 5548) in paragraph at lines 3802--3803
+Underfull \hbox (badness 5548) in paragraph at lines 3803--3804
 []|\T1/cmr/m/n/12 Nivel de con-sumo to-tal
  []
 
@@ -485,12 +485,12 @@ Underfull \hbox (badness 5548) in paragraph at lines 3802--3803
 [58]
 
 [59]
-Underfull \hbox (badness 10000) in paragraph at lines 4018--4019
+Underfull \hbox (badness 10000) in paragraph at lines 4019--4020
 []|\T1/cmr/m/n/12 Afecta la desu-til-i-dad
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 4021--4022
+Underfull \hbox (badness 1852) in paragraph at lines 4022--4023
 \T1/cmr/m/n/12 marginal del con-sumo al
  []
 
@@ -501,17 +501,17 @@ Underfull \hbox (badness 1852) in paragraph at lines 4021--4022
 [61]
 
 [62]
-Underfull \hbox (badness 4013) in paragraph at lines 4195--4196
+Underfull \hbox (badness 4013) in paragraph at lines 4196--4197
 []|\T1/cmr/m/n/12 Corrige la tasa nom-i-nal
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 4201--4202
+Underfull \hbox (badness 1132) in paragraph at lines 4202--4203
 \T1/cmr/m/n/12 hog-ar (tasa de de-s-cuen-to
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 4204--4205
+Underfull \hbox (badness 2205) in paragraph at lines 4205--4206
 \T1/cmr/m/n/12 tertem-po-rales (choque de
  []
 
@@ -528,12 +528,12 @@ Underfull \hbox (badness 2205) in paragraph at lines 4204--4205
 [67]
 
 [68]
-Underfull \hbox (badness 3138) in paragraph at lines 4586--4587
+Underfull \hbox (badness 3138) in paragraph at lines 4587--4588
 []|\T1/cmr/m/n/12 Multiplicador de pro-duc-
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 4592--4593
+Underfull \hbox (badness 3601) in paragraph at lines 4593--4594
 []|\T1/cmr/m/n/12 Mide la per-sis-ten-cia del
  []
 
@@ -551,17 +551,17 @@ Underfull \hbox (badness 3601) in paragraph at lines 4592--4593
 <inflacion_vs_precio_optimo_eq7.png, id=426, 433.62pt x 330.2739pt>
 File: inflacion_vs_precio_optimo_eq7.png Graphic file (type png)
 <use inflacion_vs_precio_optimo_eq7.png>
-Package pdftex.def Info: inflacion_vs_precio_optimo_eq7.png  used on input line 4887.
+Package pdftex.def Info: inflacion_vs_precio_optimo_eq7.png  used on input line 4888.
 (pdftex.def)             Requested size: 328.82707pt x 250.46648pt.
 
 
 [74 <./inflacion_vs_precio_optimo_eq7.png>]
-Underfull \hbox (badness 3138) in paragraph at lines 4921--4922
+Underfull \hbox (badness 3138) in paragraph at lines 4922--4923
 []|\T1/cmr/m/n/12 Variación log-a-rít-mi-ca del
  []
 
 
-Underfull \hbox (badness 3417) in paragraph at lines 4924--4925
+Underfull \hbox (badness 3417) in paragraph at lines 4925--4926
 \T1/cmr/m/n/12 de em-pre-sas que re-op-ti-
  []
 
@@ -573,27 +573,27 @@ Underfull \hbox (badness 3417) in paragraph at lines 4924--4925
 <inflacion_vs_gap_precios_eq8.png, id=438, 425.1885pt x 331.9602pt>
 File: inflacion_vs_gap_precios_eq8.png Graphic file (type png)
 <use inflacion_vs_gap_precios_eq8.png>
-Package pdftex.def Info: inflacion_vs_gap_precios_eq8.png  used on input line 5096.
+Package pdftex.def Info: inflacion_vs_gap_precios_eq8.png  used on input line 5097.
 (pdftex.def)             Requested size: 328.82707pt x 256.74477pt.
 
 
 [77]
-Underfull \hbox (badness 2894) in paragraph at lines 5127--5128
+Underfull \hbox (badness 2894) in paragraph at lines 5128--5129
 []|\T1/cmr/m/n/12 Cantidad de-man-da-da del
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 5132--5133
+Underfull \hbox (badness 2435) in paragraph at lines 5133--5134
 []|\T1/cmr/m/n/12 Índice de pre-cios agre-ga-do de la
  []
 
 
-Underfull \hbox (badness 1303) in paragraph at lines 5133--5134
+Underfull \hbox (badness 1303) in paragraph at lines 5134--5135
 []|\T1/cmr/m/n/12 Referencia para el pre-cio
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 5139--5140
+Underfull \hbox (badness 1888) in paragraph at lines 5140--5141
 []|\T1/cmr/m/n/12 Determina la sen-si-bil-i-dad
  []
 
@@ -604,37 +604,37 @@ Underfull \hbox (badness 1888) in paragraph at lines 5139--5140
 [79]
 
 [80]
-Underfull \hbox (badness 10000) in paragraph at lines 5279--5280
+Underfull \hbox (badness 10000) in paragraph at lines 5280--5281
 []|\T1/cmr/m/n/12 Costo de pro-ducir una
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 5281--5282
+Underfull \hbox (badness 2435) in paragraph at lines 5282--5283
 []|\T1/cmr/m/n/12 Índice de pre-cios agre-ga-do de la
  []
 
 
-Underfull \hbox (badness 6461) in paragraph at lines 5282--5283
+Underfull \hbox (badness 6461) in paragraph at lines 5283--5284
 []|\T1/cmr/m/n/12 Deflactor de mag-ni-tudes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5284--5285
+Underfull \hbox (badness 10000) in paragraph at lines 5285--5286
 []|\T1/cmr/m/n/12 Factor es-tocás-ti-co de de-s-cuen-to:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5285--5286
+Underfull \hbox (badness 10000) in paragraph at lines 5286--5287
 []|\T1/cmr/m/n/12 Convierte mag-ni-tudes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5285--5286
+Underfull \hbox (badness 10000) in paragraph at lines 5286--5287
 \T1/cmr/m/n/12 reales fu-turas en val-or
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 5290--5291
+Underfull \hbox (badness 1460) in paragraph at lines 5291--5292
 []|\T1/cmr/m/n/12 Markup de-sea-do ba-jo com-pe-ten-cia
  []
 
@@ -653,12 +653,12 @@ Underfull \hbox (badness 1460) in paragraph at lines 5290--5291
 [86]
 
 [87]
-Underfull \hbox (badness 1496) in paragraph at lines 5728--5729
+Underfull \hbox (badness 1496) in paragraph at lines 5729--5730
 \T1/cmr/m/n/12 ar rep-re-sen-ta-ti-vo en el pe-ri-o-do $\OML/cmm/m/it/12 t$\T1/cmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 5728--5729
+Underfull \hbox (badness 1221) in paragraph at lines 5729--5730
 \T1/cmr/m/n/12 CES so-bre el vec-tor de con-sumos
  []
 
@@ -666,37 +666,37 @@ Underfull \hbox (badness 1221) in paragraph at lines 5728--5729
 
 [88]
 
-LaTeX Warning: Reference `12.c' on page 89 undefined on input line 5770.
+LaTeX Warning: Reference `12.c' on page 89 undefined on input line 5771.
 
 
 
 [89]
-Underfull \hbox (badness 3668) in paragraph at lines 5880--5881
+Underfull \hbox (badness 3668) in paragraph at lines 5881--5882
 []|\T1/cmr/m/n/12 Nivel de de-man-da/oferta
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5880--5881
+Underfull \hbox (badness 10000) in paragraph at lines 5881--5882
 \T1/cmr/m/n/12 agre-ga-da ac-tu-al de la
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 5886--5887
+Underfull \hbox (badness 1168) in paragraph at lines 5887--5888
 \T1/cmr/m/n/12 tasa de in-terés re-al rel-e-
  []
 
 
-Underfull \hbox (badness 1009) in paragraph at lines 5892--5893
+Underfull \hbox (badness 1009) in paragraph at lines 5893--5894
 []|\T1/cmr/m/n/12 Nivel de ref-er-en-cia de la
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 5895--5896
+Underfull \hbox (badness 1478) in paragraph at lines 5896--5897
 \T1/cmr/m/n/12 con-sumo pre-sente vs. fu-
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 5901--5902
+Underfull \hbox (badness 1888) in paragraph at lines 5902--5903
 []|\T1/cmr/m/n/12 Determina la sen-si-bil-i-dad
  []
 
@@ -707,17 +707,17 @@ Underfull \hbox (badness 1888) in paragraph at lines 5901--5902
 [91]
 
 [92]
-Underfull \hbox (badness 2050) in paragraph at lines 6070--6071
+Underfull \hbox (badness 2050) in paragraph at lines 6071--6072
 []|\T1/cmr/m/n/12 Logaritmo del niv-el de tec-nología
  []
 
 
-Underfull \hbox (badness 2318) in paragraph at lines 6074--6074
+Underfull \hbox (badness 2318) in paragraph at lines 6075--6075
 []|\T1/cmr/m/n/12 Determina en qué me-di-
  []
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 6074--6074
+Underfull \hbox (badness 1776) in paragraph at lines 6075--6075
 \T1/cmr/m/n/12 da cam-bios en el tra-ba-
  []
 
@@ -728,42 +728,42 @@ Underfull \hbox (badness 1776) in paragraph at lines 6074--6074
 [94]
 
 [95]
-Underfull \hbox (badness 3612) in paragraph at lines 6252--6252
+Underfull \hbox (badness 3612) in paragraph at lines 6253--6253
 []|\T1/cmr/m/n/12 Costo marginal rel-e-vante
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6255--6255
+Underfull \hbox (badness 10000) in paragraph at lines 6256--6256
 []|\T1/cmr/m/n/12 Referencia agre-ga-da de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6255--6255
+Underfull \hbox (badness 10000) in paragraph at lines 6256--6256
 \T1/cmr/m/n/12 cos-tos marginales; sirve
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6255--6255
+Underfull \hbox (badness 10000) in paragraph at lines 6256--6256
 \T1/cmr/m/n/12 de ^^Pbench-mark^^Q para
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6255--6255
+Underfull \hbox (badness 10000) in paragraph at lines 6256--6256
 \T1/cmr/m/n/12 com-parar a las fir-mas
  []
 
 
-Underfull \hbox (badness 4193) in paragraph at lines 6258--6258
+Underfull \hbox (badness 4193) in paragraph at lines 6259--6259
 []|\T1/cmr/m/n/12 Insumo tra-ba-jo uti-liza-do
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 6264--6264
+Underfull \hbox (badness 1783) in paragraph at lines 6265--6265
 []|\T1/cmr/m/n/12 Producción in-di-vid-u-al re-
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 6270--6270
+Underfull \hbox (badness 1062) in paragraph at lines 6271--6271
 []|\T1/cmr/m/n/12 Precio nom-i-nal in-di-vid-u-al
  []
 
@@ -776,37 +776,37 @@ Underfull \hbox (badness 1062) in paragraph at lines 6270--6270
 [98]
 
 [99]
-Underfull \hbox (badness 10000) in paragraph at lines 6477--6477
+Underfull \hbox (badness 10000) in paragraph at lines 6478--6478
 []|\T1/cmr/m/n/12 Componente \T1/cmr/m/it/12 prospec-ti-vo\T1/cmr/m/n/12 :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6477--6477
+Underfull \hbox (badness 10000) in paragraph at lines 6478--6478
 \T1/cmr/m/n/12 in-tro-duce la nat-u-raleza
  []
 
 
-Underfull \hbox (badness 1303) in paragraph at lines 6480--6480
+Underfull \hbox (badness 1303) in paragraph at lines 6481--6481
 []|\T1/cmr/m/n/12 Referencia para el pre-cio
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6497--6498
+Underfull \hbox (badness 10000) in paragraph at lines 6498--6499
 []|\T1/cmr/m/n/12 Traduce la brecha de
  []
 
 
-Underfull \hbox (badness 3407) in paragraph at lines 6497--6498
+Underfull \hbox (badness 3407) in paragraph at lines 6498--6499
 \T1/cmr/m/it/12 markup $[]$ \T1/cmr/m/n/12 en una cor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6497--6498
+Underfull \hbox (badness 10000) in paragraph at lines 6498--6499
 \T1/cmr/m/n/12 rec-ción so-bre el pre-cio
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6497--6498
+Underfull \hbox (badness 10000) in paragraph at lines 6498--6499
 \T1/cmr/m/n/12 desviación del \T1/cmr/m/it/12 markup
  []
 
@@ -819,27 +819,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 6497--6498
 [102]
 
 [103]
-Underfull \hbox (badness 10000) in paragraph at lines 6688--6688
+Underfull \hbox (badness 10000) in paragraph at lines 6689--6689
 []|\T1/cmr/m/n/12 Componente \T1/cmr/m/it/12 prospec-ti-vo\T1/cmr/m/n/12 :
  []
 
 
-Underfull \hbox (badness 4467) in paragraph at lines 6688--6688
+Underfull \hbox (badness 4467) in paragraph at lines 6689--6689
 \T1/cmr/m/n/12 recoge el carác-ter ha-cia
  []
 
 
-Underfull \hbox (badness 1400) in paragraph at lines 6692--6692
+Underfull \hbox (badness 1400) in paragraph at lines 6693--6693
 []|\T1/cmr/m/n/12 Mide el mar-gen en-tre el
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 6723--6724
+Underfull \hbox (badness 1033) in paragraph at lines 6724--6725
 []|\T1/cmr/m/n/12 Mide cuán sen-si-ble es la
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 6723--6724
+Underfull \hbox (badness 1325) in paragraph at lines 6724--6725
 \T1/cmr/m/n/12 in-flación a la brecha del
  []
 
@@ -862,7 +862,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [109]
 
 [110]
-Underfull \hbox (badness 1168) in paragraph at lines 7187--7188
+Underfull \hbox (badness 1168) in paragraph at lines 7188--7189
 []|\T1/cmr/m/n/12 Logaritmo del markup de-sea-do o "sin fric-
  []
 
@@ -878,7 +878,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [113]
 
 [114]
-Overfull \hbox (6.42587pt too wide) in paragraph at lines 7516--7518
+Overfull \hbox (6.42587pt too wide) in paragraph at lines 7517--7519
 []\T1/cmr/m/n/12 La Ecuación (21) se ob-tiene re-stando la relación del markup ba-jo pre-cios flex-i-bles (Ecuación
  []
 
@@ -901,28 +901,28 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [120]
 
 [121]
-Underfull \hbox (badness 3364) in paragraph at lines 8160--8161
+Underfull \hbox (badness 3364) in paragraph at lines 8161--8162
 []|\T1/cmr/m/n/12 Coeficiente AR(1) del pro-ce-so tec-nológi-co
  []
 
 
 
 [122]
-Overfull \hbox (4.14525pt too wide) in paragraph at lines 8226--8228
+Overfull \hbox (4.14525pt too wide) in paragraph at lines 8227--8229
 []\T1/cmr/bx/n/12 Dinámica del Out-put Nat-u-ral. \T1/cmr/m/n/12 El Niv-el Nat-u-ral de Out-put viene da-do por (Ecuación
  []
 
 
 
 [123]
-Underfull \hbox (badness 3364) in paragraph at lines 8378--8379
+Underfull \hbox (badness 3364) in paragraph at lines 8379--8380
 []|\T1/cmr/m/n/12 Coeficiente AR(1) del pro-ce-so tec-nológi-co
  []
 
 
 
 [124]
-Overfull \hbox (4.14525pt too wide) in paragraph at lines 8444--8446
+Overfull \hbox (4.14525pt too wide) in paragraph at lines 8445--8447
 []\T1/cmr/bx/n/12 Dinámica del Out-put Nat-u-ral. \T1/cmr/m/n/12 El Niv-el Nat-u-ral de Out-put viene da-do por (Ecuación
  []
 
@@ -931,14 +931,14 @@ Overfull \hbox (4.14525pt too wide) in paragraph at lines 8444--8446
 [125]
 
 [126]
-Overfull \hbox (10.69766pt too wide) in paragraph at lines 8675--8677
+Overfull \hbox (10.69766pt too wide) in paragraph at lines 8676--8678
  \T1/cmr/bx/n/12 3. Condi-ción ter-mi-nal.[] \T1/cmr/m/n/12 Suponien-do que los efec-tos de las fric-ciones nom-i-nales se desvanecen
  []
 
 
 
 [127]
-Underfull \hbox (badness 1221) in paragraph at lines 8784--8786
+Underfull \hbox (badness 1221) in paragraph at lines 8785--8787
 []|\T1/cmr/m/n/12 Shock exógeno de políti-ca mon-e-taria, típi-
  []
 
@@ -952,12 +952,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [129]
 
 [130]
-Underfull \hbox (badness 1028) in paragraph at lines 8996--8997
+Underfull \hbox (badness 1028) in paragraph at lines 8997--8998
 []|\T1/cmr/m/n/12 Vector de co-e-fi-cientes que mide có-mo los
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8999--8999
+Underfull \hbox (badness 10000) in paragraph at lines 9000--9000
 []|\T1/cmr/m/n/12 Escalar (shocks
  []
 
@@ -972,7 +972,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8999--8999
 [134]
 
 [135]
-Underfull \hbox (badness 1365) in paragraph at lines 9497--9499
+Underfull \hbox (badness 1365) in paragraph at lines 9498--9500
 []|\T1/cmr/m/n/12 Coeficiente com-puesto pos-i-ti-vo que recoge
  []
 
@@ -1011,8 +1011,8 @@ Here is how much of TeX's memory you used:
  585680 words of font info for 105 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  57i,17n,65p,641b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti2074.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (139 pages, 1106705 bytes).
+ </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti2074.600pk> </Users/gabrieltehozol/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (139 pages, 1106910 bytes).
 PDF statistics:
  1313 PDF objects out of 1440 (max. 8388607)
  460 compressed objects within 5 object streams

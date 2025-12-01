@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1764466500.00532 "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" "main.pdf" "main" 1764466502.2075 0
-  "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" 1764466497.35968 352059 8949c8317e2affd248bf1b3bed99f69a ""
+["pdflatex"] 1764554207.17686 "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" "main.pdf" "main" 1764554209.86665 0
+  "/Users/gabrieltehozol/Documents/GitHub/Mathematical-development-of-chapter-2-of-Monetary-Policy-Inflation-and-the-Business-Cycle/main.tex" 1764554206.94124 352322 217b38d4a859c72b925cbc2ef02f5f06 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbi1200.tfm" 1136768653 3072 ccae1a240ab272417e4399fe942df546 ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbi1440.tfm" 1136768653 3072 4dda4299ed0d9dcf48c6a8bcfdc499fc ""
   "/Users/gabrieltehozol/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -134,8 +134,8 @@
   "ls_n_vs_w.pdf" 1764337972.85179 19241 fe9425748f0c85df01c26614746e3a32 ""
   "ls_phi_pendiente.pdf" 1764337973.33699 17737 704d78c9aba2e9384e38300a0f37a39f ""
   "ls_shift_c.pdf" 1764337973.12957 18017 737ccca44cb9f8f6c66628b2fe0b26bd ""
-  "main.aux" 1764466502.01258 24348 b77b0483dbe3955c35d10eebe819fd98 "pdflatex"
-  "main.tex" 1764466497.35968 352059 8949c8317e2affd248bf1b3bed99f69a ""
+  "main.aux" 1764554209.64765 24348 b77b0483dbe3955c35d10eebe819fd98 "pdflatex"
+  "main.tex" 1764554206.94124 352322 217b38d4a859c72b925cbc2ef02f5f06 ""
   (generated)
   "main.aux"
   "main.log"
